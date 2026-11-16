@@ -30,11 +30,15 @@ results.append(row("G1", "PASS" if g1 else "FAIL", "p0-outer-architecture.md; mo
 core=read("skills/miko-core/SKILL.md")
 g2=exists("skills/miko-core/SKILL.md") and all(x in core for x in ["閉環","權限","治理","UNKNOWN","NOT_RUN","獨立驗收","回復"])
 results.append(row("G2", "PASS" if g2 else "FAIL", "skills/miko-core/SKILL.md; governance/project-architecture/stage-gates.md", "" if g2 else "governance core contract incomplete"))
-# G3 Router: contract exists, runtime route test does not
+# G3 Router: candidate mapping and deterministic route suite; Runtime remains separate.
 router=read("governance/project-architecture/modules/router/README.md")
 g3_contract=all(x in router for x in ["觸發", "路由", "CONFLICT", "負向測試"])
-g3="NOT_RUN" if g3_contract else "FAIL"
-results.append(row("G3", g3, "modules/router/README.md", "runtime route decision suite and recorded cases are NOT_RUN"))
+g3run=subprocess.run([sys.executable,'-I','-B','tests/g3_router_acceptance.py'],cwd=ROOT,text=True,capture_output=True)
+g3json=OUT/'router/g3-router-acceptance.json'
+g3data=json.loads(g3json.read_text(encoding='utf-8')) if g3json.exists() else {}
+g3_pass=g3_contract and g3run.returncode==0 and g3data.get('overall')=='PASS' and g3data.get('mapping_count')==2
+g3="PASS" if g3_pass else ("NOT_RUN" if g3_contract and g3run.returncode!=0 else "FAIL")
+results.append(row("G3", g3, "modules/router/README.md; router/g3-router-mapping.tsv; g3-router-acceptance.json", "candidate mapping suite failed or runtime route loading remains NOT_RUN" if not g3_pass else "Runtime loading remains NOT_RUN"))
 # G4 cards: exact K01-K50 inventory plus the resolved K51 extension
 formal_cards=sorted(ROOT.glob("knowledge-cards/K[0-9][0-9].md"))
 candidate_cards=sorted(ROOT.glob("knowledge-cards/proposals/kcards/K[0-9][0-9].md"))
