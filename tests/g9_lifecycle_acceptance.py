@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir
 import subprocess,json,sys,tempfile,shutil,hashlib
-ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'evidence/governance-layer-v01/g9'; OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1]; OUT=output_dir('governance-layer-v01/g9')
+if not (ROOT / '.git').exists():
+    result={'tester':'TESTER','gate':'G9','checks':[],'overall':'BLOCKED','formal_remote_release':'NOT_RUN','formal_remote_tag':'NOT_RUN','runtime':'NOT_RUN','reason':'Git metadata unavailable; lifecycle and recovery checks require a repository checkout.'}
+    (OUT/'g9-lifecycle-acceptance.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print('OVERALL=BLOCKED')
+    print('REASON=Git metadata unavailable; lifecycle checks NOT_RUN')
+    sys.exit(2)
 checks=[]
 def add(i,ok,d): checks.append({'id':i,'status':'PASS' if ok else 'FAIL','detail':d})
 h=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,text=True,capture_output=True); add('G9-01',h.returncode==0 and len(h.stdout.strip())==40,'candidate commit exists')

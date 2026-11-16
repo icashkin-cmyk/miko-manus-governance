@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
 import hashlib, json, re, subprocess, sys, time
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir, repo_label, current_commit
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = sorted((ROOT / "skills").glob("*/SKILL.md"))
@@ -69,12 +72,11 @@ if len(set(names)) != len(names):
 if sorted(names) != sorted([r['directory_name'] for r in records if r['name'] != 'UNKNOWN']):
     errors.append('frontmatter names do not match skill directory names')
 
-out = ROOT / 'evidence/stage-01'
-out.mkdir(parents=True, exist_ok=True)
+out = output_dir('stage-01')
 (out / 'skill-inventory-current.json').write_text(json.dumps({
     'generated_at': time.strftime('%Y-%m-%dT%H:%M:%S%z'),
-    'repository': str(ROOT),
-    'commit': subprocess.check_output(['git','-C',str(ROOT),'rev-parse','HEAD'], text=True).strip(),
+    'repository': repo_label(),
+    'commit': current_commit(),
     'expected_count': EXPECTED,
     'actual_count': len(SKILLS),
     'records': records,

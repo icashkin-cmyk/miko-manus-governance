@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir
 import csv,json,re,sys
 ROOT=Path(__file__).resolve().parents[1]
 MAP=ROOT/'evidence/governance-layer-v01/router/g3-router-mapping.tsv'
-OUT=ROOT/'evidence/governance-layer-v01/router'
-OUT.mkdir(parents=True,exist_ok=True)
+OUT=output_dir('governance-layer-v01/router')
 rows=list(csv.DictReader(MAP.open(encoding='utf-8'),delimiter='\t'))
 errors=[]
 if [r['stable_id'] for r in rows] != ['K03','K51']: errors.append('mapping must contain K03 then K51 exactly once')

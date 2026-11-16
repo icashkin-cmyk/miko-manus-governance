@@ -3,11 +3,13 @@
 This checker never upgrades NOT_READ/NOT_RUN/UNKNOWN to PASS.
 """
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir
 import hashlib, json, re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "evidence/governance-layer-v01"
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = output_dir("governance-layer-v01")
 
 def exists(rel): return (ROOT / rel).exists()
 def read(rel): return (ROOT / rel).read_text(encoding="utf-8", errors="replace") if exists(rel) else ""
@@ -37,7 +39,7 @@ g3run=subprocess.run([sys.executable,'-I','-B','tests/g3_router_acceptance.py'],
 g3json=OUT/'router/g3-router-acceptance.json'
 g3data=json.loads(g3json.read_text(encoding='utf-8')) if g3json.exists() else {}
 g3_pass=g3_contract and g3run.returncode==0 and g3data.get('overall')=='PASS' and g3data.get('mapping_count')==2
-g3="PASS" if g3_pass else ("NOT_RUN" if g3_contract and g3run.returncode!=0 else "FAIL")
+g3="PASS" if g3_pass else "FAIL"
 results.append(row("G3", g3, "modules/router/README.md; router/g3-router-mapping.tsv; g3-router-acceptance.json", "candidate mapping suite failed or runtime route loading remains NOT_RUN" if not g3_pass else "Runtime loading remains NOT_RUN"))
 # G4 cards: exact K01-K50 inventory plus the resolved K51 extension
 formal_cards=sorted(ROOT.glob("knowledge-cards/K[0-9][0-9].md"))
@@ -82,5 +84,6 @@ summary={"checklist":"MIKO Manus governance layer acceptance v0.1","results":res
 for r in results: summary["counts"][r["status"]]=summary["counts"].get(r["status"],0)+1
 (OUT/"g0-g9-results.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 for r in results: print(f'{r["gate"]}\t{r["status"]}\t{r["evidence"]}\t{r["gap"]}')
-print("OVERALL=" + ("PASS" if all(r["status"]=="PASS" for r in results) else "NOT_COMPLETE"))
-sys.exit(0)
+overall = "PASS" if all(r["status"]=="PASS" for r in results) else "NOT_COMPLETE"
+print("OVERALL=" + overall)
+sys.exit(0 if overall == "PASS" else 1)

@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir
 import json,subprocess,sys,tempfile,shutil
-ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'evidence/governance-layer-v01/g6'; OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1]; OUT=output_dir('governance-layer-v01/g6')
 contract=(ROOT/'adapters/README.md').read_text(encoding='utf-8') if (ROOT/'adapters/README.md').exists() else ''
 checks=[]
 def add(i,ok,detail): checks.append({'id':i,'status':'PASS' if ok else 'FAIL','detail':detail})

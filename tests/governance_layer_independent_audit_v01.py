@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir, repo_label
 import hashlib, json, subprocess, sys
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'evidence/governance-layer-v01'
-OUT.mkdir(parents=True,exist_ok=True)
+OUT=output_dir('governance-layer-v01')
 checks=[]
 def add(i,ok,detail):
     checks.append({'id':i,'status':'PASS' if ok else 'FAIL','detail':detail})
@@ -25,9 +27,9 @@ add('IA-07', g3p.returncode==0 and g3d.get('overall')=='PASS' and g3d.get('mappi
 # Independent rerun of C1-C16; evidence is saved separately.
 p=subprocess.run([sys.executable,'-I','-B','tests/check_repo.py'],cwd=ROOT,text=True,capture_output=True)
 def clean(s):
-    home='/'+ 'home/' + 'ubuntu/'
+    home='/' + 'home/' + 'ubuntu/'
     for token in [home+'work/miko-manus-governance-p0-live',home+'work/miko-manus-governance',home]:
-        s=s.replace(token,'<REPO_ROOT>')
+        s=s.replace(token, repo_label())
     return '\n'.join(line.rstrip() for line in s.splitlines())+'\n'
 (OUT/'independent-c1-c16.stdout').write_text(clean(p.stdout),encoding='utf-8')
 (OUT/'independent-c1-c16.stderr').write_text(clean(p.stderr),encoding='utf-8')
