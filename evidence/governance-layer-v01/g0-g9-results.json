@@ -21,9 +21,9 @@
     },
     {
       "gate": "G3",
-      "status": "NOT_RUN",
-      "evidence": "modules/router/README.md",
-      "gap": "runtime route decision suite and recorded cases are NOT_RUN"
+      "status": "PASS",
+      "evidence": "modules/router/README.md; router/g3-router-mapping.tsv; g3-router-acceptance.json",
+      "gap": "Runtime loading remains NOT_RUN"
     },
     {
       "gate": "G4",
@@ -63,7 +63,7 @@
     }
   ],
   "counts": {
-    "PASS": 5,
-    "NOT_RUN": 5
+    "PASS": 6,
+    "NOT_RUN": 4
   }
 }

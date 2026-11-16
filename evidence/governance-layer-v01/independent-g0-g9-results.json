@@ -22,6 +22,11 @@
       "detail": "test entrypoints"
     },
     {
+      "id": "IA-07",
+      "status": "PASS",
+      "detail": "independent G3 mapping and route cases"
+    },
+    {
       "id": "IA-05",
       "status": "PASS",
       "detail": "check_repo exit=0"
