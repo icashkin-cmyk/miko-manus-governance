@@ -1,7 +1,7 @@
 {
   "test_id": "dghp-beauty-TEST-MUTATION-002",
   "purpose": "將 SB-040 錨點突變後驗證器拒絕候選",
-  "target_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md",
+  "target_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md",
   "repository": "icashkin-cmyk/miko",
   "branch": "main",
   "commit_sha": "ec80f473695305b35b90f0ebb941431ddde4626e",
@@ -17,5 +17,5 @@
   "finished_at": "2026-11-15T17:14:45.744252+00:00",
   "result": "PASS",
   "role": "TESTER",
-  "evidence_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-TEST-MUTATION-002.json"
+  "evidence_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-TEST-MUTATION-002.json"
 }

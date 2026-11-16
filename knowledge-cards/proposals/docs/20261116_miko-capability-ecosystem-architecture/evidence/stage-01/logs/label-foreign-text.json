@@ -1,7 +1,7 @@
 {
   "skill_id": "label-foreign-text",
   "path": "skills/label-foreign-text/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/label-foreign-text",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/label-foreign-text",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "99362eed3e73a884ef7fbcac802a53522df2e1504093f8928c4d687671f517e1",

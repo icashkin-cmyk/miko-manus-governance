@@ -1,7 +1,7 @@
 {
   "skill_id": "version-evolution-preservation",
   "path": "skills/version-evolution-preservation/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/version-evolution-preservation",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/version-evolution-preservation",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "d749e354d01910f001c1170c84287599a3ac9878a42b6490f4801547ec4476cd",

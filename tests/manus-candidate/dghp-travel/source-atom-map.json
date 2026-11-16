@@ -1,7 +1,7 @@
 {
   "skill": "dghp-travel",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-travel/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/dghp-travel/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md",
   "source_sha256": "22d0ecc87092eee1e3b496d0811bc3f813e236cdf9e0eec5a577c425879d01eb",
   "candidate_sha256": "fd9005688066b6302b2369946b4c1e7bd58af948ad673074cb3da4d30dcfeb63",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

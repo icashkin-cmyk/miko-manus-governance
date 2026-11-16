@@ -1,7 +1,7 @@
 {
   "skill_id": "dghp-travel",
   "path": "skills/dghp-travel/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-travel",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/dghp-travel",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "0b5c7b80f3984c3d257c20d639fa709cfcf51be9573acc5d939d36b012ec4656",

@@ -2,7 +2,7 @@
   "skill": "batch-task-completion-and-single-report",
   "status": "QUALIFIED_FOR_NEXT_STAGE_CANDIDATE",
   "source_miko_commit": "9cfcdfa63060e1aadc14c218a9dd4bc1922c4ab8",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/batch-task-completion-and-single-report",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/batch-task-completion-and-single-report",
   "candidate_sha256": "cafd5b4c4b7ad5c0ae76a3265708a5ea8a9fdb6abdeb14a61eea201bed4f31a8",
   "quick_validate": "PASS",
   "skill_lint": "PASS",

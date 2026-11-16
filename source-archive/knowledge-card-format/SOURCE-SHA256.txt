@@ -1,1 +1,1 @@
-5d2c02bd9c3e7d13b579bbef54a80f8ab3f8ce919eaf29e80b1e074941e26071  <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/knowledge-card-format/SKILL.md
+5d2c02bd9c3e7d13b579bbef54a80f8ab3f8ce919eaf29e80b1e074941e26071  <MIKO_SOURCE_REPO>/skills/knowledge-card-format/SKILL.md

@@ -1,7 +1,7 @@
 {
   "test_id": "MAP-001",
   "purpose": "source atom mapping with candidate/source hashes",
-  "target_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md",
+  "target_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md",
   "repository": "icashkin-cmyk/miko",
   "branch": "main",
   "commit_sha": "ec80f473695305b35b90f0ebb941431ddde4626e",
@@ -16,5 +16,5 @@
   "started_at": "2026-11-15T17:45:34.059536+00:00",
   "result": "PASS",
   "role": "TESTER",
-  "evidence_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-MAP-001.json"
+  "evidence_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-MAP-001.json"
 }

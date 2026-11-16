@@ -1,7 +1,7 @@
 # All Skills 格式、版本保護與知識卡結構稽核（候選區）
 
 - 執行時間：2026-11-15T18:37:09.895180+00:00
-- 範圍：`<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/*/SKILL.md`
+- 範圍：`<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/*/SKILL.md`
 - Skill 總數：19
 - 性質：唯讀稽核；不修改既有 Skill，不宣稱正式採用或 Runtime 生效。
 
