@@ -1,0 +1,37 @@
+{
+  "auditor": "INDEPENDENT_AUDITOR",
+  "checks": [
+    {
+      "id": "IA-01",
+      "status": "PASS",
+      "detail": "baseline files"
+    },
+    {
+      "id": "IA-02",
+      "status": "PASS",
+      "detail": "K unique count=50"
+    },
+    {
+      "id": "IA-03",
+      "status": "PASS",
+      "detail": "K03 identity conflict is preserved"
+    },
+    {
+      "id": "IA-04",
+      "status": "PASS",
+      "detail": "test entrypoints"
+    },
+    {
+      "id": "IA-05",
+      "status": "PASS",
+      "detail": "check_repo exit=0"
+    },
+    {
+      "id": "IA-06",
+      "status": "PASS",
+      "detail": "non-PASS gates remain explicitly recorded"
+    }
+  ],
+  "overall": "PASS",
+  "limitation": "This audit validates evidence integrity and truthfulness; it does not convert runtime NOT_RUN or K03 CONFLICT into PASS."
+}
