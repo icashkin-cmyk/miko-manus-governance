@@ -120,3 +120,18 @@ G3 已納入 K03 與 K51 的候選 Router 映射。映射採唯一穩定識別�
 - `evidence/governance-layer-v01/router/g3-integrity.sha256`
 
 本 G3 PASS 僅代表候選映射與決定性路由測試通過；不代表 Router 已接上 Manus Runtime、外部工具或正式治理採用。
+
+## G6–G9 全體架構驗收結果
+
+本輪依序完成 G6 Tools、G7 E2E、G8 Independent Acceptance 與 G9 Lifecycle。所有 Gate 均以實際執行結果判定，未將外部 Runtime 或正式遠端發布誤報為已啟用。
+
+| Gate | 結果 | 實際證據 | 邊界 |
+|---|---|---|---|
+| G6 | PASS | 本地檔案讀回、Terminal 執行、Git 唯讀、禁止邊界、工具契約 | External Connector 與 Runtime `NOT_RUN` |
+| G7 | PASS | K03/K51 Router → Knowledge Card → 輸出 → SHA-256 → 讀回；負向與衝突停止 | Manus Runtime `NOT_RUN` |
+| G8 | PASS | INDEPENDENT_AUDITOR 重跑 G3/G6/G7 與 C1–C16 | 外部獨立服務未納入 |
+| G9 | PASS | 候選 commit、archive、解壓讀回、隔離回復、隔離 Tag 流程、遠端身分讀回 | 正式遠端 Release、正式遠端 Tag、Push、Merge `NOT_RUN` |
+
+全體結果：G0–G9 `PASS`；C1–C16 `16/16 PASS`；C3 命中 `0`。
+
+本結果代表候選架構在本地可重現驗收與隔離生命週期演練合格，不代表正式採用、Runtime 生效、遠端發布或合併已完成。
