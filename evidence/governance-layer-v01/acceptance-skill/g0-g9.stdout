@@ -1,0 +1,11 @@
+G0	PASS	git remote, branch, HEAD, VERSION, MANUS_VERSION, README, CHANGELOG
+G1	PASS	p0-outer-architecture.md; module-mapping.md; modules/*/README.md
+G2	PASS	skills/miko-core/SKILL.md; governance/project-architecture/stage-gates.md
+G3	PASS	modules/router/README.md; router/g3-router-mapping.tsv; g3-router-acceptance.json	Runtime loading remains NOT_RUN
+G4	PASS	formal=1; candidate=50; K01-K50 unique=50; K51=True
+G5	PASS	skills count=20; stage-01 inventory	per-skill runtime execution and workflow samples are not uniformly proven
+G6	PASS	adapters/README.md; g6/g6-tools-acceptance.json	external connectors remain NOT_RUN
+G7	PASS	g7/g7-e2e-acceptance.json	representative E2E workflow failed or is NOT_RUN
+G8	PASS	g8/g8-independent-acceptance.json	independent full acceptance failed or is NOT_RUN
+G9	PASS	g9/g9-lifecycle-acceptance.json	candidate lifecycle evidence failed or is NOT_RUN
+OVERALL=PASS

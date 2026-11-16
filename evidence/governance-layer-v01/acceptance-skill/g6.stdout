@@ -1,0 +1,9 @@
+G6-01	PASS	adapter contract fields
+G6-02	PASS	adapter registry path
+G6-03	PASS	file write/readback
+G6-04	PASS	terminal execution
+G6-05	PASS	git read-only probe
+G6-06	PASS	unverified connector remains NOT_RUN
+G6-07	PASS	forbidden boundary
+EXTERNAL_CONNECTORS=NOT_RUN
+OVERALL=PASS
