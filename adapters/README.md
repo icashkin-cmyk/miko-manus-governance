@@ -21,11 +21,11 @@
 ## Codex（同步指示或全域 AGENTS.md，放在最前面）
 2026-11-02 起 Codex 停用（ADR-039），本段保留為歷史，MIKO 恢復使用時再貼。
 ```
-開始任務前先取得 MIKO 正本：有網路時先執行 git -C ~/miko pull --ff-only（或直接讀 https://raw.githubusercontent.com/icashkin-cmyk/miko/main/README.md），再讀 ~/miko/README.md；沒有網路時讀 ~/miko/README.md 上次同步的版本，並在第一行標「正本離線版（VERSION 值）」。正本優先於本設定中的同類規則；都讀不到時標「MIKO 正本 NOT_READ」並用本設定繼續，但不做外部寫入與不可逆操作。
+開始任務前先取得 MIKO 正本：有網路時先執行 git -C <LOCAL_MIKO_REPO> pull --ff-only（或直接讀 https://raw.githubusercontent.com/icashkin-cmyk/miko/main/README.md），再讀 <LOCAL_MIKO_REPO>/README.md；沒有網路時讀 <LOCAL_MIKO_REPO>/README.md 上次同步的版本，並在第一行標「正本離線版（VERSION 值）」。正本優先於本設定中的同類規則；都讀不到時標「MIKO 正本 NOT_READ」並用本設定繼續，但不做外部寫入與不可逆操作。
 ```
 本機一次性準備（終端機）：
 ```
-git clone https://github.com/icashkin-cmyk/miko.git ~/miko
+git clone https://github.com/icashkin-cmyk/miko.git <LOCAL_MIKO_REPO>
 ```
 
 ## Gemini（Gem 的指示，或「已儲存的資訊」）

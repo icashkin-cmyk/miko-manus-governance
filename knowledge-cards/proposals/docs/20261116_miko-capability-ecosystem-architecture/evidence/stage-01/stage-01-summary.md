@@ -4,7 +4,7 @@
 
 - 執行時間：2026-11-16T11:15:41+08:00
 - 目標：20 個 `skills/*/SKILL.md`
-- 實際載入驗證器：`/home/ubuntu/skills/skill-creator/scripts/quick_validate.py`
+- 實際載入驗證器：`<MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py`
 - 載入格式驗證 PASS：20/20
 - 載入格式驗證 FAIL：0/20
 - description 具可辨識觸發語句：20/20

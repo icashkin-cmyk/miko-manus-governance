@@ -1,7 +1,7 @@
 {
   "skill_id": "dghp-metaphysical-integrated-analysis",
   "path": "skills/dghp-metaphysical-integrated-analysis/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/dghp-metaphysical-integrated-analysis",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/dghp-metaphysical-integrated-analysis",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "8350b8401ab8bbf5ca4f36b089dba8c59836fe2a14d5e48bfed6c639711afeea",

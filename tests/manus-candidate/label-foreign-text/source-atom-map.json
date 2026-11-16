@@ -1,7 +1,7 @@
 {
   "skill": "label-foreign-text",
-  "source_path": "/home/ubuntu/work/github-miko-target/skills/label-foreign-text/SKILL.md",
-  "candidate_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/label-foreign-text/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/label-foreign-text/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/label-foreign-text/SKILL.md",
   "source_sha256": "e204078c4f5e3cdd68651f28f261d2c721610ca04fb3c7f8ebe12df17a02caa0",
   "candidate_sha256": "837dce20353ab5600e81d7837863ef9074dcc3afa2000700b922ea5967be0849",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

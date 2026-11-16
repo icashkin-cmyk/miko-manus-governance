@@ -4,7 +4,7 @@ description: 需要製作者、測試者與獨立驗收者分離，或需要在 
 ---
 # 三方審查 v1.1-candidate
 
-> 來源附約：`/home/ubuntu/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。
+> 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。
 
 ## 1. 三個正式角色
 

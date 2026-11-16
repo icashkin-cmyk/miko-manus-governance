@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-16T04:03:55+0000",
-  "repository": "/home/ubuntu/work/miko-manus-governance",
+  "repository": "<MANUS_REPO_ROOT>",
   "commit": "9922b76615eddadfd5ff37576c1cb7b35b7d7621",
   "expected_count": 20,
   "actual_count": 20,

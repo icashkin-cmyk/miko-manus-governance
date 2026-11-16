@@ -1,7 +1,7 @@
 {
   "skill_id": "safe-implementation",
   "path": "skills/safe-implementation/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/safe-implementation",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/safe-implementation",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "d6b770166f4f5ae4f446b9276a86a39e8e64e980a3d496dfe43015cdb727d501",

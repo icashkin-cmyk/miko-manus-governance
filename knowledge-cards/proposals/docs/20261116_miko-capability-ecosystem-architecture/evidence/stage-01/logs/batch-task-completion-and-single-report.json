@@ -1,7 +1,7 @@
 {
   "skill_id": "batch-task-completion-and-single-report",
   "path": "skills/batch-task-completion-and-single-report/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/batch-task-completion-and-single-report",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/batch-task-completion-and-single-report",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "e51bcdb72eba28c4392902914401fb8b27e439bbc8bb3676df2a4cd14068e928",

@@ -1,7 +1,7 @@
 {
   "skill_id": "tw-backtest-workflow",
   "path": "skills/tw-backtest-workflow/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/tw-backtest-workflow",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/tw-backtest-workflow",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "ac8b7d772ffcfd1d0061c21e70c4e517d5f351d482a73d0980dae86cc06c33b4",

@@ -1,7 +1,7 @@
 {
   "skill": "independent-audit",
-  "source_path": "/home/ubuntu/work/github-miko-target/skills/independent-audit/SKILL.md",
-  "candidate_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/independent-audit/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/independent-audit/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/independent-audit/SKILL.md",
   "source_sha256": "6e99f9ead1a4eb47f9f614ffc6efc04c99e979849a9e8c47e3287826f4aea5f1",
   "candidate_sha256": "0504e806441cd503c5735bf4f78099d33bcf27a290a4ac2e510acc5bf31c493a",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

@@ -9,7 +9,7 @@ description: AI 工程測試反造假、測試有效性與驗收證據可信度�
 
 - 目的：先確認本 Skill 的使用意圖、輸入範圍、輸出期待、資料來源與不可逆操作。
 - 必問：使用者目標、必要資料、時間／地區／對象條件、授權與限制；缺少關鍵資料時集中詢問，不以記憶補值。
-- 領域基線：name: ai-engineering-anti-fraud-test-credibility description: AI 工程測試反造假、測試有效性與驗收證據可信度檢查時使用：要求完整執行證據、正負向與邊界測試、異常測試、回歸測試、Mutation Testing、錯誤注入與狀態誠實標記；禁止以 AI 自述或預期輸出冒充 PASS。 > 來源附約：`/home/ubuntu/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。 每項必要測試至少保存： ／ 欄位 ／ 要求 ／ ／---／---／ ／ `TEST_ID` ／ 唯一測試識別碼 ／ ／ `TARGET` ／ 實際測試對象與路徑 ／ ／ `VERSION` ／ 版本、Branch、Commit ／ ／ `HASH` ／ 交付物完整性 ／ ／ `ENVIRONMENT` ／ 執行環境 ／ ／ `COMMAND` ／ 實際執行命令 ／
+- 領域基線：name: ai-engineering-anti-fraud-test-credibility description: AI 工程測試反造假、測試有效性與驗收證據可信度檢查時使用：要求完整執行證據、正負向與邊界測試、異常測試、回歸測試、Mutation Testing、錯誤注入與狀態誠實標記；禁止以 AI 自述或預期輸出冒充 PASS。 > 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。 每項必要測試至少保存： ／ 欄位 ／ 要求 ／ ／---／---／ ／ `TEST_ID` ／ 唯一測試識別碼 ／ ／ `TARGET` ／ 實際測試對象與路徑 ／ ／ `VERSION` ／ 版本、Branch、Commit ／ ／ `HASH` ／ 交付物完整性 ／ ／ `ENVIRONMENT` ／ 執行環境 ／ ／ `COMMAND` ／ 實際執行命令 ／
 - 輸入：本輪使用者輸入、已授權來源、專案檔與工具狀態。
 - 輸出：可追溯的需求摘要、缺件清單與可執行／需補件判定。
 
@@ -34,7 +34,7 @@ description: AI 工程測試反造假、測試有效性與驗收證據可信度�
 
 > 以下內容由原始候選逐段納入本次正式格式重構；其來源版本、差異與 SHA-256 由 mapping 與 evidence 保存。
 
-> 來源附約：`/home/ubuntu/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。
+> 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。
 
 ## 1. 強制測試證據欄位
 

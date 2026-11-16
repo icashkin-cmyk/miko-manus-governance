@@ -1,6 +1,6 @@
 from pathlib import Path
 
-ROOT = Path('/home/ubuntu/work/manus-miko-universal-governance-migration-v1')
+ROOT = Path('<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1')
 SKILL = ROOT / 'skills/dghp-travel/SKILL.md'
 
 def validate_route(text: str) -> None:

@@ -1,7 +1,7 @@
 {
   "skill": "dghp-food",
-  "source_path": "/home/ubuntu/work/github-miko-target/skills/dghp-food/SKILL.md",
-  "candidate_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-food/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/dghp-food/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-food/SKILL.md",
   "source_sha256": "d1bedcf85833ad0ee32da219d1d5fa2622ce2a3dac471474a6c265473451279d",
   "candidate_sha256": "5893eefffd6a185f347e2724d20586d6390459130b190eb8c5b56070463a08df",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",
