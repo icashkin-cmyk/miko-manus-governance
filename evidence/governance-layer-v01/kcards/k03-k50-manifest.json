@@ -434,5 +434,32 @@
       "sha256": "044bdd98de3a23f02128bde72bdb835f9e0060a70d52115a9bed2cf61d5b4cc4",
       "source_sha256": "764bd29338431c78a5d27bec3980bc0480b81a4cf3c8b5119307dfd70e1fd38b"
     }
-  ]
+  ],
+  "k03_resolution": {
+    "id": "K03",
+    "status": "RESOLVED",
+    "decision_required": null,
+    "decision": "保留「任務優先級與資源配置」為 K03；將「累積式演進與歷史版本保護」重新編號為 K51。",
+    "decided_by": "MIKO",
+    "decision_time": "2026-11-16 16:06 Asia/Taipei",
+    "selected": {
+      "title": "任務優先級與資源配置",
+      "path": "knowledge-cards/proposals/kcards/K03.md"
+    },
+    "renumbered": {
+      "old_id": "K03",
+      "new_id": "K51",
+      "title": "累積式演進與歷史版本保護",
+      "path": "knowledge-cards/proposals/kcards/K51.md"
+    },
+    "preservation_rule": "兩個來源正文均保留；未覆寫原始來源；K51 以新穩定識別名承接原 K03 語意。"
+  },
+  "k51_candidate": {
+    "path": "knowledge-cards/proposals/kcards/K51.md",
+    "status": "PROPOSED",
+    "sha256": "a3d0e8e506028d71beaba12407863d18090acc1dae78a1e5505a83bd48984ac2",
+    "source_sha256": "6ba2ef6a29f93ff226db4dfb58021d0077cdcb4d9856f9114b95f31ae110d0de"
+  },
+  "k03_k50_acceptance": "evidence/governance-layer-v01/kcards/k03-k50-acceptance.json",
+  "k03_k50_independent_audit": "evidence/governance-layer-v01/kcards/k03-k50-independent-audit.json"
 }

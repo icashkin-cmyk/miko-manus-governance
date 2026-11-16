@@ -9,12 +9,12 @@
     {
       "id": "IA-02",
       "status": "PASS",
-      "detail": "K unique count=50"
+      "detail": "K01-K50 count=50; K51=True"
     },
     {
       "id": "IA-03",
       "status": "PASS",
-      "detail": "K03 identity conflict is preserved"
+      "detail": "K03 decision and K51 renumbering are preserved"
     },
     {
       "id": "IA-04",
@@ -29,9 +29,9 @@
     {
       "id": "IA-06",
       "status": "PASS",
-      "detail": "non-PASS gates remain explicitly recorded"
+      "detail": "runtime NOT_RUN remains explicit; K03 conflict is resolved"
     }
   ],
   "overall": "PASS",
-  "limitation": "This audit validates evidence integrity and truthfulness; it does not convert runtime NOT_RUN or K03 CONFLICT into PASS."
+  "limitation": "This audit validates evidence integrity and K03 identity resolution; it does not convert runtime NOT_RUN into PASS."
 }
