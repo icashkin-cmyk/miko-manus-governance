@@ -34,7 +34,7 @@
     {
       "id": "IA-06",
       "status": "PASS",
-      "detail": "runtime NOT_RUN remains explicit; K03 conflict is resolved"
+      "detail": "external Runtime/connectors and formal release remain NOT_RUN; K03 conflict is resolved"
     }
   ],
   "overall": "PASS",
