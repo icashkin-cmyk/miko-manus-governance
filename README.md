@@ -19,8 +19,8 @@
 | Gate | 工作 | 必要條件 | 目前狀態 |
 |---|---|---|---|
 | G0 | 來源、範圍與版本基線 | 讀取 MIKO VERSION、commit、完整清單 | PASS_WITH_EVIDENCE |
-| G1 / Stage 1 | 20 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | PASS（自驗＋獨立驗收） |
-| G2 / Stage 2 | 資產分類與路徑架構 | G1 PASS；每個資產有唯一主分類、責任、輸入輸出與保存路徑 | PASS（自驗＋獨立驗收） |
+| G1 / Stage 1 | 20 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | REVISE（靜態子檢查通過，但整體驗收未通過） |
+| G2 / Stage 2 | 資產分類與路徑架構 | G1 PASS；每個資產有唯一主分類、責任、輸入輸出與保存路徑 | NOT_READY（G1 尚未整體通過） |
 
 **順序規則：G1 未 PASS，不得把 G2 標成完成；可預先閱讀 G2 規格，但不得產生 G2 PASS。**
 
@@ -80,4 +80,4 @@ miko-manus-governance/
 
 ## 本輪交付邊界
 
-本輪建立專案入口、架構索引與 Stage 1／Stage 2 可重播驗證器；Stage 1 已由自驗與獨立驗收通過後才開啟 Stage 2，Stage 2 亦已完成分類與路徑架構的自驗與獨立驗收。原 MIKO repository 不在本輪修改範圍內。完整證據見 `evidence/stage-01/` 與 `evidence/stage-02/`。
+本輪建立專案入口、架構索引與 Stage 1／Stage 2 子檢查器；但依附件所示的原 MIKO CI `check_repo.py` 實際結果為 `15/16 PASS`、`C3 FAIL`，因此本 Draft PR 整體狀態為 `REVISE`，不得把子檢查 PASS 當成整體通過。Stage 2 不得升格為完成，直到 Stage 1 依完整 C1～C16 與實際載入／觸發證據重新驗收。原 MIKO repository 不在本輪修改範圍內。
