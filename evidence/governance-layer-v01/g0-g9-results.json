@@ -39,31 +39,30 @@
     },
     {
       "gate": "G6",
-      "status": "NOT_RUN",
-      "evidence": "adapters/README.md; modules/tools/README.md",
-      "gap": "live connector, authorization, readback and degradation tests NOT_RUN"
+      "status": "PASS",
+      "evidence": "adapters/README.md; g6/g6-tools-acceptance.json",
+      "gap": "external connectors remain NOT_RUN"
     },
     {
       "gate": "G7",
-      "status": "NOT_RUN",
-      "evidence": "evidence and tests scan",
-      "gap": "representative end-to-end workflow runner is NOT_RUN or absent"
+      "status": "PASS",
+      "evidence": "g7/g7-e2e-acceptance.json",
+      "gap": "representative E2E workflow failed or is NOT_RUN"
     },
     {
       "gate": "G8",
-      "status": "NOT_RUN",
-      "evidence": "tests/check_repo.py; P0 cold-read evidence",
-      "gap": "full G8 depends on G7 PASS; external independent auditor not run"
+      "status": "PASS",
+      "evidence": "g8/g8-independent-acceptance.json",
+      "gap": "independent full acceptance failed or is NOT_RUN"
     },
     {
       "gate": "G9",
-      "status": "NOT_RUN",
-      "evidence": "candidate commit and lifecycle contract",
-      "gap": "release/tag/remote readback/recovery drill not run"
+      "status": "PASS",
+      "evidence": "g9/g9-lifecycle-acceptance.json",
+      "gap": "candidate lifecycle evidence failed or is NOT_RUN"
     }
   ],
   "counts": {
-    "PASS": 6,
-    "NOT_RUN": 4
+    "PASS": 10
   }
 }

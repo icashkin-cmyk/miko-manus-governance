@@ -1,0 +1,31 @@
+{
+  "tester": "TESTER",
+  "gate": "G7",
+  "workflow": "Router -> Knowledge Card -> output -> SHA-256 -> readback",
+  "cases": [
+    {
+      "id": "workflow-k03",
+      "status": "PASS",
+      "route": "K03",
+      "readback": true
+    },
+    {
+      "id": "workflow-k51",
+      "status": "PASS",
+      "route": "K51",
+      "readback": true
+    },
+    {
+      "id": "workflow-negative",
+      "status": "PASS",
+      "route": null
+    },
+    {
+      "id": "workflow-conflict-stop",
+      "status": "PASS",
+      "route": null
+    }
+  ],
+  "overall": "PASS",
+  "runtime": "NOT_RUN"
+}

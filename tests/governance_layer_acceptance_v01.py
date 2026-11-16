@@ -59,18 +59,24 @@ results.append(row("G4", g4, f"formal={len(formal_cards)}; candidate={len(candid
 skills=sorted(ROOT.glob("skills/*/SKILL.md"))
 g5="PASS" if len(skills)==20 and exists("evidence/stage-01/skill-inventory-current.json") else "UNKNOWN"
 results.append(row("G5", g5, f"skills count={len(skills)}; stage-01 inventory", "per-skill runtime execution and workflow samples are not uniformly proven" if g5=="PASS" else "skill inventory evidence incomplete"))
-# G6 tools: spec exists but connector/auth runtime not run
+# G6 tools: local probes may pass; external connectors remain explicitly NOT_RUN.
 adapters=read("adapters/README.md")
-g6="NOT_RUN" if adapters else "NOT_READ"
-results.append(row("G6", g6, "adapters/README.md; modules/tools/README.md", "live connector, authorization, readback and degradation tests NOT_RUN"))
-# G7 E2E: no representative E2E acceptance record
-has_e2e=any("E2E" in p.read_text(encoding="utf-8",errors="replace") for p in ROOT.glob("evidence/**/*") if p.is_file())
-g7="PASS" if has_e2e and exists("tests/e2e_acceptance.py") else "NOT_RUN"
-results.append(row("G7", g7, "evidence and tests scan", "representative end-to-end workflow runner is NOT_RUN or absent"))
-# G8 tests/independent acceptance: dependency G7 blocks full gate
-results.append(row("G8", "NOT_RUN", "tests/check_repo.py; P0 cold-read evidence", "full G8 depends on G7 PASS; external independent auditor not run"))
-# G9 release/maintenance: candidate commit exists but remote push/readback/tag not done
-results.append(row("G9", "NOT_RUN", "candidate commit and lifecycle contract", "release/tag/remote readback/recovery drill not run"))
+def result_overall(rel):
+    p=ROOT/rel
+    if not p.exists(): return None
+    try: return json.loads(p.read_text(encoding="utf-8")).get("overall")
+    except Exception: return None
+g6="PASS" if result_overall("evidence/governance-layer-v01/g6/g6-tools-acceptance.json")=="PASS" else ("NOT_RUN" if adapters else "NOT_READ")
+results.append(row("G6", g6, "adapters/README.md; g6/g6-tools-acceptance.json", "external connectors remain NOT_RUN" if g6=="PASS" else "G6 acceptance evidence missing or failed"))
+# G7 representative local E2E workflow.
+g7="PASS" if result_overall("evidence/governance-layer-v01/g7/g7-e2e-acceptance.json")=="PASS" else "NOT_RUN"
+results.append(row("G7", g7, "g7/g7-e2e-acceptance.json", "representative E2E workflow failed or is NOT_RUN"))
+# G8 independent acceptance.
+g8="PASS" if result_overall("evidence/governance-layer-v01/g8/g8-independent-acceptance.json")=="PASS" else "NOT_RUN"
+results.append(row("G8", g8, "g8/g8-independent-acceptance.json", "independent full acceptance failed or is NOT_RUN"))
+# G9 candidate lifecycle and recovery drill; formal remote release remains separate.
+g9="PASS" if result_overall("evidence/governance-layer-v01/g9/g9-lifecycle-acceptance.json")=="PASS" else "NOT_RUN"
+results.append(row("G9", g9, "g9/g9-lifecycle-acceptance.json", "candidate lifecycle evidence failed or is NOT_RUN"))
 
 summary={"checklist":"MIKO Manus governance layer acceptance v0.1","results":results,"counts":{}}
 for r in results: summary["counts"][r["status"]]=summary["counts"].get(r["status"],0)+1
