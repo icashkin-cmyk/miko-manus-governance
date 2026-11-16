@@ -27,7 +27,7 @@ if not (ROOT / '.git').exists():
     sys.exit(2)
 
 commits = run('git', 'rev-list', '--all').stdout.splitlines()
-patterns = [re.compile(r'[\w.+-]+@[\w-]+\.(?:com|tw|net|org)'), re.compile('/' + 'home/'), re.compile('<LOCAL_PATH>/'), re.compile('<HOME>/' + '[A-Z]')]
+patterns = [re.compile(r'[\w.+-]+@[\w-]+\.(?:com|tw|net|org)'), re.compile('/' + 'home/'), re.compile('/' + 'Users/'), re.compile('<HOME>/' + '[A-Z]')]
 patterns += [re.compile(re.escape(w)) for w in private_words()]
 hits = []
 for commit in commits:

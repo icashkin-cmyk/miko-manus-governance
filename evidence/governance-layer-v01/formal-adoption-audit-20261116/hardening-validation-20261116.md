@@ -16,7 +16,7 @@
 | 負向 G3 突變 | PASS；故意改壞 K51 映射後 Exit Code 1 | 恢復原始映射後再驗收 |
 | 無 Git bundle Stage 1 | PASS；Exit Code 0 | commit 欄位為 `NOT_RUN`，不丟 traceback |
 | 無 Git bundle G9 | BLOCKED；Exit Code 2 | 明確說明生命週期驗收需要 Git metadata |
-| Git 歷史 C3 | FAIL；掃描 270 個 commit、1,962 筆命中 | 歷史中已有本機路徑／範例內容；保護歷史原則下未重寫歷史 |
+| Git 歷史 C3 | FAIL；掃描 271 個 commit、1,964 筆命中 | 歷史中已有本機路徑／範例內容；保護歷史原則下未重寫歷史 |
 
 ## 正式採用欄位
 
