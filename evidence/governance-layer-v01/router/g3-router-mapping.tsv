@@ -1,0 +1,3 @@
+stable_id	name	status	source	version	trigger_keywords	prohibited	primary_route
+K03	任務優先級與資源配置	PROPOSED	knowledge-cards/proposals/kcards/K03.md	candidate	多項任務|資源不足|時限衝突|任務優先級|排序	取消或重啟 STOP/PAUSED 任務；自行假設期限或資源	priority-and-resource
+K51	累積式演進與歷史版本保護	PROPOSED	knowledge-cards/proposals/kcards/K51.md	candidate	升級|優化|重構|保留原本|不要覆蓋|歷史版本|版本沿革|回歸測試	刪除或覆寫歷史版本；未授權廢止；把新版存在當成正式採用	cumulative-evolution

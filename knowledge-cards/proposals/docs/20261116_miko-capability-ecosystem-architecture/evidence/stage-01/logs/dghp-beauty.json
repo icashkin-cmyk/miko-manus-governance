@@ -1,7 +1,7 @@
 {
   "skill_id": "dghp-beauty",
   "path": "skills/dghp-beauty/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-beauty",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/dghp-beauty",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "710998d783a9ecdaa1c086ae451e201c9d8a981e0747aa168faa954462bcb4d1",

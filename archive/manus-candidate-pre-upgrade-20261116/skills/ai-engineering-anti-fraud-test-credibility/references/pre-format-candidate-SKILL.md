@@ -4,7 +4,7 @@ description: AI 工程測試反造假、測試有效性與驗收證據可信度�
 ---
 # AI 工程反造假與測試可信度規範 v1.1-candidate
 
-> 來源附約：`<LOCAL_PATH>/ubuntu/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。
+> 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。
 
 ## 1. 強制測試證據欄位
 

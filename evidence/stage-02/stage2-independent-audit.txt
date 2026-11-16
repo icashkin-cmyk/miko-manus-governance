@@ -1,0 +1,6 @@
+role: INDEPENDENT_AUDITOR
+input_gate: G1 PASS
+records: 20
+self_result: PASS
+error_count: 0
+result: PASS

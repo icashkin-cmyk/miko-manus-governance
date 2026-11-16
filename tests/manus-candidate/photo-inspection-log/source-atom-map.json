@@ -1,7 +1,7 @@
 {
   "skill": "photo-inspection-log",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/photo-inspection-log/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/photo-inspection-log/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/photo-inspection-log/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/photo-inspection-log/SKILL.md",
   "source_sha256": "bf6777198c51d4f87dc77722f8810d79b6f9e9245605dcc4bcb700cc278a3f52",
   "candidate_sha256": "6248ffa104ff0b33213d35ef16f3ef1834be7478564deb5eb9e3f4e31ddbe26a",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

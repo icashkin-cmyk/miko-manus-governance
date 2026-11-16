@@ -1,7 +1,7 @@
 {
   "skill_id": "dghp-food",
   "path": "skills/dghp-food/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-food",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/dghp-food",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "7b3ac6e69bd6957684f59b342871f6918ec5683bd79690d6ab3d9b7bca63535e",

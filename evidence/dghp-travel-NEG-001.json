@@ -1,7 +1,7 @@
 {
   "test_id": "dghp-travel-NEG-001",
   "purpose": "確認禁止冒充導航、錯用班次、UNKNOWN 升格與無返程放行",
-  "target_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md",
+  "target_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md",
   "repository": "icashkin-cmyk/miko",
   "branch": "main",
   "commit_sha": "ec80f473695305b35b90f0ebb941431ddde4626e",
@@ -17,5 +17,5 @@
   "finished_at": "2026-11-15T17:30:28.259002+00:00",
   "result": "PASS",
   "role": "TESTER",
-  "evidence_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/evidence/dghp-travel-NEG-001.json"
+  "evidence_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/evidence/dghp-travel-NEG-001.json"
 }

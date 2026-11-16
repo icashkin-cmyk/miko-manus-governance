@@ -1,0 +1,1 @@
+3579e87ffaa9efb362619a5a299d733e9261f48adc1ffe0cfb535a7fe6180c02  <MIKO_SOURCE_REPO>/skills/batch-task-completion-and-single-report/SKILL.md

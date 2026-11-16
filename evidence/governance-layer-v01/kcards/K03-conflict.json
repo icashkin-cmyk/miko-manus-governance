@@ -1,0 +1,19 @@
+{
+  "id": "K03",
+  "status": "RESOLVED",
+  "decision_required": null,
+  "decision": "保留「任務優先級與資源配置」為 K03；將「累積式演進與歷史版本保護」重新編號為 K51。",
+  "decided_by": "MIKO",
+  "decision_time": "2026-11-16 16:06 Asia/Taipei",
+  "selected": {
+    "title": "任務優先級與資源配置",
+    "path": "knowledge-cards/proposals/kcards/K03.md"
+  },
+  "renumbered": {
+    "old_id": "K03",
+    "new_id": "K51",
+    "title": "累積式演進與歷史版本保護",
+    "path": "knowledge-cards/proposals/kcards/K51.md"
+  },
+  "preservation_rule": "兩個來源正文均保留；未覆寫原始來源；K51 以新穩定識別名承接原 K03 語意。"
+}

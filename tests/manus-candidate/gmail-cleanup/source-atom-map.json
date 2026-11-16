@@ -1,7 +1,7 @@
 {
   "skill": "gmail-cleanup",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/gmail-cleanup/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/gmail-cleanup/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/gmail-cleanup/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/gmail-cleanup/SKILL.md",
   "source_sha256": "aafebf2998c0122b57bf2cec1df033a4aa856b3b5d106b07688dde4c27498b47",
   "candidate_sha256": "a8eb3b281263b71ebb8a5fa6e631cbd03c1eadeded652c467c8817e54dcf8f65",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

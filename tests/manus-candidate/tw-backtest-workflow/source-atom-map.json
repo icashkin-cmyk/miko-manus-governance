@@ -1,7 +1,7 @@
 {
   "skill": "tw-backtest-workflow",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/tw-backtest-workflow/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/tw-backtest-workflow/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/tw-backtest-workflow/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/tw-backtest-workflow/SKILL.md",
   "source_sha256": "2b6ef0318f642df64ef9d62f41f512b32fb2467d7f957cd474c5000b6c721cbd",
   "candidate_sha256": "edd3a7d3764f23169724349942a7bebcee91e4c7750d0e4ca8b4740146494cb2",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

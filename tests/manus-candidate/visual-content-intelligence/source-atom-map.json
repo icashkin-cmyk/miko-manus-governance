@@ -1,7 +1,7 @@
 {
   "skill": "visual-content-intelligence",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/visual-content-intelligence/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/visual-content-intelligence/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/visual-content-intelligence/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/visual-content-intelligence/SKILL.md",
   "source_sha256": "fa8827beb7da95f76564026b35f8260d4933ffb3d4d9aa2e9d914eefa07a8c99",
   "candidate_sha256": "7c9a5a5650b86eaa690bc4e60d90ad77646fbdae67a270fe5612c678fdea5290",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

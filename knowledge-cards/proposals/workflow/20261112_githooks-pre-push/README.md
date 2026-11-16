@@ -11,8 +11,8 @@
 
 ## 安裝（由 MIKO 在 Mac 親手執行；雲端不安裝）
 ```bash
-cd <HOME>/miko
-bash knowledge-cards/proposals/workflow/20261112_githooks-pre-push/install_hooks.sh <HOME>/miko
+cd <LOCAL_MIKO_REPO>
+bash knowledge-cards/proposals/workflow/20261112_githooks-pre-push/install_hooks.sh <LOCAL_MIKO_REPO>
 ```
 私密字清單只用環境變數 `MIKO_PRIVATE_WORDS` 帶入，不寫進 repo、commit 訊息或任何公開檔。
 

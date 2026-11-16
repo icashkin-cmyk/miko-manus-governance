@@ -1,7 +1,7 @@
 {
   "skill": "dghp-work-handoff",
-  "source_path": "<LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-work-handoff/SKILL.md",
-  "candidate_path": "<LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-work-handoff/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/dghp-work-handoff/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-work-handoff/SKILL.md",
   "source_sha256": "b3c11f04d51b62d8f04c6822f12302059ba1071a76422aea758a1c5711cedac9",
   "candidate_sha256": "bd099ccc91ebf561721b1eaac54dc1991c2544cd1c1e19ad75344b182f9d036a",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

@@ -1,5 +1,5 @@
---- <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/dghp-beauty/SKILL.md
-+++ <LOCAL_PATH>/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md
+--- <MIKO_SOURCE_REPO>/skills/dghp-beauty/SKILL.md
++++ <LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty/SKILL.md
 @@ -1,67 +1,109 @@
  ---
  name: dghp-beauty

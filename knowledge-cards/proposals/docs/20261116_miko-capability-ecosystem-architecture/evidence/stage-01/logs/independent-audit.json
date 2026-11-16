@@ -1,7 +1,7 @@
 {
   "skill_id": "independent-audit",
   "path": "skills/independent-audit/SKILL.md",
-  "command": "python3 <LOCAL_PATH>/ubuntu/skills/skill-creator/scripts/quick_validate.py --path <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/independent-audit",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/independent-audit",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "e1e8e95b48896b36a1c9c0901befd4ff47f2edd08fa4d026aa6952cf600c0ed5",
