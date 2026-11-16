@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-16T08:59:39+0000",
+  "generated_at": "2026-11-16T09:34:54+0000",
   "repository": "<REPO_ROOT>",
-  "commit": "8f6222d8b4eed38225b1ad0be275f6829cb52f40",
+  "commit": "90a018c4c95bfec9b970936f59873c0e6e0cc8be",
   "expected_count": 21,
   "actual_count": 21,
   "records": [
@@ -127,7 +127,7 @@
       "directory_name": "miko-governance-layer-acceptance",
       "name": "miko-governance-layer-acceptance",
       "description_present": true,
-      "sha256": "f8bafc03575e3512134d76a14d2ebec86fd2b6fadbca9b9b8a45e1d929f16bbd",
+      "sha256": "4e57c9d0f0e2241ac97ccb258d5bee511ad3893dc104d018f7ac323326cb91eb",
       "source_archive_present": true,
       "status": "PASS"
     },
