@@ -1,0 +1,1 @@
+cec7b3aac19de978070d2f2fc715fca406725371fe07e41536362ea3ac8a39eb  <LOCAL_PATH>/ubuntu/work/github-miko-target/skills/version-evolution-preservation/SKILL.md
