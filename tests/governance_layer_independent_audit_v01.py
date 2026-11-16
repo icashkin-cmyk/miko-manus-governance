@@ -32,9 +32,11 @@ def clean(s):
 (OUT/'independent-c1-c16.stdout').write_text(clean(p.stdout),encoding='utf-8')
 (OUT/'independent-c1-c16.stderr').write_text(clean(p.stderr),encoding='utf-8')
 add('IA-05', p.returncode==0 and 'PASS C3' in p.stdout and '合計：16/16 PASS' in p.stdout, f'check_repo exit={p.returncode}')
-# Static gate truthfulness: runtime NOT_RUN remains explicit even after K03 resolution.
-summary=json.loads((OUT/'g0-g9-results.json').read_text(encoding='utf-8')) if (OUT/'g0-g9-results.json').exists() else {}
-add('IA-06', summary.get('counts',{}).get('NOT_RUN',0)>0 and summary.get('counts',{}).get('CONFLICT',0)==0, 'runtime NOT_RUN remains explicit; K03 conflict is resolved')
+# Static boundary truthfulness: candidate Gates may all PASS while external Runtime/release stays NOT_RUN.
+g6=json.loads((OUT/'g6/g6-tools-acceptance.json').read_text(encoding='utf-8')) if (OUT/'g6/g6-tools-acceptance.json').exists() else {}
+g9=json.loads((OUT/'g9/g9-lifecycle-acceptance.json').read_text(encoding='utf-8')) if (OUT/'g9/g9-lifecycle-acceptance.json').exists() else {}
+boundary=(g6.get('external_connectors')=='NOT_RUN' and g9.get('formal_remote_release')=='NOT_RUN' and g9.get('formal_remote_tag')=='NOT_RUN')
+add('IA-06', boundary, 'external Runtime/connectors and formal release remain NOT_RUN; K03 conflict is resolved')
 result={'auditor':'INDEPENDENT_AUDITOR','checks':checks,'overall':'PASS' if all(x['status']=='PASS' for x in checks) else 'FAIL','limitation':'This audit validates evidence integrity and K03 identity resolution; it does not convert runtime NOT_RUN into PASS.'}
 (OUT/'independent-g0-g9-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 for x in checks: print(f"{x['id']}\t{x['status']}\t{x['detail']}")

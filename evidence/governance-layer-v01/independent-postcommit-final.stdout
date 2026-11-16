@@ -1,0 +1,8 @@
+IA-01	PASS	baseline files
+IA-02	PASS	K01-K50 count=50; K51=True
+IA-03	PASS	K03 decision and K51 renumbering are preserved
+IA-04	PASS	test entrypoints
+IA-07	PASS	independent G3 mapping and route cases
+IA-05	PASS	check_repo exit=0
+IA-06	PASS	external Runtime/connectors and formal release remain NOT_RUN; K03 conflict is resolved
+OVERALL=PASS
