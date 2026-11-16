@@ -92,3 +92,31 @@ C3 去識別化只替換本機路徑表示，不改測試判定、來源語意�
 - `evidence/governance-layer-v01/kcards/k03-k50-independent-final.stdout`
 
 以上僅代表候選正文與驗收條件通過，不代表 K03–K50 已正式採用或已由 Runtime 載入。
+
+## G3 Router 映射與驗收結果
+
+G3 已納入 K03 與 K51 的候選 Router 映射。映射採唯一穩定識別名、候選狀態與可追溯來源；Router 只負責選擇，不執行 Skill、不授予權限、不修改正式規則。
+
+- K03：任務優先級與資源配置 → `priority-and-resource`
+- K51：累積式演進與歷史版本保護 → `cumulative-evolution`
+- 主路由限制：每個輸入最多一個主路由。
+- 雙重命中：標記 `CONFLICT`，不自行選邊。
+- 無命中：標記 `NO_ROUTE`，不自行補路由。
+- Runtime 載入：`NOT_RUN`，不宣稱已載入。
+
+實際驗收：
+
+- TESTER：Exit Code 0，正向、負向、邊界、衝突與 Mutation Testing 全部 PASS。
+- INDEPENDENT_AUDITOR：Exit Code 0，重新解析映射並重跑四組路由案例，全部 PASS。
+- G3 Gate：`PASS`。
+- C1–C16：Exit Code 0，16/16 PASS。
+- C3：命中 0。
+
+證據：
+
+- `evidence/governance-layer-v01/router/g3-router-mapping.tsv`
+- `evidence/governance-layer-v01/router/g3-router-acceptance.json`
+- `evidence/governance-layer-v01/router/g3-router-independent-audit.json`
+- `evidence/governance-layer-v01/router/g3-integrity.sha256`
+
+本 G3 PASS 僅代表候選映射與決定性路由測試通過；不代表 Router 已接上 Manus Runtime、外部工具或正式治理採用。

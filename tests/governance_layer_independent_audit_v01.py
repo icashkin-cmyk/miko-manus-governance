@@ -17,6 +17,11 @@ add('IA-02', required <= (formal|proposed) and (ROOT/'knowledge-cards/proposals/
 conf=(ROOT/'evidence/governance-layer-v01/kcards/K03-conflict.json').read_text(encoding='utf-8') if (ROOT/'evidence/governance-layer-v01/kcards/K03-conflict.json').exists() else ''
 add('IA-03', 'RESOLVED' in conf and 'K51' in conf and '任務優先級與資源配置' in conf, 'K03 decision and K51 renumbering are preserved')
 add('IA-04', all((ROOT/x).exists() for x in ['tests/check_repo.py','tests/stage1_inventory_check.py','tests/stage2_asset_classification_check.py']), 'test entrypoints')
+# Independent G3 rerun: read the mapping and execute the independent Router audit.
+g3p=subprocess.run([sys.executable,'-I','-B','tests/g3_router_independent_audit.py'],cwd=ROOT,text=True,capture_output=True)
+g3j=(ROOT/'evidence/governance-layer-v01/router/g3-router-independent-audit.json')
+g3d=json.loads(g3j.read_text(encoding='utf-8')) if g3j.exists() else {}
+add('IA-07', g3p.returncode==0 and g3d.get('overall')=='PASS' and g3d.get('mapping_count')==2 and g3d.get('runtime')=='NOT_RUN', 'independent G3 mapping and route cases')
 # Independent rerun of C1-C16; evidence is saved separately.
 p=subprocess.run([sys.executable,'-I','-B','tests/check_repo.py'],cwd=ROOT,text=True,capture_output=True)
 def clean(s):
