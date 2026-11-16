@@ -4,7 +4,7 @@ import hashlib, json, re, subprocess, sys, time
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = sorted((ROOT / "skills").glob("*/SKILL.md"))
-EXPECTED = 20
+EXPECTED = 21
 errors = []
 records = []
 
