@@ -1,0 +1,8 @@
+IA-01	PASS	baseline files
+IA-02	PASS	K unique count=50
+IA-03	PASS	K03 identity conflict is preserved
+IA-04	PASS	test entrypoints
+IA-05	PASS	check_repo exit=0
+IA-06	PASS	non-PASS gates remain explicitly recorded
+OVERALL=PASS
+EXIT_CODE=0

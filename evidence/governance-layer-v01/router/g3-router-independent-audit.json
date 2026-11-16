@@ -1,0 +1,60 @@
+{
+  "auditor": "INDEPENDENT_AUDITOR",
+  "gate": "G3",
+  "mapping_count": 2,
+  "cases": [
+    {
+      "id": "K03",
+      "expected": [
+        "ROUTE",
+        "K03"
+      ],
+      "actual": [
+        "ROUTE",
+        "K03"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "K51",
+      "expected": [
+        "ROUTE",
+        "K51"
+      ],
+      "actual": [
+        "ROUTE",
+        "K51"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "NONE",
+      "expected": [
+        "NO_ROUTE",
+        null
+      ],
+      "actual": [
+        "NO_ROUTE",
+        null
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "CONFLICT",
+      "expected": [
+        "CONFLICT",
+        null
+      ],
+      "actual": [
+        "CONFLICT",
+        null
+      ],
+      "status": "PASS"
+    }
+  ],
+  "runtime": "NOT_RUN",
+  "overall": "PASS",
+  "limitations": [
+    "This validates candidate mapping and deterministic routing only; it does not validate Manus Runtime loading or external tool execution."
+  ]
+}

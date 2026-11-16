@@ -1,5 +1,5 @@
---- /home/ubuntu/work/manus-miko-universal-governance-migration-v1/archive/dghp-travel/v0.7-rewritten-candidate/SKILL.md	2026-11-15 17:46:15.775864915 +0000
-+++ /home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md	2026-11-15 23:37:17.443146150 +0000
+--- <LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/archive/dghp-travel/v0.7-rewritten-candidate/SKILL.md	2026-11-15 17:46:15.775864915 +0000
++++ <LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-travel/SKILL.md	2026-11-15 23:37:17.443146150 +0000
 @@ -1,9 +1,9 @@
  ---
  name: dghp-travel

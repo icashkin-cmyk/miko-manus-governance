@@ -1,7 +1,7 @@
 {
   "skill_id": "ai-engineering-anti-fraud-test-credibility",
   "path": "skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/ai-engineering-anti-fraud-test-credibility",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/ai-engineering-anti-fraud-test-credibility",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "0abbef0f6412e2b31288b0c0461a33afd47d745c894ed343fd16a3bebd84b463",

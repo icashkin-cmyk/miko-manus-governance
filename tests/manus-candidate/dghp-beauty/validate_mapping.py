@@ -2,7 +2,7 @@ from pathlib import Path
 import json, hashlib
 base=Path(__file__).parent
 root=base.parent.parent.parent
-source=Path('/home/ubuntu/work/github-miko-target/skills/dghp-beauty/SKILL.md')
+source=Path('<MIKO_SOURCE_REPO>/skills/dghp-beauty/SKILL.md')
 candidate=root/'skills/dghp-beauty/SKILL.md'
 data=json.loads((base/'source-atom-map.json').read_text(encoding='utf-8'))
 assert hashlib.sha256(source.read_bytes()).hexdigest()==data['source_sha256']

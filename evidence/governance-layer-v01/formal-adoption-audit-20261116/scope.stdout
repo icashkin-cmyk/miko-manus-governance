@@ -1,0 +1,6 @@
+CANDIDATE_EXISTS= True
+FORMAL_EXISTS= False
+ACTIVE_SKILL_COUNT= 20
+ACTIVE_SKILL_NAMES= ai-engineering-anti-fraud-test-credibility,batch-task-completion-and-single-report,dghp-beauty,dghp-food,dghp-metaphysical-integrated-analysis,dghp-travel,dghp-work-handoff,gmail-cleanup,independent-audit,knowledge-card-format,label-foreign-text,make-skill,miko-core,photo-inspection-log,safe-implementation,three-party-review,tw-alert-check,tw-backtest-workflow,version-evolution-preservation,visual-content-intelligence
+TARGET_NAME_CONFLICT= False
+CANDIDATE_STATUS= PROPOSED

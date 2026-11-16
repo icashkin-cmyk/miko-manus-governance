@@ -1,7 +1,7 @@
 {
   "skill_id": "knowledge-card-format",
   "path": "skills/knowledge-card-format/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/knowledge-card-format",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/knowledge-card-format",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "72ee5386978d5a9195b4888c9252566bf7d3baea8f4a598c97ec65bf030ad847",

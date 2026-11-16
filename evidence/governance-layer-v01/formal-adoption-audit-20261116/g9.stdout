@@ -1,0 +1,8 @@
+G9-01	PASS	candidate commit exists
+G9-02	PASS	local candidate archive
+G9-03	PASS	archive readback
+G9-04	PASS	isolated recovery drill
+G9-05	PASS	isolated candidate tag process
+G9-06	PASS	remote identity readback
+FORMAL_REMOTE_RELEASE=NOT_RUN
+OVERALL=PASS

@@ -1,0 +1,137 @@
+# MIKO｜Manus 治理架構逐層驗收報告 v0.1
+
+## 結論
+
+本輪已依使用者提供的 13 頁驗收單，建立並執行 G0–G9 逐層核對。**整體尚未合格，不能標記總體 PASS**。MIKO 已裁決 K03 保留「任務優先級與資源配置」，原「累積式演進與歷史版本保護」改編為 K51；G4 的穩定識別名驗收已通過。C1–C16 回歸已實際 `16/16 PASS`；獨立冷讀器的證據完整性檢查通過。G3、G6、G7、G8、G9 尚未完成所需實測。
+
+## 驗收對象
+
+- Repository：`icashkin-cmyk/miko-manus-governance`
+- Branch：`manus/initial-architecture-stage1-stage2-20261116`
+- Candidate HEAD：`f685fce52a3562d38c76f6bff2f65f44159dbfa1`
+- MIKO 正本版本：`1.2.72`
+- Manus 候選版本：`0.1.0-manus-candidate`
+- 驗收單來源：使用者提供之 DOCX，Hash 保存於 `evidence/governance-layer-v01/checklist-docx.sha256`
+- 驗收單原始檔採 `SOURCE_HASH_ONLY` 封存，未將二進位檔寫入 repository。
+
+## G0–G9 結果
+
+| Gate | 結果 | 實際證據 | 目前限制 |
+|---|---|---|---|
+| G0 | PASS | repository、branch、HEAD、VERSION、MANUS_VERSION、README、CHANGELOG 已讀取 | 僅代表基線身分完整，不代表正式發布 |
+| G1 | PASS | `p0-outer-architecture.md`、`module-mapping.md`、Core/Router/Registry/Tools/Lifecycle 模組 README | 屬架構層核對 |
+| G2 | PASS | `skills/miko-core/SKILL.md`、`stage-gates.md` | 屬治理契約與邊界核對 |
+| G3 | NOT_RUN | Router 候選契約存在 | 尚無實際路由決策測試與 Runtime 讀回 |
+| G4 | PASS | K01–K50 候選卡索引、K03 裁決、K51 重編與逐卡 Hash | K01–K50 識別項已唯一化；K51 保留原 K03 的另一個語意，兩張仍是 PROPOSED |
+| G5 | PASS（範圍限定） | 20 個 Skill、Stage 1 inventory、Stage 2 20 筆分類；兩個檢查器 Exit Code 0 | `RUNTIME_STATUS=UNKNOWN_FOR_ALL`，不宣稱 Runtime 實測 |
+| G6 | NOT_RUN | `adapters/README.md`、Tools 模組契約 | 尚未執行外部 connector、授權、讀回與降級測試 |
+| G7 | NOT_RUN | 尚無代表性端到端工作流執行器與原始輸出 | 不得以單元／靜態測試代替 E2E |
+| G8 | NOT_RUN | 本輪已建立獨立冷讀器，且其證據完整性檢查 PASS | 完整 G8 依賴 G7 通過及真正獨立驗收者；目前只能算候選冷讀 |
+| G9 | NOT_RUN | 候選 commit 與生命週期契約存在 | 尚未執行正式 tag、發布、遠端讀回、回復演練 |
+
+## K01–K50 處理
+
+- K01 原檔保留，未覆寫。
+- K02 由既有 Manus 候選來源恢復為 `PROPOSED` 候選稿。
+- K03–K50 由 `Pasted_content_24.txt` 逐字抽取至 `knowledge-cards/proposals/kcards/`，每張都有來源與 SHA-256。
+- 候選來源 Hash 與 48 筆映射見 `evidence/governance-layer-v01/kcards/k03-k50-manifest.json`。
+- K03 裁決與 K51 重編見 `evidence/governance-layer-v01/kcards/K03-conflict.json`、`k03-k51-resolution.md`。
+- 「任務優先級與資源配置」保留為 K03；「累積式演進與歷史版本保護」以 K51 承接。
+- 「50 個識別項已被盤點」不等於「K01–K50 已正式採用」；K51 是額外保留的候選延伸。
+
+## C3 修正與回歸
+
+初次加入驗收證據後，C3 命中 Stage 1 產生的本機絕對路徑。已在最後重跑 Stage 1／Stage 2 後去識別化，再執行原始 `tests/check_repo.py`：
+
+- Stage 1 Exit Code：0
+- Stage 2 Exit Code：0
+- C1–C16 Exit Code：0
+- C3：`PASS`，命中 0
+- 總計：`16/16 PASS`
+- `git diff --check`：Exit Code 0
+
+C3 去識別化只替換本機路徑表示，不改測試判定、來源語意或卡片正文。
+
+## 獨立冷讀
+
+`tests/governance_layer_independent_audit_v01.py` 直接重讀檔案、重新計算 K01–K50 與 K51、確認 K03 裁決紀錄，並重新執行 C1–C16；結果為 `OVERALL=PASS`。此 PASS 僅代表本輪證據完整性與不誤報檢查通過，**不把 G3、G6、G7、G8、G9 的未完成項目改成 PASS**。
+
+## 下一步（不可跳站）
+
+1. 以 K03 與 K51 的新穩定識別名建立 Router 映射。
+2. 跑 K01–K50 逐卡格式／來源／反例／回歸驗收，並另外驗證 K51 的沿革保真。
+3. 建立 Router 的正向、負向、邊界及衝突測試，並保存實際 stdout、stderr、Exit Code。
+4. 在不需要外部授權的離線範圍先做 Tools contract 與 E2E dry-run；需要 connector 或 Runtime 的部分仍標 `NOT_RUN`，不可繞過授權。
+5. 完成 G7 後再做真正獨立驗收 G8；G8 通過後才可規劃 G9 的發布、遠端讀回與回復演練。
+
+## 邊界聲明
+
+本報告與新增卡片均屬候選工作區內容；尚未正式採用、尚未 Runtime 生效、未建立正式 release tag，也未宣稱已合併或已推送 main。原始 MIKO repository 未修改。
+
+## K03–K50 直接填入與驗收結果
+
+依 MIKO 指示，K03–K50 已採用附件提供的候選範例正文直接填入候選卡，並補上缺少的 `UNKNOWN`／`NOT_RUN` 邊界語句。每張卡仍保留 `PROPOSED`、來源與尚未 Runtime 載入聲明。
+
+實際驗收結果：
+
+- 卡片數量：48 張（K03–K50）。
+- TESTER 自驗：Exit Code 0，逐卡 `PASS`。
+- INDEPENDENT_AUDITOR 冷讀：Exit Code 0，逐卡 `PASS`。
+- 正向測試：48/48 PASS。
+- 負向測試：移除執行要求、錯誤採用狀態、超過 1,000 字元均可被偵測。
+- 邊界測試：`UNKNOWN`／`NOT_RUN` 語句完整。
+- Mutation Testing：PASS。
+- C1–C16：Exit Code 0，`16/16 PASS`。
+- C3：命中 0。
+
+逐卡結果保存於：
+
+- `evidence/governance-layer-v01/kcards/k03-k50-acceptance.json`
+- `evidence/governance-layer-v01/kcards/k03-k50-independent-audit.json`
+- `evidence/governance-layer-v01/kcards/k03-k50-tester-final.stdout`
+- `evidence/governance-layer-v01/kcards/k03-k50-independent-final.stdout`
+
+以上僅代表候選正文與驗收條件通過，不代表 K03–K50 已正式採用或已由 Runtime 載入。
+
+## G3 Router 映射與驗收結果
+
+G3 已納入 K03 與 K51 的候選 Router 映射。映射採唯一穩定識別名、候選狀態與可追溯來源；Router 只負責選擇，不執行 Skill、不授予權限、不修改正式規則。
+
+- K03：任務優先級與資源配置 → `priority-and-resource`
+- K51：累積式演進與歷史版本保護 → `cumulative-evolution`
+- 主路由限制：每個輸入最多一個主路由。
+- 雙重命中：標記 `CONFLICT`，不自行選邊。
+- 無命中：標記 `NO_ROUTE`，不自行補路由。
+- Runtime 載入：`NOT_RUN`，不宣稱已載入。
+
+實際驗收：
+
+- TESTER：Exit Code 0，正向、負向、邊界、衝突與 Mutation Testing 全部 PASS。
+- INDEPENDENT_AUDITOR：Exit Code 0，重新解析映射並重跑四組路由案例，全部 PASS。
+- G3 Gate：`PASS`。
+- C1–C16：Exit Code 0，16/16 PASS。
+- C3：命中 0。
+
+證據：
+
+- `evidence/governance-layer-v01/router/g3-router-mapping.tsv`
+- `evidence/governance-layer-v01/router/g3-router-acceptance.json`
+- `evidence/governance-layer-v01/router/g3-router-independent-audit.json`
+- `evidence/governance-layer-v01/router/g3-integrity.sha256`
+
+本 G3 PASS 僅代表候選映射與決定性路由測試通過；不代表 Router 已接上 Manus Runtime、外部工具或正式治理採用。
+
+## G6–G9 全體架構驗收結果
+
+本輪依序完成 G6 Tools、G7 E2E、G8 Independent Acceptance 與 G9 Lifecycle。所有 Gate 均以實際執行結果判定，未將外部 Runtime 或正式遠端發布誤報為已啟用。
+
+| Gate | 結果 | 實際證據 | 邊界 |
+|---|---|---|---|
+| G6 | PASS | 本地檔案讀回、Terminal 執行、Git 唯讀、禁止邊界、工具契約 | External Connector 與 Runtime `NOT_RUN` |
+| G7 | PASS | K03/K51 Router → Knowledge Card → 輸出 → SHA-256 → 讀回；負向與衝突停止 | Manus Runtime `NOT_RUN` |
+| G8 | PASS | INDEPENDENT_AUDITOR 重跑 G3/G6/G7 與 C1–C16 | 外部獨立服務未納入 |
+| G9 | PASS | 候選 commit、archive、解壓讀回、隔離回復、隔離 Tag 流程、遠端身分讀回 | 正式遠端 Release、正式遠端 Tag、Push、Merge `NOT_RUN` |
+
+全體結果：G0–G9 `PASS`；C1–C16 `16/16 PASS`；C3 命中 `0`。
+
+本結果代表候選架構在本地可重現驗收與隔離生命週期演練合格，不代表正式採用、Runtime 生效、遠端發布或合併已完成。

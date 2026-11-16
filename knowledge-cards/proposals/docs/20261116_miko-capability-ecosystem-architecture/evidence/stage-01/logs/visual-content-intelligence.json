@@ -1,7 +1,7 @@
 {
   "skill_id": "visual-content-intelligence",
   "path": "skills/visual-content-intelligence/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/visual-content-intelligence",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/visual-content-intelligence",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "d8a80f66dfac10e4679ad56cbabeaf5fd711a992fc8efa9de56e626605dc5013",

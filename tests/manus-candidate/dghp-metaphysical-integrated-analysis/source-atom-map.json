@@ -1,7 +1,7 @@
 {
   "skill": "dghp-metaphysical-integrated-analysis",
-  "source_path": "/home/ubuntu/work/github-miko-target/skills/dghp-metaphysical-integrated-analysis/SKILL.md",
-  "candidate_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-metaphysical-integrated-analysis/SKILL.md",
+  "source_path": "<MIKO_SOURCE_REPO>/skills/dghp-metaphysical-integrated-analysis/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-metaphysical-integrated-analysis/SKILL.md",
   "source_sha256": "546f1feac8424db1bfd7b2a7a8f7e42437a360fc90149d27779be7e1b3484cc7",
   "candidate_sha256": "25723e662b86e543957802dd0e9801fdc143e64faebbc0cea44392a20e7f2132",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",

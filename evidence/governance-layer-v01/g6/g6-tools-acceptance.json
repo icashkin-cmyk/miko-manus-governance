@@ -1,0 +1,44 @@
+{
+  "tester": "TESTER",
+  "gate": "G6",
+  "checks": [
+    {
+      "id": "G6-01",
+      "status": "PASS",
+      "detail": "adapter contract fields"
+    },
+    {
+      "id": "G6-02",
+      "status": "PASS",
+      "detail": "adapter registry path"
+    },
+    {
+      "id": "G6-03",
+      "status": "PASS",
+      "detail": "file write/readback"
+    },
+    {
+      "id": "G6-04",
+      "status": "PASS",
+      "detail": "terminal execution"
+    },
+    {
+      "id": "G6-05",
+      "status": "PASS",
+      "detail": "git read-only probe"
+    },
+    {
+      "id": "G6-06",
+      "status": "PASS",
+      "detail": "unverified connector remains NOT_RUN"
+    },
+    {
+      "id": "G6-07",
+      "status": "PASS",
+      "detail": "forbidden boundary"
+    }
+  ],
+  "external_connectors": "NOT_RUN",
+  "overall": "PASS",
+  "runtime": "NOT_RUN"
+}

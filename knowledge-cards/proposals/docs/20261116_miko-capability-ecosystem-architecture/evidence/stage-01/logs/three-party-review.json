@@ -1,7 +1,7 @@
 {
   "skill_id": "three-party-review",
   "path": "skills/three-party-review/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/three-party-review",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/three-party-review",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "a3da3295bee26d38495b195d58439d7d15248a4d05c05a93e29ac12241fc586b",

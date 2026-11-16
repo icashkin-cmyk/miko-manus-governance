@@ -1,0 +1,8 @@
+positive_k03	PASS	expected=ROUTE	actual={'decision': 'ROUTE', 'primary': 'K03'}
+positive_k51	PASS	expected=ROUTE	actual={'decision': 'ROUTE', 'primary': 'K51'}
+negative_unrelated	PASS	expected=NO_ROUTE	actual={'decision': 'NO_ROUTE', 'primary': None}
+boundary_k03	PASS	expected=ROUTE	actual={'decision': 'ROUTE', 'primary': 'K03'}
+boundary_k51	PASS	expected=ROUTE	actual={'decision': 'ROUTE', 'primary': 'K51'}
+conflict_both	PASS	expected=CONFLICT	actual={'decision': 'CONFLICT', 'primary': None, 'candidates': ['K03', 'K51']}
+MUTATION_TESTS=PASS
+OVERALL=PASS

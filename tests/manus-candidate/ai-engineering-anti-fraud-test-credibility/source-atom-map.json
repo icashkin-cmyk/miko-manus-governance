@@ -1,7 +1,7 @@
 {
   "skill": "ai-engineering-anti-fraud-test-credibility",
   "source_path": "NOT_READ",
-  "candidate_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",
+  "candidate_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",
   "source_sha256": "7a4c17bb84c3d3f5c21d2a24127cf092afaf687ae03ca6871ac6dd774cdd92ed",
   "candidate_sha256": "b6b7abbf4b0f739eb3d4e7abbc57e56559ed66f860eaf3b6f16d004c91c7fb16",
   "mapping_method": "preservation reference plus formal S1-S4 semantic anchors",
@@ -77,7 +77,7 @@
     {
       "id": "AI-ENGINEERING-ANTI-FRAUD-TEST-CREDIBILITY-0009",
       "source_line": 12,
-      "source_atom": "- 領域基線：name: ai-engineering-anti-fraud-test-credibility description: AI 工程測試反造假、測試有效性與驗收證據可信度檢查時使用：要求完整執行證據、正負向與邊界測試、異常測試、回歸測試、Mutation Testing、錯誤注入與狀態誠實標記；禁止以 AI 自述或預期輸出冒充 PASS。 > 來源附約：`/home/ubuntu/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。 每項必要測試至少保存： ／ 欄位 ／ 要求 ／ ／---／---／ ／ `TEST_ID` ／ 唯一測試識別碼 ／ ／ `TARGET` ／ 實際測試對象與路徑 ／ ／ `VERSION` ／ 版本、Branch、Commit ／ ／ `HASH` ／ 交付物完整性 ／ ／ `ENVIRONMENT` ／ 執行環境 ／ ／ `COMMAND` ／ 實際執行命令 ／",
+      "source_atom": "- 領域基線：name: ai-engineering-anti-fraud-test-credibility description: AI 工程測試反造假、測試有效性與驗收證據可信度檢查時使用：要求完整執行證據、正負向與邊界測試、異常測試、回歸測試、Mutation Testing、錯誤注入與狀態誠實標記；禁止以 AI 自述或預期輸出冒充 PASS。 > 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt` 第六節；文件狀態 `PROPOSED`；採用狀態 `PENDING`。角色分離與模式選擇由 `three-party-review` 負責，本 Skill 不重複定義角色責任。 每項必要測試至少保存： ／ 欄位 ／ 要求 ／ ／---／---／ ／ `TEST_ID` ／ 唯一測試識別碼 ／ ／ `TARGET` ／ 實際測試對象與路徑 ／ ／ `VERSION` ／ 版本、Branch、Commit ／ ／ `HASH` ／ 交付物完整性 ／ ／ `ENVIRONMENT` ／ 執行環境 ／ ／ `COMMAND` ／ 實際執行命令 ／",
       "candidate_anchor": "UC1",
       "mapping_status": "MAPPED",
       "source_atom_id": "AI-ENGINEERING-ANTI-FRAUD-TEST-CREDIBILITY-0009"

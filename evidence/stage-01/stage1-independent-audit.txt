@@ -1,0 +1,6 @@
+role: INDEPENDENT_AUDITOR
+expected: 20
+actual: 20
+self_result: PASS
+error_count: 0
+result: PASS

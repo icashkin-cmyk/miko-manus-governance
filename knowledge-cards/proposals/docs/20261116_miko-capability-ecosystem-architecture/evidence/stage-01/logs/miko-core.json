@@ -1,7 +1,7 @@
 {
   "skill_id": "miko-core",
   "path": "skills/miko-core/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/miko-core",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/miko-core",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "2a9c77d93fe66eee4fe17771d5895f5e2478c1007d77c7393c54269951877e07",

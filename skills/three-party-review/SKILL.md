@@ -9,7 +9,7 @@ description: 需要製作者、測試者與獨立驗收者分離，或需要在 
 
 - 目的：先確認本 Skill 的使用意圖、輸入範圍、輸出期待、資料來源與不可逆操作。
 - 必問：使用者目標、必要資料、時間／地區／對象條件、授權與限制；缺少關鍵資料時集中詢問，不以記憶補值。
-- 領域基線：name: three-party-review description: 需要製作者、測試者與獨立驗收者分離，或需要在 STAGED_SELF_AUDIT 與 INDEPENDENTLY_AUDITED 之間選擇驗收模式時使用；適用 Skill、治理規則、文件交付、正式採用、PR 合併與版本發布前的責任隔離。 > 來源附約：`/home/ubuntu/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。 理解需求與 AC，製作／修改候選成果，保存來源、版本、Commit、檔案清單、Diff、自測與已知問題。不得把自測宣稱為獨立驗收，不得隱藏失敗或自行降低 AC。 重新確認實際測試對象與版本，依需求與 AC 建立並實際執行正向、負向、邊界、異常測試，檢查測試能否識別缺陷，保存完整執行證據。不得只引用製作者報告，不得以預期輸出冒充實際輸出，不得把 SKIP、NOT_RUN 或 UNKNOWN 當 PASS。 重新讀取需求、AC、來源與交付成果，核對版本、Commit、Hash，挑戰漏測、假 PASS、未涵蓋失敗情境與文件／功能不一致，視風險重新執行測試並獨立判定。不得直接接受前兩者 PASS、未讀取成果便簽核、修改交付物使其通過、降低 AC 或以角色名稱代替證據。 適用於一般工作、低風險、可逆修改與候選初步整理。順序固定為： ```text IMPLEMENTER → TESTER → SELF_REVIEW ``` 同一執行者可以分階段完成，但必須：三階段分開記錄、每階段保存證據、前一階段後凍結成果、下一階段重新讀取、不得引用前階段 PASS 代替新階段證據，並揭露同一執行者身分。 `STAGED_SELF_AUDIT` 不是 `INDEPENDENT_AUDITOR`，不得宣稱真正外部獨立驗收。
+- 領域基線：name: three-party-review description: 需要製作者、測試者與獨立驗收者分離，或需要在 STAGED_SELF_AUDIT 與 INDEPENDENTLY_AUDITED 之間選擇驗收模式時使用；適用 Skill、治理規則、文件交付、正式採用、PR 合併與版本發布前的責任隔離。 > 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。 理解需求與 AC，製作／修改候選成果，保存來源、版本、Commit、檔案清單、Diff、自測與已知問題。不得把自測宣稱為獨立驗收，不得隱藏失敗或自行降低 AC。 重新確認實際測試對象與版本，依需求與 AC 建立並實際執行正向、負向、邊界、異常測試，檢查測試能否識別缺陷，保存完整執行證據。不得只引用製作者報告，不得以預期輸出冒充實際輸出，不得把 SKIP、NOT_RUN 或 UNKNOWN 當 PASS。 重新讀取需求、AC、來源與交付成果，核對版本、Commit、Hash，挑戰漏測、假 PASS、未涵蓋失敗情境與文件／功能不一致，視風險重新執行測試並獨立判定。不得直接接受前兩者 PASS、未讀取成果便簽核、修改交付物使其通過、降低 AC 或以角色名稱代替證據。 適用於一般工作、低風險、可逆修改與候選初步整理。順序固定為： ```text IMPLEMENTER → TESTER → SELF_REVIEW ``` 同一執行者可以分階段完成，但必須：三階段分開記錄、每階段保存證據、前一階段後凍結成果、下一階段重新讀取、不得引用前階段 PASS 代替新階段證據，並揭露同一執行者身分。 `STAGED_SELF_AUDIT` 不是 `INDEPENDENT_AUDITOR`，不得宣稱真正外部獨立驗收。
 - 輸入：本輪使用者輸入、已授權來源、專案檔與工具狀態。
 - 輸出：可追溯的需求摘要、缺件清單與可執行／需補件判定。
 
@@ -34,7 +34,7 @@ description: 需要製作者、測試者與獨立驗收者分離，或需要在 
 
 > 以下內容由原始候選逐段納入本次正式格式重構；其來源版本、差異與 SHA-256 由 mapping 與 evidence 保存。
 
-> 來源附約：`/home/ubuntu/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。
+> 來源附約：`<LOCAL_HOME>/upload/pasted_content.txt`；文件狀態 `PROPOSED`；採用狀態 `PENDING`。本 Skill 候選不宣稱附約已成為 MIKO 正式規則。
 
 ## 1. 三個正式角色
 

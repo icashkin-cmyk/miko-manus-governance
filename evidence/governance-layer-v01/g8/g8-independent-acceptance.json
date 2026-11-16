@@ -1,0 +1,29 @@
+{
+  "auditor": "INDEPENDENT_AUDITOR",
+  "gate": "G8",
+  "checks": [
+    {
+      "id": "G3",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "G6",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "G7",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "C1-C16",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ],
+  "overall": "PASS",
+  "runtime": "NOT_RUN",
+  "limitation": "Independent local acceptance; no external Runtime activation claim."
+}

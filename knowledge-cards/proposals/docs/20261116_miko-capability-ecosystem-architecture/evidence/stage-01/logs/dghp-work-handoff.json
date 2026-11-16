@@ -1,7 +1,7 @@
 {
   "skill_id": "dghp-work-handoff",
   "path": "skills/dghp-work-handoff/SKILL.md",
-  "command": "python3 /home/ubuntu/skills/skill-creator/scripts/quick_validate.py --path /home/ubuntu/work/github-miko-target/skills/dghp-work-handoff",
+  "command": "python3 <MANUS_SKILLS_ROOT>/skill-creator/scripts/quick_validate.py --path <MIKO_SOURCE_REPO>/skills/dghp-work-handoff",
   "executed_at": "2026-11-16T11:15:41+08:00",
   "exit_code": 0,
   "validator_stdout_sha256": "11e744eee3529159e057929a3a8aa7c02fce5a5b502d2f8a5fabcc31b68811a9",

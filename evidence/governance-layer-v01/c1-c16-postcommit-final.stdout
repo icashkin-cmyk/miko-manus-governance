@@ -1,0 +1,18 @@
+PASS C1 版本一致 ｜VERSION=1.2.72 miko-core 對應正本=1.2.72
+PASS C2 Skill 開頭格式（name 與資料夾同名、小寫連字號 ≤ 64 字、description ≤ 1024 字） ｜不合格：[]；提示（不擋）標題沒有版號：[]
+PASS C3 公開檔（含 .csv、二進位、快取檔）無 email、本機路徑與私人關鍵字 ｜命中：[]；私人關鍵字 0 個
+PASS C4 回歸測試 T1～T66、T15B～T15E 與 T29B 都在正本 §8 ｜缺：[]
+PASS C5 sync 檔存在且 LOG 有表頭
+PASS C6 bt_min.py 實跑結果與預期一致（含除息日樣本：給事件檔就停止） ｜報酬率=7.12% MDD=-3.38% 事件擋下=True
+PASS C7 美妝專案包完整、版本對應、範本表格與膚況欄位未填 ｜專案包 v1.0／對應 dghp-beauty v1.0／Skill v1.0；範本已填列 0；缺驗收題 []
+PASS C8 repo 沒有個人清單檔，.gitignore 已排除 ｜命中：[]
+PASS C9 回測帳本（獨立常數＋固定值）、偷看未來與全樣本統計、公司事件、雜湊、順延取消、ETF 稅率 ｜已平倉 7 筆、淨利 1479、PF 1.42、最大連敗 2；帳本 True、固定值 True、偷看未來被擋 [True, True, True]、停止與規格 [True, True, True, True, True, True, True, True, True, True, True, True, True]
+PASS C10 VERSION 第 4 行等於 README 的 SHA-256 ｜README=d47f7b3769d0
+PASS C11 Skill 改版不得大量精簡（子句保留 ≥ 90%，否則行首「## 刪除清單」本次要有新增條目） ｜無改動
+PASS C12 xlsx／csv 內容無私密字 ｜掃描字數 0；命中：[]
+PASS C13 不得提交本機設定、環境變數、憑證檔與金鑰樣式 ｜共 0 筆；命中（只列檔名與類型）：[]
+PASS C14 已過升級站的 Skill，skill_lint 不得退回 FAIL ｜清單 2 個：['make-skill', 'visual-content-intelligence']；FAIL：[]
+PASS C15 出處編號提示（只提示不擋）：正文引用的 ADR 在 CHANGELOG 或 README 有出處 ｜引用 72 個；例外 7 個（出處未核實，見 tests/c15_exceptions.txt）；找不到出處：['ADR-001']
+PASS C16 詞彙定義表十一節齊全，範圍內各檔短名第一次出現就寫正式名稱 ｜範圍 8 檔；名詞 22 個；檢查檔 8 個；不合格 0 項；PASS
+合計：16/16 PASS
+提示：私人關鍵字 0 個（MIKO_PRIVATE_WORDS 沒帶或是空值），C3／C12 沒有掃私密字，只做格式檢查

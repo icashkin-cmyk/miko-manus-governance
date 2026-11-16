@@ -1,7 +1,7 @@
 {
   "test_id": "dghp-beauty-TEST-MUTATION-001",
   "purpose": "刪除 SB-040 映射錨點後，驗證器應拒絕突變文件",
-  "target_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty",
+  "target_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/skills/dghp-beauty",
   "repository": "icashkin-cmyk/miko",
   "branch": "main",
   "commit_sha": "ec80f473695305b35b90f0ebb941431ddde4626e",
@@ -17,5 +17,5 @@
   "finished_at": "2026-11-15T17:00:54.786052+00:00",
   "result": "PASS",
   "role": "TESTER",
-  "evidence_path": "/home/ubuntu/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-TEST-MUTATION-001.json"
+  "evidence_path": "<LOCAL_HOME>/work/manus-miko-universal-governance-migration-v1/evidence/dghp-beauty-TEST-MUTATION-001.json"
 }
