@@ -1,0 +1,18 @@
+{
+  "id": "K03",
+  "status": "CONFLICT",
+  "decision_required": "MIKO",
+  "variants": [
+    {
+      "source": "Pasted_content_24.txt",
+      "title": "任務優先級與資源配置",
+      "path": "knowledge-cards/proposals/kcards/K03.md"
+    },
+    {
+      "source": "20261116_MIKO-K01-K03-知識卡正文與索引.md",
+      "title": "累積式演進與歷史版本保護",
+      "path": "historical candidate outside current repo; source referenced in source-archive"
+    }
+  ],
+  "rule": "不得在未裁決前將兩個不同語意內容共用同一穩定識別名；兩者均保留。"
+}

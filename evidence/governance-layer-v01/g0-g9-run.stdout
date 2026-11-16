@@ -1,0 +1,11 @@
+G0	PASS	git remote, branch, HEAD, VERSION, MANUS_VERSION, README, CHANGELOG
+G1	PASS	p0-outer-architecture.md; module-mapping.md; modules/*/README.md
+G2	PASS	skills/miko-core/SKILL.md; governance/project-architecture/stage-gates.md
+G3	NOT_RUN	modules/router/README.md	runtime route decision suite and recorded cases are NOT_RUN
+G4	NOT_READ	knowledge-cards/Kxx.md count=1	required 50 formal cards; missing=49
+G5	PASS	skills count=20; stage-01 inventory	per-skill runtime execution and workflow samples are not uniformly proven
+G6	NOT_RUN	adapters/README.md; modules/tools/README.md	live connector, authorization, readback and degradation tests NOT_RUN
+G7	NOT_RUN	evidence and tests scan	representative end-to-end workflow runner is NOT_RUN or absent
+G8	NOT_RUN	tests/check_repo.py; P0 cold-read evidence	full G8 depends on G7 PASS; external independent auditor not run
+G9	NOT_RUN	candidate commit and lifecycle contract	release/tag/remote readback/recovery drill not run
+OVERALL=NOT_COMPLETE

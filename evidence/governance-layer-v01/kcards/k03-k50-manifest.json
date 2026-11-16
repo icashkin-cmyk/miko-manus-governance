@@ -1,0 +1,438 @@
+{
+  "source_sha256": "d69b65e82299fe5858b6cfae366423eb211aae9615ee7c095b802ba12c07a2df",
+  "count": 48,
+  "cards": [
+    {
+      "id": "K03",
+      "title": "任務優先級與資源配置",
+      "path": "knowledge-cards/proposals/kcards/K03.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "5f43a90265e97e9a2cd3e68f6c0af5342b459fbd47e3f1f01d30c62363927eb5",
+      "source_sha256": "5aaa3c3ad82a7c9e5654c78bf048b141f198f0197a3697f63ad6e6bbf049c574"
+    },
+    {
+      "id": "K04",
+      "title": "範圍界定與需求保真",
+      "path": "knowledge-cards/proposals/kcards/K04.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "18526a44229196944db671fa618fbefdafce2c96bbd603a850f68a54f8300082",
+      "source_sha256": "54ca060754db70f67161afcb3749ea91b89754f64dd2911f431be1a48595faab"
+    },
+    {
+      "id": "K05",
+      "title": "任務閉環與交接",
+      "path": "knowledge-cards/proposals/kcards/K05.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "710b8c2115490ac48aeda6900cf5f1276e4f78d75dcbe9dd4feeee0a4bf7fb2d",
+      "source_sha256": "38c171c9238052b4fab9c666a1696fd57a5f0432e23bea632bad6349298b6aa5"
+    },
+    {
+      "id": "K06",
+      "title": "使用者授權辨識",
+      "path": "knowledge-cards/proposals/kcards/K06.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "d40bafe8b63933398637aaaf2d536555b1f24528d7a1a5f66fd54f993c15ae8a",
+      "source_sha256": "ee976e3144767e4e3cbcd9b228f888b0c686b33ae48693db53531171c8654b7f"
+    },
+    {
+      "id": "K07",
+      "title": "工具與平台權限核對",
+      "path": "knowledge-cards/proposals/kcards/K07.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "647f986b3091ddba00c86a6a5e5e7b1d01d1f08be2d059346e5ed8da0c5b1818",
+      "source_sha256": "02f840f883f96eee8312c35221a2cf3d4848ac3e5d04c54f6592ba8e06a58048"
+    },
+    {
+      "id": "K08",
+      "title": "資料隱私與秘密防護",
+      "path": "knowledge-cards/proposals/kcards/K08.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "a36dae90b4a768502282c8a3af620cfd50b80054a6151be562d9d0397b2d693f",
+      "source_sha256": "9466541c9f49328da9f88d9bdca804f20dc54c78095ac2e474d7b810be68257e"
+    },
+    {
+      "id": "K09",
+      "title": "風險與不可逆操作管制",
+      "path": "knowledge-cards/proposals/kcards/K09.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "eab0b8a1c979fd5435a362c98b6bc2c9fb39cd6098688db83e53ab62b2fef5b3",
+      "source_sha256": "ab4f0ebcf51f6b3f1468a60beebad659ee12609e2777bfcdd215d8b05a4f2cb2"
+    },
+    {
+      "id": "K10",
+      "title": "停止、暫緩與禁止條件",
+      "path": "knowledge-cards/proposals/kcards/K10.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "f7f9874f1b16f44cf21119322d9b92fe0adb7c88554e5c37117feab56f8079c3",
+      "source_sha256": "03427b1fb19ee2816ba31f08a3e82bcc2051719137821e23aabcf1eb0cf754c1"
+    },
+    {
+      "id": "K11",
+      "title": "來源辨識與可信度",
+      "path": "knowledge-cards/proposals/kcards/K11.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "bd14a3a36d3544e3397c438457dada31fbe42c1d1d662d815614545be3ab5131",
+      "source_sha256": "fe264e0a495b7819975081624d8f65c120237f5e6221bf1543d279ece03d749c"
+    },
+    {
+      "id": "K12",
+      "title": "事實與推論分離",
+      "path": "knowledge-cards/proposals/kcards/K12.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "2da99afe4221bff4c911c9e79fd27ddd333ff4c744cabc0b67197fe72d27babb",
+      "source_sha256": "d201832cd53c34623beacec01de815b8b2bb4f0229bb223c6c499ebe49fc3064"
+    },
+    {
+      "id": "K13",
+      "title": "時效與版本核對",
+      "path": "knowledge-cards/proposals/kcards/K13.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "9a35a398a2fe68eed0e74a9b1b7e96d8f910e1e5998fbbd53c4d676485eade15",
+      "source_sha256": "55c8ff846cc427eeb19944f855627d232e90582235be557235608eeeec510bfc"
+    },
+    {
+      "id": "K14",
+      "title": "證據鏈與可追溯性",
+      "path": "knowledge-cards/proposals/kcards/K14.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "d2aa172ce314c328dcf92e6398b24521092e27fb1c36b95f2a64fdbe76dd592a",
+      "source_sha256": "48d8864a334c44760af6e2d8fa7c2331a731d3a6836dc485e76524c4a84d3491"
+    },
+    {
+      "id": "K15",
+      "title": "衝突與未知處理",
+      "path": "knowledge-cards/proposals/kcards/K15.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "4199423fb96cc454f86e03c66d74631c292a13c100beb0eaeeca2accfbc78237",
+      "source_sha256": "cb4aeda039e013ada6efe730e3629bfa566e525160bba8ccb1b6d65cea3aa3ca"
+    },
+    {
+      "id": "K16",
+      "title": "任務意圖與能力分類",
+      "path": "knowledge-cards/proposals/kcards/K16.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "354c3492b1a56ab4ce941d6210e01bb6ae21b6ea913d179d19ad4ccb8f0c2d78",
+      "source_sha256": "698253b73e462e628ff5edb309bdaa027772e519a37d9ca17a86d8d97a842a9b"
+    },
+    {
+      "id": "K17",
+      "title": "知識卡選擇與組合",
+      "path": "knowledge-cards/proposals/kcards/K17.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "a44ab604f8f2fdb302ad7fb226b0a4fd437a6ada6a615823892d6e030c80ce81",
+      "source_sha256": "4ce7ce6b8f4ccd93d7dabdf48eb5ab63f52c5e6d9e61f9d98c1f523c3b038d26"
+    },
+    {
+      "id": "K18",
+      "title": "Skill 選擇與載入",
+      "path": "knowledge-cards/proposals/kcards/K18.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "2fc70c05c32a0138bc7f67a9d684c908338a81249b2e2ad09f230120451e2a2f",
+      "source_sha256": "6123be3046d500f12ad15411dede7728f2df7797db60622b311f64f5d8265917"
+    },
+    {
+      "id": "K19",
+      "title": "工具選擇與執行路由",
+      "path": "knowledge-cards/proposals/kcards/K19.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "2d8c676108d1089cc01333feee61f452a62c77dfabbc166793242a7c6e47112b",
+      "source_sha256": "8d6f17d4bf79c354c515534f793a772cf641ed689128ade522dea9dcde2322ea"
+    },
+    {
+      "id": "K20",
+      "title": "多 Skill 串接與路由回退",
+      "path": "knowledge-cards/proposals/kcards/K20.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "66e4fc3191cf9e790adc04895596a0199be5651e1d7f2bf79bffeed7ae3eaef5",
+      "source_sha256": "f3828cc8d7ff7bdaa7c3f6c52575ca903d423f00ecbffa2f040816820cacb27c"
+    },
+    {
+      "id": "K21",
+      "title": "版本與來源身分管理",
+      "path": "knowledge-cards/proposals/kcards/K21.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "dbff96b564392c9c123550befe98e2851a5d5f7500158c6a214b983172070ec6",
+      "source_sha256": "3a57751f2c87cfbb573c70b7a6b39a8a7959397aa3bdc7f5f9fb6e377137b42c"
+    },
+    {
+      "id": "K22",
+      "title": "新增與擴充管理",
+      "path": "knowledge-cards/proposals/kcards/K22.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "60527b44c771a9d2eaa9a35e84ef596d42cbfaffb27577125911001843928ce6",
+      "source_sha256": "d9adfdda689347475a815ff591b2e69d3e8e7536d6fbb912c0ac3c5fb3d8135a"
+    },
+    {
+      "id": "K23",
+      "title": "修正與升級管理",
+      "path": "knowledge-cards/proposals/kcards/K23.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "c824af9af4e9bc267e1234d554882c2226f12e82d0cc952c7c80d90dac4c787a",
+      "source_sha256": "bbc813ed918016f92ed5d7dbbb2e16987a54fc894dbb0cbcd9a85f58d530c436"
+    },
+    {
+      "id": "K24",
+      "title": "衝突與取代鏈管理",
+      "path": "knowledge-cards/proposals/kcards/K24.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "9de3c7d78b1b71ac481c18960925fbd091bf785c2009fb307d9f78f57c6ada63",
+      "source_sha256": "b62bff1aca13be60ec30ec8eccbb6a989314a13db6ab376e0e6da1f60b6d5963"
+    },
+    {
+      "id": "K25",
+      "title": "退役與歷史保存",
+      "path": "knowledge-cards/proposals/kcards/K25.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "ca6ebb0f006b1317ada648c8b1a5cf213625ffe5d9e1bbe5c5ce258f302e9c46",
+      "source_sha256": "629a25bfe0b40d87fd9233eb7e095af07824f21f726305892990bbc06ede1b4e"
+    },
+    {
+      "id": "K26",
+      "title": "執行前置條件檢查",
+      "path": "knowledge-cards/proposals/kcards/K26.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "877cab054a9b7dca7f3edd35c7d72b4dd8d2c86c66b8f60953fc4a3b6bc6b873",
+      "source_sha256": "1156ac962097ce19885a1e6a1dfc01ab413c544d4c1f7e55a8da61f10f1d33f9"
+    },
+    {
+      "id": "K27",
+      "title": "多步驟工作執行",
+      "path": "knowledge-cards/proposals/kcards/K27.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "5cc5a7b0e8161fe57fa310191c0d088797762963540548cfa1ea09cda642a757",
+      "source_sha256": "26755cb1d97b0e8a8e7c43997f12bd3790593b38309496c9e60bd7b1bbecd1db"
+    },
+    {
+      "id": "K28",
+      "title": "工具與工作流協調",
+      "path": "knowledge-cards/proposals/kcards/K28.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "e29cf7146bdb33ee148ac46958eeabeb22b6e3eeb9dc5282b9349b4801b9f098",
+      "source_sha256": "2943d3260ac47b04b31b6443047d4f7085a71db71fd00d7094ea368762bd3720"
+    },
+    {
+      "id": "K29",
+      "title": "失敗診斷與局部修復",
+      "path": "knowledge-cards/proposals/kcards/K29.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "d0b611f41d486d5b47087b7610538ec69ee12b83e781cc0045531dffe4ae8acd",
+      "source_sha256": "441b2eb399d86d04b09ffb0c2c765c53b921924f81b7db5f83c7a10ad0d43391"
+    },
+    {
+      "id": "K30",
+      "title": "成果保存與讀回",
+      "path": "knowledge-cards/proposals/kcards/K30.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "e869da54f6ed6b030c4131e2e705a6cd0552199c9dbe39f8df373b5272426def",
+      "source_sha256": "db0d178e8da91396fa14763256d2faf1fcfc00ce78b475df64b10cdb42b7edcf"
+    },
+    {
+      "id": "K31",
+      "title": "測試案例設計",
+      "path": "knowledge-cards/proposals/kcards/K31.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "092d7d1e8eeb66451e1222f5e705573a5a1a0637c596bb22c7548dd5f5104f5c",
+      "source_sha256": "5859622627e231cea70f64d0b21e5f603cbd433c40c9d7d1a328ecfea9cd0c38"
+    },
+    {
+      "id": "K32",
+      "title": "邊界與反例測試",
+      "path": "knowledge-cards/proposals/kcards/K32.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "dcdd3c730dd07ae008a932c8d6c516e46f1eceecc92371675faf53215d8aa9d2",
+      "source_sha256": "5814d90de2aa74767c22b342b71150c134fd157f870cc7956ac1051793e41612"
+    },
+    {
+      "id": "K33",
+      "title": "整合與端到端測試",
+      "path": "knowledge-cards/proposals/kcards/K33.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "09b89a85b2ccc249e628a2993c2552ae2f16419e686ceead5b6fd55d3795ba8f",
+      "source_sha256": "a1ab1126ba871f34169879f70a365d356e933f65c99ded6d534b68f3c2b27f10"
+    },
+    {
+      "id": "K34",
+      "title": "獨立稽核與驗收",
+      "path": "knowledge-cards/proposals/kcards/K34.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "2de3a734f0a703d9654040710e76c2049952cc15f880cc5aabd355faf621bde1",
+      "source_sha256": "6436322fd768bae8facbdf90908833c2e940c2413f8cc37bb9763095c9684012"
+    },
+    {
+      "id": "K35",
+      "title": "回歸與版本驗證",
+      "path": "knowledge-cards/proposals/kcards/K35.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "5f5531efff3caae80583f7eff8738b6793f1e98b223d422dc686a5eec4221267",
+      "source_sha256": "3f1f34a99a7ae403c8c49bea9c60e87afe48d4720a3e5c666a27da56eb08badf"
+    },
+    {
+      "id": "K36",
+      "title": "知識擷取與分類",
+      "path": "knowledge-cards/proposals/kcards/K36.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "35520af43d7dd8475f30b094a5ef837876b5303287926d911acce5addc4cc6ab",
+      "source_sha256": "d87a483bcda38dd10f558f87c81bdfb01b634974e91092bf6058bc526d8258aa"
+    },
+    {
+      "id": "K37",
+      "title": "知識整理與結構化",
+      "path": "knowledge-cards/proposals/kcards/K37.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "84189e0903c5c617659f82644ac4cee64854b08738bdaf906de4397d01c19285",
+      "source_sha256": "91e83603ef646c4a6a97925ebf2cee0934cd17cd5861f1fad505463c710107c7"
+    },
+    {
+      "id": "K38",
+      "title": "知識索引與檢索",
+      "path": "knowledge-cards/proposals/kcards/K38.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "b8dd106eb1680b03433936a3b2a2dd9b76e327128bafddd5966ac9f71d00f7c7",
+      "source_sha256": "a140b7449fd96b5eb552a2fe27c8ea952432b68fec69f7333b77b98769722d7e"
+    },
+    {
+      "id": "K39",
+      "title": "知識更新與時效管理",
+      "path": "knowledge-cards/proposals/kcards/K39.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "fd104aeca1bed700e03168ca0d8ba61d22e546e3ce0c74fd2eb1da4b61a0fb40",
+      "source_sha256": "9f6f9e2ff21c9139a8f4ce68803ff1f44ca91fda36029eed2cab2d0ec103a051"
+    },
+    {
+      "id": "K40",
+      "title": "知識保存與跨任務引用",
+      "path": "knowledge-cards/proposals/kcards/K40.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "d73d877a1b32cc9298dd0e72894855fd2fa7cabf8215848fd9c23c324222bba2",
+      "source_sha256": "2ac8577c5a8d19314feb1f160b82f8e552f14f093ab7e2e4d43925c3f71595b5"
+    },
+    {
+      "id": "K41",
+      "title": "執行結果復盤",
+      "path": "knowledge-cards/proposals/kcards/K41.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "761314893d3920832be74f1437f977e2a85eb7d6beeac896f92217b9a5f2a41d",
+      "source_sha256": "3dc7f49d8a3f4da779b75aa94cdab5c85aefed90b22976b75144ff8276704485"
+    },
+    {
+      "id": "K42",
+      "title": "重複錯誤辨識",
+      "path": "knowledge-cards/proposals/kcards/K42.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "f2d9c0ec9f1372c60827c33821288cc2ea48af027e689fc03fd9d1b6a5ba6c4d",
+      "source_sha256": "79bf7e60eff0afe7f7e02f25b6e463e6a2eedb609a6356227f8dd135754a9d31"
+    },
+    {
+      "id": "K43",
+      "title": "改善方案生成",
+      "path": "knowledge-cards/proposals/kcards/K43.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "6a38d737a6446a7f8c58f9e1333d2c00c1fa6d1fb49412c97696fa78559bd6f7",
+      "source_sha256": "0f82feda11f41b0ddeb99ceb7d098ba1d0c9e2c7544c025ea8714c192cec3e8e"
+    },
+    {
+      "id": "K44",
+      "title": "改善效果驗證",
+      "path": "knowledge-cards/proposals/kcards/K44.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "88fa8c62a27f765cd67bb4a45448666a03c02cad576aa9c4292c7c23f99c64bd",
+      "source_sha256": "e61212feedcd77b472688a928b3c42d8f89d5e268964e1de6ae3e89a469cc571"
+    },
+    {
+      "id": "K45",
+      "title": "經驗沉澱與治理提案",
+      "path": "knowledge-cards/proposals/kcards/K45.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "a500a9bb45e4a597535b53386bc3a056b5c6274ad4c6c2b2dd9fc0d26ce28975",
+      "source_sha256": "cdadefff87bd4bcd4721fff4c60206cd0c1134ca3e6151c6b9863821e9f34f85"
+    },
+    {
+      "id": "K46",
+      "title": "安全與隱私健康檢查",
+      "path": "knowledge-cards/proposals/kcards/K46.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "732ba2cf57500f673afdcebf89e94066323d545932cfd1693959b25049e9a5df",
+      "source_sha256": "a71db7ffc49246ef3ff6331183c8a9f1866e788585d87f4fc2460e43dae305da"
+    },
+    {
+      "id": "K47",
+      "title": "能力與相依健康檢查",
+      "path": "knowledge-cards/proposals/kcards/K47.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "88652842f957fed2848870768f86b8a16782d139ba3d4531620d51b72b42ada2",
+      "source_sha256": "ff4c7ac03d300ce80e4ed4f6f77370f10ed3100f324a13c1e38c4462eea75d9a"
+    },
+    {
+      "id": "K48",
+      "title": "效能與成本監控",
+      "path": "knowledge-cards/proposals/kcards/K48.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "962229c8ad9494a1bbf8a006411d82af3e168da314595386b9e744a34347ee21",
+      "source_sha256": "b64ca020cf85e16c9ac1c45935d867f128906a5fb3362f4d77445c2980b1428e"
+    },
+    {
+      "id": "K49",
+      "title": "系統整合與平台相容性",
+      "path": "knowledge-cards/proposals/kcards/K49.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "44fc789303053307b43680cf5db026710e76f9f50bffb44e238a27440525d8c7",
+      "source_sha256": "b81551185be017f0727ea6e69482a346e7c553fe8d663ec744d32fd251981e18"
+    },
+    {
+      "id": "K50",
+      "title": "系統生命週期與整體健康",
+      "path": "knowledge-cards/proposals/kcards/K50.md",
+      "status": "PROPOSED",
+      "source": "source-archive/governance-layer-v01/Pasted_content_24.txt",
+      "sha256": "044bdd98de3a23f02128bde72bdb835f9e0060a70d52115a9bed2cf61d5b4cc4",
+      "source_sha256": "764bd29338431c78a5d27bec3980bc0480b81a4cf3c8b5119307dfd70e1fd38b"
+    }
+  ]
+}

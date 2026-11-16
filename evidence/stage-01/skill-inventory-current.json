@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-16T04:03:55+0000",
-  "repository": "<MANUS_REPO_ROOT>",
-  "commit": "9922b76615eddadfd5ff37576c1cb7b35b7d7621",
+  "generated_at": "2026-11-16T08:04:13+0000",
+  "repository": "<REPO_ROOT>",
+  "commit": "f685fce52a3562d38c76f6bff2f65f44159dbfa1",
   "expected_count": 20,
   "actual_count": 20,
   "records": [
@@ -10,7 +10,7 @@
       "directory_name": "ai-engineering-anti-fraud-test-credibility",
       "name": "ai-engineering-anti-fraud-test-credibility",
       "description_present": true,
-      "sha256": "b6b7abbf4b0f739eb3d4e7abbc57e56559ed66f860eaf3b6f16d004c91c7fb16",
+      "sha256": "961f706fba4173dd732c71b0542022832b095e523c4d6283423c0726a8ac0828",
       "source_archive_present": true,
       "status": "PASS"
     },
@@ -19,7 +19,7 @@
       "directory_name": "batch-task-completion-and-single-report",
       "name": "batch-task-completion-and-single-report",
       "description_present": true,
-      "sha256": "3579e87ffaa9efb362619a5a299d733e9261f48adc1ffe0cfb535a7fe6180c02",
+      "sha256": "75c6f9f58d476f93b16818315fdbd9e8999812953e656e3998c67087d59d0bfa",
       "source_archive_present": true,
       "status": "PASS"
     },
@@ -64,7 +64,7 @@
       "directory_name": "dghp-work-handoff",
       "name": "dghp-work-handoff",
       "description_present": true,
-      "sha256": "bd099ccc91ebf561721b1eaac54dc1991c2544cd1c1e19ad75344b182f9d036a",
+      "sha256": "cc98b4fdc03f76f3dde87fe3ae602a4fee2a97e2eb840df80401f60e30ca9adf",
       "source_archive_present": true,
       "status": "PASS"
     },
@@ -82,7 +82,7 @@
       "directory_name": "independent-audit",
       "name": "independent-audit",
       "description_present": true,
-      "sha256": "0504e806441cd503c5735bf4f78099d33bcf27a290a4ac2e510acc5bf31c493a",
+      "sha256": "ab27d7128128b96db17325ab8ad937da61f804242679a4819a345368a1c3ddd5",
       "source_archive_present": true,
       "status": "PASS"
     },
@@ -109,7 +109,7 @@
       "directory_name": "make-skill",
       "name": "make-skill",
       "description_present": true,
-      "sha256": "2373261f7e04b1694c993c8d7cb43af0f97ecb555435e9a740212ae9aed6572d",
+      "sha256": "409af7abf8bc99015cd12a45f4782b1b5c1bde13ad976dc61d998c3c6ee92b7f",
       "source_archive_present": true,
       "status": "PASS"
     },
@@ -145,7 +145,7 @@
       "directory_name": "three-party-review",
       "name": "three-party-review",
       "description_present": true,
-      "sha256": "3fd6c3e655f284168e4f62d59fd1856aeb5b52c8626a2a383e006a62e6845fe5",
+      "sha256": "dcd6636573f3b4b7e0698b3a286fa880a0db49c41d77af3703c1d31eaf2791c9",
       "source_archive_present": true,
       "status": "PASS"
     },

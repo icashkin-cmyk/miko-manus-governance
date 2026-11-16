@@ -1,0 +1,70 @@
+{
+  "checklist": "MIKO Manus governance layer acceptance v0.1",
+  "results": [
+    {
+      "gate": "G0",
+      "status": "PASS",
+      "evidence": "git remote, branch, HEAD, VERSION, MANUS_VERSION, README, CHANGELOG",
+      "gap": ""
+    },
+    {
+      "gate": "G1",
+      "status": "PASS",
+      "evidence": "p0-outer-architecture.md; module-mapping.md; modules/*/README.md",
+      "gap": ""
+    },
+    {
+      "gate": "G2",
+      "status": "PASS",
+      "evidence": "skills/miko-core/SKILL.md; governance/project-architecture/stage-gates.md",
+      "gap": ""
+    },
+    {
+      "gate": "G3",
+      "status": "NOT_RUN",
+      "evidence": "modules/router/README.md",
+      "gap": "runtime route decision suite and recorded cases are NOT_RUN"
+    },
+    {
+      "gate": "G4",
+      "status": "CONFLICT",
+      "evidence": "formal=1; candidate=49; unique=50",
+      "gap": "K03 has two incompatible source meanings; MIKO stable-ID decision required"
+    },
+    {
+      "gate": "G5",
+      "status": "PASS",
+      "evidence": "skills count=20; stage-01 inventory",
+      "gap": "per-skill runtime execution and workflow samples are not uniformly proven"
+    },
+    {
+      "gate": "G6",
+      "status": "NOT_RUN",
+      "evidence": "adapters/README.md; modules/tools/README.md",
+      "gap": "live connector, authorization, readback and degradation tests NOT_RUN"
+    },
+    {
+      "gate": "G7",
+      "status": "NOT_RUN",
+      "evidence": "evidence and tests scan",
+      "gap": "representative end-to-end workflow runner is NOT_RUN or absent"
+    },
+    {
+      "gate": "G8",
+      "status": "NOT_RUN",
+      "evidence": "tests/check_repo.py; P0 cold-read evidence",
+      "gap": "full G8 depends on G7 PASS; external independent auditor not run"
+    },
+    {
+      "gate": "G9",
+      "status": "NOT_RUN",
+      "evidence": "candidate commit and lifecycle contract",
+      "gap": "release/tag/remote readback/recovery drill not run"
+    }
+  ],
+  "counts": {
+    "PASS": 4,
+    "NOT_RUN": 5,
+    "CONFLICT": 1
+  }
+}
