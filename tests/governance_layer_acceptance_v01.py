@@ -35,18 +35,22 @@ router=read("governance/project-architecture/modules/router/README.md")
 g3_contract=all(x in router for x in ["觸發", "路由", "CONFLICT", "負向測試"])
 g3="NOT_RUN" if g3_contract else "FAIL"
 results.append(row("G3", g3, "modules/router/README.md", "runtime route decision suite and recorded cases are NOT_RUN"))
-# G4 cards: exact candidate inventory plus stable-ID conflict check
+# G4 cards: exact K01-K50 inventory plus the resolved K51 extension
 formal_cards=sorted(ROOT.glob("knowledge-cards/K[0-9][0-9].md"))
 candidate_cards=sorted(ROOT.glob("knowledge-cards/proposals/kcards/K[0-9][0-9].md"))
 conflict=read("evidence/governance-layer-v01/kcards/K03-conflict.json")
-card_total=len({p.stem for p in formal_cards + candidate_cards})
-if card_total==50 and '"status": "CONFLICT"' not in conflict:
+card_ids={p.stem for p in formal_cards + candidate_cards}
+required_ids={f"K{i:02d}" for i in range(1,51)}
+card_total=len(card_ids)
+k51=exists("knowledge-cards/proposals/kcards/K51.md")
+resolved='"status": "RESOLVED"' in conflict and 'K51' in conflict
+if required_ids <= card_ids and k51 and resolved:
     g4="PASS"
-elif card_total==50 and '"status": "CONFLICT"' in conflict:
+elif '"status": "CONFLICT"' in conflict:
     g4="CONFLICT"
 else:
     g4="NOT_READ"
-results.append(row("G4", g4, f"formal={len(formal_cards)}; candidate={len(candidate_cards)}; unique={card_total}", "K03 has two incompatible source meanings; MIKO stable-ID decision required" if g4=="CONFLICT" else (f"required 50 cards; unique={card_total}" if g4!="PASS" else "")))
+results.append(row("G4", g4, f"formal={len(formal_cards)}; candidate={len(candidate_cards)}; K01-K50 unique={len(required_ids & card_ids)}; K51={k51}", "K03 identity conflict remains unresolved" if g4=="CONFLICT" else (f"K01-K50 or K51 resolution incomplete; unique={card_total}" if g4!="PASS" else "")))
 # G5 skills: inventory exists, actual per-skill execution not proven by static files
 skills=sorted(ROOT.glob("skills/*/SKILL.md"))
 g5="PASS" if len(skills)==20 and exists("evidence/stage-01/skill-inventory-current.json") else "UNKNOWN"

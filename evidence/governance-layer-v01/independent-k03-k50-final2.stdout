@@ -1,0 +1,7 @@
+IA-01	PASS	baseline files
+IA-02	PASS	K01-K50 count=50; K51=True
+IA-03	PASS	K03 decision and K51 renumbering are preserved
+IA-04	PASS	test entrypoints
+IA-05	PASS	check_repo exit=0
+IA-06	PASS	runtime NOT_RUN remains explicit; K03 conflict is resolved
+OVERALL=PASS

@@ -1,6 +1,6 @@
 PASS C1 版本一致 ｜VERSION=1.2.72 miko-core 對應正本=1.2.72
 PASS C2 Skill 開頭格式（name 與資料夾同名、小寫連字號 ≤ 64 字、description ≤ 1024 字） ｜不合格：[]；提示（不擋）標題沒有版號：[]
-FAIL C3 公開檔（含 .csv、二進位、快取檔）無 email、本機路徑與私人關鍵字 ｜命中：['evidence/stage-01/skill-inventory-current.json:/home/']；私人關鍵字 0 個
+FAIL C3 公開檔（含 .csv、二進位、快取檔）無 email、本機路徑與私人關鍵字 ｜命中：['evidence/stage-01/skill-inventory-current.json:<REPO_ROOT>']；私人關鍵字 0 個
 PASS C4 回歸測試 T1～T66、T15B～T15E 與 T29B 都在正本 §8 ｜缺：[]
 PASS C5 sync 檔存在且 LOG 有表頭
 PASS C6 bt_min.py 實跑結果與預期一致（含除息日樣本：給事件檔就停止） ｜報酬率=7.12% MDD=-3.38% 事件擋下=True

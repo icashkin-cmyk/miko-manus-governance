@@ -1,18 +1,19 @@
 {
   "id": "K03",
-  "status": "CONFLICT",
-  "decision_required": "MIKO",
-  "variants": [
-    {
-      "source": "Pasted_content_24.txt",
-      "title": "任務優先級與資源配置",
-      "path": "knowledge-cards/proposals/kcards/K03.md"
-    },
-    {
-      "source": "20261116_MIKO-K01-K03-知識卡正文與索引.md",
-      "title": "累積式演進與歷史版本保護",
-      "path": "historical candidate outside current repo; source referenced in source-archive"
-    }
-  ],
-  "rule": "不得在未裁決前將兩個不同語意內容共用同一穩定識別名；兩者均保留。"
+  "status": "RESOLVED",
+  "decision_required": null,
+  "decision": "保留「任務優先級與資源配置」為 K03；將「累積式演進與歷史版本保護」重新編號為 K51。",
+  "decided_by": "MIKO",
+  "decision_time": "2026-11-16 16:06 Asia/Taipei",
+  "selected": {
+    "title": "任務優先級與資源配置",
+    "path": "knowledge-cards/proposals/kcards/K03.md"
+  },
+  "renumbered": {
+    "old_id": "K03",
+    "new_id": "K51",
+    "title": "累積式演進與歷史版本保護",
+    "path": "knowledge-cards/proposals/kcards/K51.md"
+  },
+  "preservation_rule": "兩個來源正文均保留；未覆寫原始來源；K51 以新穩定識別名承接原 K03 語意。"
 }

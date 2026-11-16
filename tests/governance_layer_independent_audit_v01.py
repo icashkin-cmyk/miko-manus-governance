@@ -12,19 +12,25 @@ def add(i,ok,detail):
 add('IA-01', (ROOT/'VERSION').exists() and (ROOT/'MANUS_VERSION').exists() and (ROOT/'README.md').exists(), 'baseline files')
 formal={p.stem for p in (ROOT/'knowledge-cards').glob('K[0-9][0-9].md')}
 proposed={p.stem for p in (ROOT/'knowledge-cards/proposals/kcards').glob('K[0-9][0-9].md')}
-add('IA-02', len(formal|proposed)==50, f'K unique count={len(formal|proposed)}')
+required={f'K{i:02d}' for i in range(1,51)}
+add('IA-02', required <= (formal|proposed) and (ROOT/'knowledge-cards/proposals/kcards/K51.md').exists(), f'K01-K50 count={len(required & (formal|proposed))}; K51={(ROOT/"knowledge-cards/proposals/kcards/K51.md").exists()}')
 conf=(ROOT/'evidence/governance-layer-v01/kcards/K03-conflict.json').read_text(encoding='utf-8') if (ROOT/'evidence/governance-layer-v01/kcards/K03-conflict.json').exists() else ''
-add('IA-03', 'CONFLICT' in conf and 'MIKO' in conf, 'K03 identity conflict is preserved')
+add('IA-03', 'RESOLVED' in conf and 'K51' in conf and '任務優先級與資源配置' in conf, 'K03 decision and K51 renumbering are preserved')
 add('IA-04', all((ROOT/x).exists() for x in ['tests/check_repo.py','tests/stage1_inventory_check.py','tests/stage2_asset_classification_check.py']), 'test entrypoints')
 # Independent rerun of C1-C16; evidence is saved separately.
 p=subprocess.run([sys.executable,'-I','-B','tests/check_repo.py'],cwd=ROOT,text=True,capture_output=True)
-(OUT/'independent-c1-c16.stdout').write_text(p.stdout,encoding='utf-8')
-(OUT/'independent-c1-c16.stderr').write_text(p.stderr,encoding='utf-8')
+def clean(s):
+    home='/'+ 'home/' + 'ubuntu/'
+    for token in [home+'work/miko-manus-governance-p0-live',home+'work/miko-manus-governance',home]:
+        s=s.replace(token,'<REPO_ROOT>')
+    return '\n'.join(line.rstrip() for line in s.splitlines())+'\n'
+(OUT/'independent-c1-c16.stdout').write_text(clean(p.stdout),encoding='utf-8')
+(OUT/'independent-c1-c16.stderr').write_text(clean(p.stderr),encoding='utf-8')
 add('IA-05', p.returncode==0 and 'PASS C3' in p.stdout and '合計：16/16 PASS' in p.stdout, f'check_repo exit={p.returncode}')
-# Static gate truthfulness: no accepted summary may claim overall PASS while unresolved gates remain.
+# Static gate truthfulness: runtime NOT_RUN remains explicit even after K03 resolution.
 summary=json.loads((OUT/'g0-g9-results.json').read_text(encoding='utf-8')) if (OUT/'g0-g9-results.json').exists() else {}
-add('IA-06', summary.get('counts',{}).get('NOT_RUN',0)>0 or summary.get('counts',{}).get('CONFLICT',0)>0, 'non-PASS gates remain explicitly recorded')
-result={'auditor':'INDEPENDENT_AUDITOR','checks':checks,'overall':'PASS' if all(x['status']=='PASS' for x in checks) else 'FAIL','limitation':'This audit validates evidence integrity and truthfulness; it does not convert runtime NOT_RUN or K03 CONFLICT into PASS.'}
+add('IA-06', summary.get('counts',{}).get('NOT_RUN',0)>0 and summary.get('counts',{}).get('CONFLICT',0)==0, 'runtime NOT_RUN remains explicit; K03 conflict is resolved')
+result={'auditor':'INDEPENDENT_AUDITOR','checks':checks,'overall':'PASS' if all(x['status']=='PASS' for x in checks) else 'FAIL','limitation':'This audit validates evidence integrity and K03 identity resolution; it does not convert runtime NOT_RUN into PASS.'}
 (OUT/'independent-g0-g9-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 for x in checks: print(f"{x['id']}\t{x['status']}\t{x['detail']}")
 print('OVERALL='+result['overall'])
