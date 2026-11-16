@@ -34,7 +34,7 @@
     {
       "gate": "G5",
       "status": "PASS",
-      "evidence": "skills count=20; stage-01 inventory",
+      "evidence": "skills count=21; stage-01 inventory",
       "gap": "per-skill runtime execution and workflow samples are not uniformly proven"
     },
     {

@@ -7,8 +7,13 @@
 - 專案版本：`0.1.0-manus-candidate`
 - MIKO 正本基線：`v1.2.72｜`，來源 commit：`9922b76615eddadfd5ff37576c1cb7b35b7d7621`
 - 目前狀態：`CANDIDATE`
-- Runtime 載入、熱插拔、正式採用：`UNKNOWN`；本文件不宣稱已生效
+- Runtime 載入、熱插拔：`UNKNOWN`；`miko-governance-layer-acceptance v0.1.0` 已在本地正式採用；本文件不宣稱 Runtime 已生效
 - 建立時間：2026-11-16（Asia/Taipei）
+
+## 正式採用 Skill
+
+- `miko-governance-layer-acceptance v0.1.0`：本地正式採用，正式路徑為 `skills/miko-governance-layer-acceptance/SKILL.md`。
+- 候選原檔、來源封存、採用裁決與 Hash 均保留；正式採用不代表 Push、Merge、Release 或 Runtime 啟用。
 
 ## 專案目的
 
@@ -21,7 +26,7 @@
 | Gate | 工作 | 必要條件 | 目前狀態 |
 |---|---|---|---|
 | G0 | 來源、範圍與版本基線 | 讀取 MIKO VERSION、commit、完整清單 | PASS_WITH_EVIDENCE |
-| G1 / Stage 1 | 20 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | PASS_WITH_EVIDENCE（完整 C1-C16 與獨立冷讀通過） |
+| G1 / Stage 1 | 21 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | PASS_WITH_EVIDENCE（完整 C1-C16 與獨立冷讀通過） |
 | G2 / Stage 2 | 資產分類與路徑架構 | G1 PASS；每個資產有唯一主分類、責任、輸入輸出與保存路徑 | NOT_READY（G1 尚未整體通過） |
 
 **順序規則：G1 未 PASS，不得把 G2 標成完成；可預先閱讀 G2 規格，但不得產生 G2 PASS。**

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-16T08:12:37+0000",
+  "generated_at": "2026-11-16T08:59:39+0000",
   "repository": "<REPO_ROOT>",
-  "commit": "13255401b8412098645768cbc6859124e3913b9d",
-  "expected_count": 20,
-  "actual_count": 20,
+  "commit": "8f6222d8b4eed38225b1ad0be275f6829cb52f40",
+  "expected_count": 21,
+  "actual_count": 21,
   "records": [
     {
       "path": "skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",
@@ -119,6 +119,15 @@
       "name": "miko-core",
       "description_present": true,
       "sha256": "5e3056e9ea4cdfa32668c2df95541719dc3fff6e402f9331d6081b8744ee8104",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/miko-governance-layer-acceptance/SKILL.md",
+      "directory_name": "miko-governance-layer-acceptance",
+      "name": "miko-governance-layer-acceptance",
+      "description_present": true,
+      "sha256": "f8bafc03575e3512134d76a14d2ebec86fd2b6fadbca9b9b8a45e1d929f16bbd",
       "source_archive_present": true,
       "status": "PASS"
     },

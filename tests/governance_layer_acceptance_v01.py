@@ -57,7 +57,7 @@ else:
 results.append(row("G4", g4, f"formal={len(formal_cards)}; candidate={len(candidate_cards)}; K01-K50 unique={len(required_ids & card_ids)}; K51={k51}", "K03 identity conflict remains unresolved" if g4=="CONFLICT" else (f"K01-K50 or K51 resolution incomplete; unique={card_total}" if g4!="PASS" else "")))
 # G5 skills: inventory exists, actual per-skill execution not proven by static files
 skills=sorted(ROOT.glob("skills/*/SKILL.md"))
-g5="PASS" if len(skills)==20 and exists("evidence/stage-01/skill-inventory-current.json") else "UNKNOWN"
+g5="PASS" if len(skills)==21 and exists("evidence/stage-01/skill-inventory-current.json") else "UNKNOWN"
 results.append(row("G5", g5, f"skills count={len(skills)}; stage-01 inventory", "per-skill runtime execution and workflow samples are not uniformly proven" if g5=="PASS" else "skill inventory evidence incomplete"))
 # G6 tools: local probes may pass; external connectors remain explicitly NOT_RUN.
 adapters=read("adapters/README.md")
