@@ -29,9 +29,9 @@ inv=["Single Decision Root","Single Canonical Repository","Single Primary AI Pla
 g1=all(x in outer for x in inv) and all(x in mapping for x in ["G01","G02","G03","G04","G05","G06","G07","G08","G09","G10"]) and exists("governance/project-architecture/modules/router/README.md")
 results.append(row("G1", "PASS" if g1 else "FAIL", "p0-outer-architecture.md; module-mapping.md; modules/*/README.md", "" if g1 else "outer responsibility mapping incomplete"))
 # G2 governance core
-core=read("skills/miko-core/SKILL.md")
-g2=exists("skills/miko-core/SKILL.md") and all(x in core for x in ["閉環","權限","治理","UNKNOWN","NOT_RUN","獨立驗收","回復"])
-results.append(row("G2", "PASS" if g2 else "FAIL", "skills/miko-core/SKILL.md; governance/project-architecture/stage-gates.md", "" if g2 else "governance core contract incomplete"))
+core=read("skills/manus-core/SKILL.md")
+g2=exists("skills/manus-core/SKILL.md") and all(x in core for x in ["閉環","權限","治理","UNKNOWN","NOT_RUN","獨立驗收","回復"])
+results.append(row("G2", "PASS" if g2 else "FAIL", "skills/manus-core/SKILL.md; governance/project-architecture/stage-gates.md", "" if g2 else "governance core contract incomplete"))
 # G3 Router: candidate mapping and deterministic route suite; Runtime remains separate.
 router=read("governance/project-architecture/modules/router/README.md")
 g3_contract=all(x in router for x in ["觸發", "路由", "CONFLICT", "負向測試"])

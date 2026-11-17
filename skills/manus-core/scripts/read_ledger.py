@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # read_ledger.py｜來源讀取紀錄：把一份文字來源切成固定行數的區塊，逐塊取得並記帳，最後由程式算覆蓋率（只用標準函式庫）
-# 用途：miko-core references/source-read-log.md 的 R2「連續讀取」P 步。覆蓋率、缺塊、重複、來源是否被改過都由程式算，模型不得手算。
+# 用途：manus-core references/source-read-log.md 的 R2「連續讀取」P 步。覆蓋率、缺塊、重複、來源是否被改過都由程式算，模型不得手算。
 # 用法：
 #   python3 -I -B read_ledger.py plan   <來源檔> [--lines 300] [--bytes 24000]  → 印出 JSON：檔案 SHA-256、總行數、區塊清單（每塊起訖行；不印區塊 SHA）
 #   python3 -I -B read_ledger.py show   <來源檔> <第幾塊> [--lines 300] [--bytes 24000] → 印出該塊表頭、全文，最後一行 END 才印該塊 SHA-256；模型照 END 行的 SHA 記進讀取帳

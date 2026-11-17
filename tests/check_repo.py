@@ -93,10 +93,10 @@ readme = (R / 'README.md').read_text(encoding='utf-8')
 ver = (R / 'VERSION').read_text(encoding='utf-8').split('\n')[0].strip()
 chg = (R / 'CHANGELOG.md').read_text(encoding='utf-8')
 adp = (R / 'adapters' / 'README.md').read_text(encoding='utf-8')
-core = (R / 'skills' / 'miko-core' / 'SKILL.md').read_text(encoding='utf-8')
+core = (R / 'skills' / 'manus-core' / 'SKILL.md').read_text(encoding='utf-8')
 m = re.search(r'對應正本：([0-9.]+)', core)
 ok('C1 版本一致', f'v{ver}｜' in readme and f'- {ver}（' in chg and f'VERSION 的 {ver}' in adp and f'正本 v{ver}」' in adp and m and m.group(1) == ver,
-   f'VERSION={ver} miko-core 對應正本={m.group(1) if m else None}')
+   f'VERSION={ver} manus-core 對應正本={m.group(1) if m else None}')
 
 bad, nover = [], []
 for p in sorted((R / 'skills').glob('*/SKILL.md')):
@@ -317,10 +317,10 @@ except Exception as ex:
 
 # C16 詞彙定義表與第一次出現（1.2.53，ADR-076；MIKO 2026-11-09 短名詞要寫正式名稱、完整定義放 references/term-definitions.md）：
 # 定義表每個名詞十一節齊全、類型五選一、短名與正式名稱不重複；tests/glossary_scope.txt 列的檔，每個短名第一次出現就有緊鄰的「短名（正式名稱：…」、H1 下第一個非空行是名詞行。
-# 邏輯在 skills/miko-core/scripts/terms_check.py（代入卡等 repo 外的檔用同一支實跑）；不在定義表裡的新造短名詞檢查不到
+# 邏輯在 skills/manus-core/scripts/terms_check.py（代入卡等 repo 外的檔用同一支實跑）；不在定義表裡的新造短名詞檢查不到
 try:
     sc16 = [x.split()[0] for x in (R / 'tests' / 'glossary_scope.txt').read_text(encoding='utf-8').splitlines() if x.strip() and not x.startswith('#')]
-    r16 = subprocess.run([sys.executable, '-I', '-B', str(R / 'skills' / 'miko-core' / 'scripts' / 'terms_check.py'), str(R / 'skills' / 'miko-core' / 'references' / 'term-definitions.md')] + [str(R / x) for x in sc16], capture_output=True, text=True)
+    r16 = subprocess.run([sys.executable, '-I', '-B', str(R / 'skills' / 'manus-core' / 'scripts' / 'terms_check.py'), str(R / 'skills' / 'manus-core' / 'references' / 'term-definitions.md')] + [str(R / x) for x in sc16], capture_output=True, text=True)
     lines16 = r16.stdout.strip().splitlines()
     ok('C16 詞彙定義表十一節齊全，範圍內各檔短名第一次出現就寫正式名稱', r16.returncode == 0 and sc16, f'範圍 {len(sc16)} 檔；' + '；'.join(lines16[:4]))
 except Exception as ex:

@@ -12,7 +12,7 @@ MODULES = ROOT / "governance/project-architecture/modules"
 
 EXPECTED = {
     "G01": ("governance",),
-    "G02": ("skills/miko-core", "governance/project-architecture/modules/core"),
+    "G02": ("skills/manus-core", "governance/project-architecture/modules/core"),
     "G03": ("governance/project-architecture/modules/router",),
     "G04": ("knowledge-cards",),
     "G05": ("skills",),

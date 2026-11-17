@@ -11,3 +11,10 @@
 - independent_acceptance: `NOT_RUN`
 - runtime_status: `UNKNOWN`
 - candidate_status: `SOURCE_BASELINE_ONLY`
+
+## 2026-11-17｜Manus 現行名稱對齊
+
+- 現行 Skill 路徑由 `skills/miko-core/` 改名為 `skills/manus-core/`。
+- 現行 frontmatter 名稱由 `miko-core` 改為 `manus-core`，版本內容沿用 v1.73，未刪除或改寫核心規則語意。
+- 原始 MIKO 來源、`archive/`、`source-archive/` 與歷史驗收證據保留原名稱 `miko-core`，作為來源與歷史識別，不作為現行 Runtime 載入路徑。
+- 本次改名屬識別與路徑對齊，不宣稱 MIKO 正本、Manus Runtime 或外部平台已自動同步。

@@ -1,6 +1,6 @@
 # 治理模組與全域交付規則（自四視角引擎 v3.3 §6～§7 原文搬入，未改寫）
 
-來源：skills/multi-agent-coordination-engine/SKILL.md v3.3（2026-11-09）第 244～329 行，逐字搬入；2026-11-12 MIKO 決定退休四視角引擎（原檔移到 skills/_retired/），本檔保留其中仍被 miko-core、dghp-work-handoff、tw-backtest-workflow、shared-rules 引用的唯一資訊。本檔內「本 Skill」「§N」等自指，指原四視角引擎 v3.3。
+來源：skills/multi-agent-coordination-engine/SKILL.md v3.3（2026-11-09）第 244～329 行，逐字搬入；2026-11-12 MIKO 決定退休四視角引擎（原檔移到 skills/_retired/），本檔保留其中仍被 manus-core、dghp-work-handoff、tw-backtest-workflow、shared-rules 引用的唯一資訊。本檔內「本 Skill」「§N」等自指，指原四視角引擎 v3.3。
 
 ## 6. 狀態、證據與交付（全域）
 - 完成度分軸記錄，每一軸都要有對應證據：已生成、已保存、已 Review、已驗證、已送達、已接手、已安裝、已載入、已啟用、全面覆蓋。
@@ -58,7 +58,7 @@
 1. 不修改、不覆寫、不搬移治理原件，只新增版本與差異。
 2. 不自行修改原件中的 State。下列事項仍須 MIKO 明確批准：升格 Canonical；啟用 Runtime、LIVE 或任何模組；修改策略；費用；權限；刪除。
 3. 不建立第二個 writer，不重派已完成或已停止的任務。台指期維持 STOPPED_BY_USER。RC 或使用者設下的停止、暫緩、禁止，優先於 §5.3 的停止條件；使用者說「繼續」不等於撤銷這些停止。
-4. 跨平台寫入須 MIKO 當次明確授權，寫入前後都要讀回。範圍包括帳號設定、ChatGPT 專案、Notion、Drive、GitHub、AGENTS 與其他聊天室。例外依 miko-core §7：Claude 存 Drive MIKO_ARCHIVE（只新增）與更新正本 repo icashkin-cmyk/miko。
+4. 跨平台寫入須 MIKO 當次明確授權，寫入前後都要讀回。範圍包括帳號設定、ChatGPT 專案、Notion、Drive、GitHub、AGENTS 與其他聊天室。例外依 manus-core §7：Claude 存 Drive MIKO_ARCHIVE（只新增）與更新正本 repo icashkin-cmyk/miko。
 5. 臺股（RC2）規則不外溢到其他領域。
 6. 治理專案的狀態檔只記錄治理專案本身。DGHP 各 Task 的狀態以原 Task／Bridge 為準，不建立第二控制面。
 
@@ -86,5 +86,5 @@
 
 ### 7.8 交接
 - 交接給其他 AI 或另一個 Claude 對話時（原寫「外部 ChatGPT 或 Codex」，兩者 2026-11-02 起停用，ADR-039），用 19 欄 FINAL_HANDOFF，欄位依序為：WORKFLOW_ID、CURRENT_TASK、CURRENT_STEP、OPERATION_ID、SOURCE_VERSIONS、SOURCE_SNAPSHOT、PREFLIGHT_STATE、COMPLETED、PREPARED_NOT_PUBLISHED、OPEN_BLOCKERS、ATTEMPT_STATE、EXECUTION_STATE、PUBLICATION_STATE、READBACK_STATE、ACTIVE_WRITER_STATE、COMPLETION_SCOPE、NEXT_MINIMUM_STEP、USER_DECISION、AUTOMATION_STATE。房內一般回覆不用。
-- 狀態與決策同步到 Notion、文件同步到 Drive，都需要授權（見 §7.4 第 4 條；Claude 存 MIKO_ARCHIVE 依 miko-core §7 例外）。
+- 狀態與決策同步到 Notion、文件同步到 Drive，都需要授權（見 §7.4 第 4 條；Claude 存 MIKO_ARCHIVE 依 manus-core §7 例外）。
 - 待決事項與已結案事項記在 04 狀態檔，不寫進本正文，避免把動態狀態寫成規則。

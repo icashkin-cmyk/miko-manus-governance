@@ -1,4 +1,4 @@
-# test_terms_check.py｜terms_check.py 的固定題（1.2.53，ADR-076）：python3 -I -B skills/miko-core/scripts/test_terms_check.py
+# test_terms_check.py｜terms_check.py 的固定題（1.2.53，ADR-076）：python3 -I -B skills/manus-core/scripts/test_terms_check.py
 import subprocess, sys, tempfile, pathlib
 HERE = pathlib.Path(__file__).resolve().parent
 SECS = ['正式名稱', '類型', '定義', '觸發條件', '執行動作', '輸出格式', '完成判準', '失敗處理', '不適用情況', '相關名詞', '條文']

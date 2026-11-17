@@ -6,15 +6,15 @@ inv=json.loads((ROOT/'evidence/stage-01/skill-inventory-current.json').read_text
 rows=[]
 for r in inv['records']:
     name=r['directory_name']
-    if name in {'miko-core','make-skill','independent-audit','three-party-review','ai-engineering-anti-fraud-test-credibility','version-evolution-preservation','batch-task-completion-and-single-report','knowledge-card-format'}:
+    if name in {'manus-core','make-skill','independent-audit','three-party-review','ai-engineering-anti-fraud-test-credibility','version-evolution-preservation','batch-task-completion-and-single-report','knowledge-card-format'}:
         category='governance-skill'
         owner='GOVERNANCE_OWNER with IMPLEMENTER/TESTER/INDEPENDENT_AUDITOR evidence separation'
     elif name in {'dghp-work-handoff','safe-implementation','tw-backtest-workflow'}:
         category='workflow-skill'
-        owner='IMPLEMENTER under miko-core boundaries'
+        owner='IMPLEMENTER under manus-core boundaries'
     else:
         category='domain-skill'
-        owner='IMPLEMENTER under miko-core and domain boundaries'
+        owner='IMPLEMENTER under manus-core and domain boundaries'
     rows.append({
         'stable_id': name,
         'primary_asset_type': 'Skill',

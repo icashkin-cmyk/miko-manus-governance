@@ -3,13 +3,13 @@
 - 更新時間：2026-11-16 08:08（台北）
 - 正本版本：1.2.72（ADR-095）；VERSION 第 1～4 行與 README 標題一致；README SHA-256（26e0ba…da45c）與 VERSION 第 4 行相符（通過）
 - 時間窗：2026-11-15 20:08～2026-11-16 08:08（台北）
-- 檢查範圍：origin/main 窗內無新提交（僅上一輪 sync 紀錄 2c9fa7f，時間即窗首）；Drive 窗內修改中繼資料（只計檔數與類別，內容 NOT_READ，查詢無分頁，共 3 筆）；Notion 關鍵字 MIKO（0 筆）；帳號 Skill miko-core 為代入卡（啟用，未落後提示）；GPT 同步依正本 ADR-039 停用，sync/gpt/ 不存在，不列為中斷；其他 repo：本輪 list_repos 工具未載入，NOT_READ
+- 檢查範圍：origin/main 窗內無新提交（僅上一輪 sync 紀錄 2c9fa7f，時間即窗首）；Drive 窗內修改中繼資料（只計檔數與類別，內容 NOT_READ，查詢無分頁，共 3 筆）；Notion 關鍵字 MIKO（0 筆）；帳號 Skill manus-core 為代入卡（啟用，未落後提示）；GPT 同步依正本 ADR-039 停用，sync/gpt/ 不存在，不列為中斷；其他 repo：本輪 list_repos 工具未載入，NOT_READ
 
 ## 本輪變化
 - Drive｜窗內修改 3 筆中繼資料，類別為 Git 內部檔（修改時間 2026-11-15 23:54Z，即台北 2026-11-16 07:54；3 檔合計約 15.6 KB）；內容 NOT_READ｜證據：Drive 修改時間查詢（中繼資料）；本輪為連續第 6 輪出現同類修改
 - GitHub｜窗內無新提交｜證據：git fetch origin main、git log origin/main
 - Notion｜MIKO 0 筆｜證據：notion-search（workspace_search）
-- 帳號 Skill｜miko-core 為代入卡，啟用｜證據：ListSkills
+- 帳號 Skill｜manus-core 為代入卡，啟用｜證據：ListSkills
 - GPT 同步｜依 ADR-039 停用，本輪不列變化、不列中斷
 
 ## 本輪推進與驗收

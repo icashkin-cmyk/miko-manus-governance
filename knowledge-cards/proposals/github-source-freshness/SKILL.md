@@ -47,7 +47,7 @@ https://api.github.com/repos/<owner>/<repo>/commits?sha=main&per_page=1
 
 使用相同 API headers。第一個取第一筆的完整 commit SHA、短碼、時間與 commit message，記為「VERSION 最新修改 commit」，只作為版本變更證據。第二個取 main 目前 HEAD 的完整 commit SHA，記為「固定 commit」，站 3 所有檔案都用它讀。不得用記憶、附件、舊對話或先前回應的 commit 代替。
 
-不可把 VERSION 最新修改 commit 當固定 commit：VERSION 之後 main 可能又改了 CHANGELOG、Skill、sync 等其他檔，用較舊的 commit 讀會得到舊內容卻仍然比對通過（實例：2026-11-11 VERSION 最後修改在 4cae500，之後 main 80b082c 又改了 CHANGELOG.md 與 skills/miko-core/SKILL.md，用 4cae500 讀這兩檔的 SHA-256 與 main 不同）。
+不可把 VERSION 最新修改 commit 當固定 commit：VERSION 之後 main 可能又改了 CHANGELOG、Skill、sync 等其他檔，用較舊的 commit 讀會得到舊內容卻仍然比對通過（實例：2026-11-11 VERSION 最後修改在 4cae500，之後 main 80b082c 又改了 CHANGELOG.md 與 skills/manus-core/SKILL.md，用 4cae500 讀這兩檔的 SHA-256 與 main 不同）。
 
 ### 站 3：固定 commit 讀內容
 
@@ -92,7 +92,7 @@ API 與固定 commit 不同時標 `CONFLICT`；main raw 與固定內容或 API �
 ```bash
 python3 scripts/verify_github_source.py \
   --repo icashkin-cmyk/miko \
-  --paths VERSION CHANGELOG.md README.md skills/miko-core/SKILL.md
+  --paths VERSION CHANGELOG.md README.md skills/manus-core/SKILL.md
 ```
 
 工具會：
@@ -111,7 +111,7 @@ python3 scripts/verify_github_source.py \
 成功取得 API commit 時：
 
 ```text
-已對齊：miko-core vX｜正本 vY（commit abc1234｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub <owner>/<repo> main（YYYY-MM-DD）
+已對齊：manus-core vX｜正本 vY（commit abc1234｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub <owner>/<repo> main（YYYY-MM-DD）
 ```
 
 工具只有檔案內容而沒有 commit 時，寫 `commit UNKNOWN`；不可補造。來源讀不到時寫 `正本 NOT_READ` 與實際失敗時間。

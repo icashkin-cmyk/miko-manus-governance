@@ -1,5 +1,5 @@
 # test_flowlock_check.py｜flowlock_check.py 的固定測題（1.2.64，ADR-087；P-19a 先寫會失敗的重現，再寫程式；只用標準函式庫）
-# 用法：python3 -I -B skills/miko-core/scripts/test_flowlock_check.py；全過結束碼 0
+# 用法：python3 -I -B skills/manus-core/scripts/test_flowlock_check.py；全過結束碼 0
 import subprocess, sys, tempfile, pathlib
 S = pathlib.Path(__file__).resolve().parent / 'flowlock_check.py'
 CASES = [
@@ -16,7 +16,7 @@ CASES = [
     ('帶補充說明的標籤照前綴分類', '甲【推論，只加句不刪】乙【未查證：上游日期】丙【UNKNOWN】\n\n流程鎖：通過 0 項／降級 2 項／UNKNOWN 1 項', 0),
     ('有交付檔字樣仍照算', '甲【來源：x】\n\n流程鎖：通過 1 項／降級 0 項／UNKNOWN 0 項（完整版見交付檔〈a.md〉）', 0),
     ('流程鎖行加粗仍照算（1.2.64 稽核反例）', '甲【來源：x】\n\n**流程鎖：通過 1 項／降級 0 項／UNKNOWN 0 項**', 0),
-    ('停止回覆沒有流程鎖行一律 FAIL，由人先判斷不跑本工具（1.2.64 稽核第三輪改）', '已對齊：miko-core v1.65（正本 1.2.64）｜領域：台指期｜Skill：無｜狀態來源：STOPPED_BY_USER\nSTOPPED_BY_USER（要 MIKO 明說「撤銷台指期停止」才解除）', 1),
+    ('停止回覆沒有流程鎖行一律 FAIL，由人先判斷不跑本工具（1.2.64 稽核第三輪改）', '已對齊：manus-core v1.65（正本 1.2.64）｜領域：台指期｜Skill：無｜狀態來源：STOPPED_BY_USER\nSTOPPED_BY_USER（要 MIKO 明說「撤銷台指期停止」才解除）', 1),
     ('標籤寫在交付檔、回覆內 0 個標籤：宣告數對不上判 FAIL，改對交付檔跑（1.2.64 稽核第三輪改）', '結果見交付檔。\n\n流程鎖：通過 3 項／降級 0 項／UNKNOWN 0 項（完整版見交付檔〈a.md〉）', 1),
     ('降級清單寫在流程鎖之前不重複計數（1.2.64 稽核第二輪反例）', '甲【來源：x】。\n乙是推估【推論】。\n\n降級：乙是推估【推論】\n流程鎖：通過 1 項／降級 1 項／UNKNOWN 0 項', 0),
     ('提到 STOPPED_BY_USER 又答別題卻漏流程鎖要判 FAIL（1.2.64 稽核第二輪反例）', '台指期那部分 STOPPED_BY_USER。\n另一題：答案是 3【工具：wc -l】。', 1),

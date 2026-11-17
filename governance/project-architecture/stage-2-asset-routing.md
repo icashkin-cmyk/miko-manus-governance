@@ -12,9 +12,9 @@
 
 | secondary_role | 判定範圍 | 主要邊界 |
 |---|---|---|
-| `governance-skill` | miko-core、make-skill、independent-audit、three-party-review、反造假、版本保護、批次完成制、知識卡格式 | 定義規則、驗收、版本與責任；不得自行宣稱正式採用或 Runtime 生效 |
+| `governance-skill` | manus-core、make-skill、independent-audit、three-party-review、反造假、版本保護、批次完成制、知識卡格式 | 定義規則、驗收、版本與責任；不得自行宣稱正式採用或 Runtime 生效 |
 | `workflow-skill` | dghp-work-handoff、safe-implementation、tw-backtest-workflow | 定義可重複工作流程；不得提高權限，不得繞過停止／暫緩領域 |
-| `domain-skill` | 美妝、食物、命理、旅遊、Gmail、外文、照片、臺灣警報、視覺內容 | 只處理各自領域；不得取代 miko-core 治理，不得跨域擴權 |
+| `domain-skill` | 美妝、食物、命理、旅遊、Gmail、外文、照片、臺灣警報、視覺內容 | 只處理各自領域；不得取代 manus-core 治理，不得跨域擴權 |
 
 ## 2. 標準路徑
 
