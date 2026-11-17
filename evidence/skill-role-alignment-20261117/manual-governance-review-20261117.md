@@ -51,12 +51,12 @@
 
 ## 6. 版本與雜湊
 
-| 檔案 | SHA-256 |
-|---|---|
-| `knowledge-cards/proposals/skills/ai-behavior-emulation-manus-primary/SKILL.md` | `a34f7186e0a1921be5bc28166197e920666845aba498f69043ea0c4acd4144ae` |
-| `knowledge-cards/proposals/skills/manus-core-manus-primary/SKILL.md` | `31f7393740fafe21769496ad72b83f8523c9d1b8e5d7bae3a1cbd0c988fdc8f3` |
-| `knowledge-cards/proposals/skills/miko-governance-layer-acceptance/SKILL.md` | `73e5128b4b2bff301ef9cec6cafc03b39cd97465227d44e837d1d46d85a5cead` |
-| `knowledge-cards/proposals/skills/thinking-tools-performance-optimization-manus-primary/SKILL.md` | `850caf8ea39c7c4a2ba91598dbeb3aa82aadaa91244aebd19f4617f352d231b3` |
+| 檔案 | 範圍 | SHA-256 |
+|---|---|---|
+| `knowledge-cards/proposals/skills/ai-behavior-emulation-manus-primary/SKILL.md` | 審查對象 | `a34f7186e0a1921be5bc28166197e920666845aba498f69043ea0c4acd4144ae` |
+| `knowledge-cards/proposals/skills/manus-core-manus-primary/SKILL.md` | 審查對象 | `31f7393740fafe21769496ad72b83f8523c9d1b8e5d7bae3a1cbd0c988fdc8f3` |
+| `knowledge-cards/proposals/skills/thinking-tools-performance-optimization-manus-primary/SKILL.md` | 審查對象 | `850caf8ea39c7c4a2ba91598dbeb3aa82aadaa91244aebd19f4617f352d231b3` |
+| `knowledge-cards/proposals/skills/miko-governance-layer-acceptance/SKILL.md` | 範圍外參考，不納入本次三份角色對齊判定 | `73e5128b4b2bff301ef9cec6cafc03b39cd97465227d44e837d1d46d85a5cead` |
 
 ## 7. 建議處理順序
 
@@ -70,4 +70,3 @@
 
 - 狀態：**完成但有疑慮**。人工審查已完成並發現 `manus-core` 重大衝突；Claude 獨立審查仍 `BLOCKED`，三份候選不可宣稱正式採用。
 - 困難卡：現象＝Claude API 審查未完成；證據＝既有 Claude review summary；類別＝缺授權／服務阻塞；影響＝無法完成指定獨立治理審查；解除條件＝可用 Claude API 或由 MIKO 提供正式審查結果；負責方＝Claude API／MIKO；首次發現時間＝本輪。
-
