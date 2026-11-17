@@ -26,7 +26,7 @@
 | Gate | 工作 | 必要條件 | 目前狀態 |
 |---|---|---|---|
 | G0 | 來源、範圍與版本基線 | 讀取 MIKO VERSION、commit、完整清單 | PASS_WITH_EVIDENCE |
-| G1 / Stage 1 | 21 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | PASS_WITH_EVIDENCE（完整 C1-C16 與獨立冷讀通過） |
+| G1 / Stage 1 | 24 個 Skill 的能力盤點與 metadata／觸發條件核對 | 每筆都有實際檔案、唯一名稱、描述、來源與證據；未知欄位分開標記 | PASS_WITH_EVIDENCE（完整 C1-C16 與獨立冷讀通過） |
 | G2 / Stage 2 | 資產分類與路徑架構 | G1 PASS；每個資產有唯一主分類、責任、輸入輸出與保存路徑 | NOT_READY（G1 尚未整體通過） |
 
 **順序規則：G1 未 PASS，不得把 G2 標成完成；可預先閱讀 G2 規格，但不得產生 G2 PASS。**
