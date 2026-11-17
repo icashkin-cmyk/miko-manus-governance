@@ -3,7 +3,7 @@
 | Gate | 入口條件 | 必要輸出 | PASS 條件 | 失敗出口 |
 |---|---|---|---|---|
 | G0 | 來源與範圍已凍結 | baseline、完整清單、版本與 hash | 來源可追溯、範圍無歧義 | `NOT_READ`／`BLOCKED`，停相依步驟 |
-| G1 | G0 PASS | 21 筆 Skill inventory、觸發與 metadata 證據 | 每筆實際讀取、唯一、欄位完整，反向測試有效 | 修正盤點或標 `UNKNOWN`，不得進 G2 |
+| G1 | G0 PASS | 24 筆 Skill inventory、觸發與 metadata 證據 | 每筆實際讀取、唯一、欄位完整，反向測試有效 | 修正盤點或標 `UNKNOWN`，不得進 G2 |
 | G2 | G1 PASS | 資產分類、責任與保存路徑 | 每筆一個主分類，衝突可裁決 | `CONFLICT` 交治理角色，不自行升格 |
 | G3-G8 | 前一 Gate PASS | 對應階段產物與獨立證據 | 逐條 AC PASS | 回到第一個 FAIL 的 Gate，不跳站 |
 
