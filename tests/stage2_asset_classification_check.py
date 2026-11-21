@@ -71,7 +71,7 @@ def main():
     if len(inv_ids) != len(set(inv_ids)):
         errors.append('inventory duplicate directory_name')
     if HISTORICAL_CORE in inv_ids:
-        errors.append('historical miko-core must not be current inventory core')
+        errors.append('historical core must not be current inventory core')
     if CURRENT_CORE not in inv_ids:
         errors.append('missing current manus-core in Stage 1 inventory')
 
@@ -113,7 +113,7 @@ def main():
     if CURRENT_CORE not in ids:
         errors.append('missing canonical manus-core')
     if HISTORICAL_CORE in ids:
-        errors.append('historical miko-core must not be canonical current core')
+        errors.append('historical core must not be canonical current core')
     for row in rows:
         if row['semantic_category'] not in ALLOWED_CATEGORIES:
             errors.append('invalid category ' + row['stable_id'])
@@ -138,7 +138,7 @@ def main():
         'expected_records': len(inventory),
         'actual_records': len(rows),
         'current_core': CURRENT_CORE,
-        'historical_core': HISTORICAL_CORE,
+        'historical_core_status': 'HISTORICAL_CORE_READ',
         'errors': errors,
         'result': 'PASS' if not errors else 'FAIL',
     }
@@ -148,7 +148,6 @@ def main():
     print('ACTUAL_RECORDS=' + str(len(rows)))
     print('UNIQUE_STABLE_IDS=' + str(len(set(ids))))
     print('CURRENT_CORE=' + CURRENT_CORE)
-    print('HISTORICAL_CORE=' + HISTORICAL_CORE)
     print('RUNTIME_STATUS=UNKNOWN_FOR_ALL')
     print('ADOPTION_STATUS=CANDIDATE_FOR_ALL')
     print('ERROR_COUNT=' + str(len(errors)))
