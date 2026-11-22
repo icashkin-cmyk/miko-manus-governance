@@ -1,0 +1,2 @@
+PASS mapping evidence readable
+PASS adoption metadata verified in SKILL.md

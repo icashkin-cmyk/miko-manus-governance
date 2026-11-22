@@ -1,0 +1,30 @@
+[1mdiff --git a/skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md b/skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md[m
+[1mindex 1b9a11d..ace3655 100644[m
+[1m--- a/skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md[m
+[1m+++ b/skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md[m
+[36m@@ -2,8 +2,8 @@[m
+ name: governance-merge-reconciliation-reverse-acceptance[m
+ description: 治理-合併彙整衝突與反向驗收：在多份規則、Skill、Project Instructions、治理文件或版本需要合併、彙整、同步、升級、搬移或重新編排時使用；檢查遺漏、語意衝突、責任重疊、權限放寬、狀態誤升格、路由不一致、Runtime 差異與不可回復風險，並執行合併後反向、負向、邊界與回歸測試。[m
+ metadata:[m
+[31m-  status: CANDIDATE[m
+[31m-  adoption_scope: NOT_ADOPTED[m
+[32m+[m[32m  status: ADOPTED[m
+[32m+[m[32m  adoption_scope: ADOPTED[m
+   runtime_status: NOT_RUN[m
+   owner: Manus[m
+   may_adopt: false[m
+[36m@@ -17,7 +17,7 @@[m [mmetadata:[m
+ - **什麼時候使用：** 多份 Skill、規則、Project Instructions、治理文件、Router、測試規格或版本要合併、彙整、同步、升級、搬移、壓縮或重新編排時；也適用於合併後需要確認原始限制仍存在、候選狀態未誤升格、文件與行為沒有分叉的任務。[m
+ - **處理什麼：** 建立來源清單與權威順序、凍結合併範圍、逐條保真映射、衝突分類、責任拆分、合併前後差異、反向測試、失敗出口、回復與可追溯證據。[m
+ - **不處理什麼：** 不取代 `independent-audit` 的獨立冷讀、不取代 `three-party-review` 的角色分離、不取代 `batch-task-completion-and-single-report` 的全量清單與整批完成，也不自行批准、正式採用、Push、Merge、Release 或啟用 Runtime。[m
+[31m-- **目前狀態：** `CANDIDATE`；採用狀態 `NOT_ADOPTED`；Runtime 狀態 `NOT_RUN`。文件存在或靜態檢查通過，不代表正式採用或 Runtime 生效。[m
+[32m+[m[32m- **目前狀態：** `ADOPTED`；採用狀態 `ADOPTED`（僅目前 repository 的本地正式 `skills/` 路徑）；Runtime 狀態 `NOT_RUN`。正式採用不代表 Project Settings 已寫入或 Runtime 已生效。[m
+ [m
+ ## 2. 核心目的[m
+ [m
+[36m@@ -221,4 +221,4 @@[m [mmetadata:[m
+ [m
+ 交接必須列出：已保存、已送達、已接收、已執行、已驗證、Runtime 是否生效、未完成事項、風險、負責方、下一步與任務四態。任務四態只可用：`完成`、`完成但有疑慮`、`需要資料`、`卡住`。[m
+ [m
+[31m-本候選 Skill 的升級遵循累積式演進：不覆寫原始 Skill，不刪除歷史證據；任何後續修改都必須重新保存快照、Diff、SHA-256、測試結果與回復方式。[m
+[32m+[m[32m本 Skill 的升級遵循累積式演進：不覆寫原始 Skill，不刪除歷史證據；任何後續修改都必須重新保存快照、Diff、SHA-256、測試結果與回復方式。[m

@@ -1,0 +1,55 @@
+PASS frontmatter
+PASS structure name: governance-merge-reconciliation-reverse-acceptance
+PASS structure status: CANDIDATE
+PASS structure adoption_scope: NOT_ADOPTED
+PASS structure runtime_status: NOT_RUN
+PASS structure ## 5. 合併／彙整前檢查
+PASS structure ## 6. 合併／彙整執行流程
+PASS structure ## 7. 風險與防範矩陣
+PASS structure ## 8. 反向測試流程
+PASS structure ## 9. 七欄 P／C／J 步驟規格
+PASS structure ## 10. 失敗出口、回復與重試
+PASS structure ## 11. 證據、版本與回復保存
+PASS structure ## 12. 驗收標準
+PASS structure ## 14. 最終驗收與交接
+PASS RT-01 declared
+PASS RT-01 executable reverse behavior
+PASS RT-02 declared
+PASS RT-02 executable reverse behavior
+PASS RT-03 declared
+PASS RT-03 executable reverse behavior
+PASS RT-04 declared
+PASS RT-04 executable reverse behavior
+PASS RT-05 declared
+PASS RT-05 executable reverse behavior
+PASS RT-06 declared
+PASS RT-06 executable reverse behavior
+PASS RT-07 declared
+PASS RT-07 executable reverse behavior
+PASS RT-08 declared
+PASS RT-08 executable reverse behavior
+PASS RT-09 declared
+PASS RT-09 executable reverse behavior
+PASS RT-10 declared
+PASS RT-10 executable reverse behavior
+PASS RT-11 declared
+PASS RT-11 executable reverse behavior
+PASS RT-12 declared
+PASS RT-12 executable reverse behavior
+PASS hard boundary/status 下單
+PASS hard boundary/status 交易
+PASS hard boundary/status Broker
+PASS hard boundary/status LIVE
+PASS hard boundary/status STOPPED_BY_USER
+PASS hard boundary/status PAUSED_BY_USER
+PASS negative status-promotion rejection UNKNOWN
+PASS negative status-promotion rejection NOT_RUN
+PASS negative status-promotion rejection BLOCKED
+PASS negative status-promotion rejection CONFLICT
+PASS negative status-promotion rejection FAIL
+PASS candidate metadata
+PASS adoption metadata
+PASS runtime metadata
+PASS evidence hash
+SKILL_SHA256=5e9c256343660c8609543d093f1bac9a4e8a11532ac5ac5a454dfdaaa67a7860
+OVERALL_STATUS=PASS

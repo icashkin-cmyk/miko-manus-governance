@@ -1,0 +1,1 @@
+595b103ac775d3c0073796169383c29265136293de7f529460795d7f8f018829  skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md
