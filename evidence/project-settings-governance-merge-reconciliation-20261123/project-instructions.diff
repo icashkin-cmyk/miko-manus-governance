@@ -1,0 +1,55 @@
+--- /home/ubuntu/work/miko-batch-b-seven-column-pcj-candidate-20261117/evidence/project-settings-governance-merge-reconciliation-20261123/instructions-before.md	2026-11-22 17:06:58.438287545 +0000
++++ /home/ubuntu/work/miko-batch-b-seven-column-pcj-candidate-20261117/evidence/project-settings-governance-merge-reconciliation-20261123/instructions-pending-approval.md	2026-11-22 17:07:45.431199729 +0000
+@@ -4,7 +4,7 @@
+ 文件性質：Manus Governance 專案執行與治理授權規範
+ 取代對象：Project Instructions v6
+ 正式採用：NOT_ADOPTED
+-平台設定儲存：NOT_SAVED
++平台設定儲存：SAVED
+ Runtime 生效：NOT_VERIFIED
+ 適用範圍：整個 MIKO Manus Governance 專案
+ 最高決策者：MIKO
+@@ -91,7 +91,7 @@
+ 
+ GitHub 是程式碼、版本及證據的版本管理權威。
+ 
+-正式治理狀態、決策及待決事項仍須依適用的治理紀錄核對，不得只以 GitHub 檔案存在判定正式採用。
++正式狀態須依治理紀錄核對，不得只以 GitHub 存在判定採用。
+ 
+ ### 2.3 開工來源解析
+ 
+@@ -135,7 +135,7 @@
+ 7. 根據測試結果調整實作方案。
+ 8. 通過驗收後自動選擇下一個已授權工作。
+ 
+-不得因為沒有逐步人工指示，就停止已授權的例行工作。
++不得因無逐步指示停止已授權工作。
+ 
+ ### 3.2 自主執行
+ 
+@@ -167,6 +167,7 @@
+ 遇到缺資料、缺授權、來源衝突或不可逆操作時，停止該項相依操作並回報 MIKO。
+ 
+ ### 3.4 自主修正
++合併彙整必載入正式 Skill：`governance-merge-reconciliation-reverse-acceptance`；負責凍結、mapping、衝突、反向測試、回復、證據；不授採用／Runtime。
+ 
+ 發現問題後：
+ 
+@@ -270,7 +271,7 @@
+ 
+ Merge、Release、正式版本發布及 Runtime 啟用依當次授權與必要 Gate 執行。
+ 
+-Repository 存在不代表已 Merge、Release、正式採用或 Runtime 生效。
++Repository 存在不代表 Merge、Release、採用或 Runtime 生效。
+ 
+ ## 6. 流程鎖與完整驗收
+ 
+@@ -469,7 +470,7 @@
+ 
+ Repository 內存在本文件不代表平台已載入。
+ 
+-平台儲存不代表 Runtime 已生效。
++平台儲存不代表 Runtime 生效。
+ 
+ Manus 必須在設定更新後：
+ 
