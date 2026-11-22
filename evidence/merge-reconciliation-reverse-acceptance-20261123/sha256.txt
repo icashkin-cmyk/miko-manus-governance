@@ -1,0 +1,2 @@
+ad97a71ea6d1098fe05fccb954eee016b7b4458cdab7b4b145a4e0842cab220b  evidence/merge-reconciliation-reverse-acceptance-20261123/pre-upgrade-snapshot/SKILL.md
+5e9c256343660c8609543d093f1bac9a4e8a11532ac5ac5a454dfdaaa67a7860  skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md

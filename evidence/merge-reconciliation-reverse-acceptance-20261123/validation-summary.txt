@@ -1,0 +1,3 @@
+quick_validate=PASS
+behavior_acceptance=PASS
+diff=RECORDED

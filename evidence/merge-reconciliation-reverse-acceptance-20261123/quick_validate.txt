@@ -1,0 +1,2 @@
+Validating skill at: /home/ubuntu/work/miko-batch-b-seven-column-pcj-candidate-20261117/skills/governance-merge-reconciliation-reverse-acceptance
+Skill is valid!

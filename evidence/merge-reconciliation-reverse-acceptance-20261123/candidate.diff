@@ -1,0 +1,302 @@
+--- evidence/merge-reconciliation-reverse-acceptance-20261123/pre-upgrade-snapshot/SKILL.md	2026-11-22 16:24:58.002527692 +0000
++++ skills/governance-merge-reconciliation-reverse-acceptance/SKILL.md	2026-11-22 16:27:04.545908081 +0000
+@@ -1,85 +1,224 @@
+ ---
+ name: governance-merge-reconciliation-reverse-acceptance
+-description: "[TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]"
++description: 治理-合併彙整衝突與反向驗收：在多份規則、Skill、Project Instructions、治理文件或版本需要合併、彙整、同步、升級、搬移或重新編排時使用；檢查遺漏、語意衝突、責任重疊、權限放寬、狀態誤升格、路由不一致、Runtime 差異與不可回復風險，並執行合併後反向、負向、邊界與回歸測試。
++metadata:
++  status: CANDIDATE
++  adoption_scope: NOT_ADOPTED
++  runtime_status: NOT_RUN
++  owner: Manus
++  may_adopt: false
++  may_enable_runtime: false
+ ---
+ 
+-# Governance Merge Reconciliation Reverse Acceptance
++# 治理-合併彙整衝突與反向驗收
+ 
+-## Overview
++## 1. 什麼時候使用、處理什麼與目前狀態
+ 
+-[TODO: 1-2 sentences explaining what this skill enables]
++- **什麼時候使用：** 多份 Skill、規則、Project Instructions、治理文件、Router、測試規格或版本要合併、彙整、同步、升級、搬移、壓縮或重新編排時；也適用於合併後需要確認原始限制仍存在、候選狀態未誤升格、文件與行為沒有分叉的任務。
++- **處理什麼：** 建立來源清單與權威順序、凍結合併範圍、逐條保真映射、衝突分類、責任拆分、合併前後差異、反向測試、失敗出口、回復與可追溯證據。
++- **不處理什麼：** 不取代 `independent-audit` 的獨立冷讀、不取代 `three-party-review` 的角色分離、不取代 `batch-task-completion-and-single-report` 的全量清單與整批完成，也不自行批准、正式採用、Push、Merge、Release 或啟用 Runtime。
++- **目前狀態：** `CANDIDATE`；採用狀態 `NOT_ADOPTED`；Runtime 狀態 `NOT_RUN`。文件存在或靜態檢查通過，不代表正式採用或 Runtime 生效。
++
++## 2. 核心目的
++
++防止合併與彙整把「相同內容」誤當成「相同規則」。任何合併都必須能回答：哪些來源被讀取、誰具權威、哪些條文被保留、哪些條文衝突、哪些責任被拆分、哪些限制不能放寬、候選與正式狀態是否分離、合併後如何證明原始行為仍在、失敗時如何回復。
++
++## 3. 觸發條件與不適用情況
++
++| 情境 | 是否使用 | 路由 |
++|---|---|---|
++| 多份治理文件、Skill 或規則合併／彙整 | 必須 | 本 Skill 主路由 |
++| 單一文件純排版且不改語意 | 通常不使用 | `skill-creator` 或文件工具 |
++| 全部 Skill 批次升級 | 條件式 | 先由批次 Skill 凍結清單，本 Skill 處理合併風險 |
++| 正式放行前獨立冷讀 | 不是本 Skill 單獨完成 | 轉交 `independent-audit` |
++| PR、Merge、Release 或 Runtime 啟用 | 本 Skill 僅提供驗收證據 | 交由 `manus-core` 與授權者 |
++| 下單、交易、Broker、LIVE、台指期 | 禁止 | 維持硬禁止狀態，不執行；台指期固定 `STOPPED_BY_USER`，回測固定 `PAUSED_BY_USER` |
++
++## 4. 責任邊界與相依
++
++### 本 Skill owns
++
++1. 合併來源盤點、權威排序與範圍凍結。
++2. 條文／欄位／流程／限制的雙向 mapping。
++3. 遺漏、重複、責任重疊、語意衝突與覆蓋風險分析。
++4. 合併前基線與合併後反向、負向、邊界、回歸、冪等及回復測試。
++5. 合併結果、未決衝突、差異、Hash 與回復入口的證據索引。
++
++### 本 Skill does not own
++
++- 正式採用、治理裁決、永久權限變更、Project Settings 寫入、Runtime 啟用、Push、Merge、Release、付款、刪除或任何不可逆外部操作。
++- 把自己的自測寫成獨立稽核。
++- 修改其他 Skill 的原始正本以消除衝突。
++
++### 相依與 handoff
++
++- `manus-core`：權限、權威來源、唯一 writer、正式狀態、困難卡與最終整合。
++- `version-evolution-preservation`：快照、累積升級、歷史保留、Diff、Hash 與回復。
++- `independent-audit`：需要真正獨立驗證時冷讀、重跑與反證。
++- `three-party-review`：需要 IMPLEMENTER／TESTER／INDEPENDENT_AUDITOR 角色隔離時使用。
++- `batch-task-completion-and-single-report`：涉及全量清單、凍結總數或整批交付時使用。
++
++## 5. 合併／彙整前檢查
++
++1. 建立 `MERGE_TASK_ID`、目標、範圍、排除項、輸入清單、預期輸出與 AC。
++2. 逐一讀取來源全文、附件、References、測試、版本、狀態與證據；讀不到的標 `NOT_READ`，不可用記憶補齊。
++3. 凍結 `EXPECTED`、`ACTUAL`、`UNIQUE`、重複、缺件、多件與來源版本；清單不完整時停止相依工作。
++4. 為每個來源記錄識別、權威性、版本、Commit、時間、SHA-256、狀態與讀取結果。
++5. 建立雙向 mapping：來源每一條都要找到保留、合併、替代、明確廢止或待裁決結果；候選每一條都要能回指來源或標示新增理由。
++6. 先保存所有原始檔、原始 Hash 與可回復副本；禁止直接覆寫唯一正本。
++7. 對照權限、硬禁止、停止／暫緩狀態、失敗出口、Router 觸發、版本狀態與 Runtime 聲明。
++
++## 6. 合併／彙整執行流程
++
++固定順序：
++
++1. **分類：** 將每條內容標為 `INHERIT`、`ENHANCE`、`ADD`、`CORRECT`、`REFACTOR`、`DEPRECATE_PENDING` 或 `CONFLICT`。
++2. **衝突判定：** 比較權威、適用範圍、優先級、版本、角色、權限、狀態、輸出與失敗處理；不能只靠關鍵字相同判定相容。
++3. **責任拆分：** 同一功能若同時由多個 Skill 負責，指定唯一主路由、輔助路由、handoff 與禁止重複寫入的邊界。
++4. **保守合併：** 在衝突未裁決前保留雙方原文，產生候選結果並標 `CONFLICT`；不得以新版自動覆蓋舊版，也不得以壓縮刪除未驗證規則。
++5. **建立候選：** 只寫入新的候選路徑；保存 source-to-candidate mapping、變更理由、Diff、Hash 與回復步驟。
++6. **合併後核對：** 逐條檢查硬禁止、狀態字典、權限邊界、Router、失敗出口、版本標記與 Runtime 限制仍可觀察。
++7. **進入反向測試：** 先測最可能被合併破壞的限制，再測正常流程；任一必要反例失敗都不得輸出整體 PASS。
++
++## 7. 風險與防範矩陣
++
++| 風險 | 典型症狀 | 防範／測試 | 失敗狀態 |
++|---|---|---|---|
++| 規則遺漏 | 原來源有條文，候選無 mapping | 雙向覆蓋與缺件計數 | `FAIL`／`REWORK_REQUIRED` |
++| 語意衝突 | 同一詞在不同來源有不同限制 | 逐條衝突表、權威排序、人工裁決 | `CONFLICT` |
++| 責任重疊 | 多個 Skill 都可寫入或放行 | owns／does_not_own／handoff 測試 | `CONFLICT`／`BLOCKED` |
++| 歷史覆蓋 | 舊版、原始證據或回復點消失 | 快照、Hash、Diff、回復演練 | `FAIL` |
++| 權限放寬 | 禁止變允許、核准門檻消失 | 負向與權限拒絕測試 | `FAIL` |
++| 候選誤升格 | `CANDIDATE` 變 `ADOPTED` 無批准 | 狀態突變與批准欄位測試 | `FAIL` |
++| 假 PASS | `UNKNOWN`／`NOT_RUN`／`BLOCKED` 被算 PASS | 狀態升格反例 | `FAIL` |
++| 路由不一致 | description 命中但正文不載入或反之 | 觸發／不觸發與 handoff 測試 | `FAIL`／`CONFLICT` |
++| Settings／Runtime 分叉 | 設定寫入後讀回不同或 Runtime 未讀回 | 前後 Hash、遠端讀回、行為測試 | `BLOCKED`／`NOT_RUN` |
++| 不可回復 | 合併後無法回到基線 | 回復演練與副作用盤點 | `FAIL` |
++| 部分成功被隱藏 | 一部分寫入、一部分失敗卻報整體成功 | 副作用、錯誤、Exit Code 與狀態分離 | `PARTIAL_FAILURE` |
++| 無限重試 | 相同非暫時錯誤反覆執行 | 次數上限、冪等鍵、停止出口 | `BLOCKED` |
++
++## 8. 反向測試流程
++
++反向測試不是再跑一次正向案例，而是主動構造會破壞合併安全性的輸入。至少執行以下案例，保存命令、輸入、stdout、stderr、Exit Code、時間、結果與 Hash：
++
++| ID | 反向案例 | 必須觀察的行為 |
++|---|---|---|
++| RT-01 | 兩個權威來源對同一權限互相矛盾 | 不靜默選邊；標 `CONFLICT` 並停止相依寫入 |
++| RT-02 | 兩份文件有相同欄位但責任不同 | 不合併成模糊條文；列重疊與唯一主責 |
++| RT-03 | 合併候選刪掉硬禁止 | 測試必須失敗，禁止交付 |
++| RT-04 | 新版覆蓋舊版歷史證據 | 必須拒絕或恢復快照，保留舊版可讀 |
++| RT-05 | 將 `CANDIDATE` 改成 `ADOPTED` 但無批准 | 必須拒絕狀態升格 |
++| RT-06 | 將 `UNKNOWN`、`NOT_RUN`、`BLOCKED` 改算 `PASS` | 必須拒絕整體 PASS |
++| RT-07 | description 與實際 Router 觸發條件不一致 | 必須標路由缺口，不宣稱可用 |
++| RT-08 | Project Settings 寫入前後 Hash 不同且未讀回 | 標 `BLOCKED`／`NOT_RUN`，不宣稱 Runtime |
++| RT-09 | 部分檔案成功、部分檔案失敗 | 分離副作用與未完成項，提供回復入口 |
++| RT-10 | 同一非冪等合併命令重跑 | 無去重鍵或讀回證據時拒絕重試 |
++| RT-11 | 路由 A→B→A 或互相回送 | 偵測循環並停止，標 `CONFLICT`／`BLOCKED` |
++| RT-12 | 測試器被修改以避開原 FAIL | 保留原 FAIL，要求測試器差異與回歸 |
++
++## 9. 七欄 P／C／J 步驟規格
++
++每個執行步驟均須有以下七欄，不得以「同上」省略：
++
++| 欄位 | 要求 |
++|---|---|
++| 觸發條件 | 可觀察且可判定 |
++| 操作要求 | 明確動作、輸入與順序 |
++| 禁止事項 | 不可繞過的限制 |
++| 輸出／證據 | 檔案、狀態、命令、Hash 或記錄 |
++| 完成判定 | 可驗收的 PASS 條件 |
++| 失敗處理 | 具體狀態、停止點與責任方 |
++| 回復方式 | 明確版本、快照或逆向步驟 |
++
++步驟類型只使用：`P`（實作／執行）、`C`（檢查／驗證）、`J`（判斷／路由）。
++
++## 10. 失敗出口、回復與重試
++
++- 必要來源讀不到：`NOT_READ`；停止相依步驟，列缺資料與解除條件。
++- 授權、Connector 或讀回不可用：`BLOCKED`；不改用替代權限繞過。
++- 來源或規則矛盾：`CONFLICT`；保存兩方原文、位置、影響、待裁決與回復點。
++- 測試必要條件不符：`FAIL`；保留原始失敗，修正後重跑原失敗題、反例與受影響回歸。
++- 部分成功：不得整體 PASS；保存已完成副作用、未完成範圍、錯誤與可回復步驟。
++- 僅可對可判定的暫時性錯誤有限重試；非冪等操作缺少去重鍵或讀回證據時禁止重試。
++- 連續失敗達到預先設定上限時標 `BLOCKED` 或 `REWORK_REQUIRED`，不得無限循環。
++
++## 11. 證據、版本與回復保存
++
++至少保存：
++
++1. 原始來源快照與來源清單。
++2. 合併前後檔案清單、版本、Commit 與 SHA-256。
++3. source-to-candidate 雙向 mapping。
++4. 完整 Diff 與變更分類。
++5. 正向、負向、邊界、權限、反向、回歸與回復測試結果。
++6. stdout、stderr、Exit Code、執行時間與環境。
++7. `CONFLICT`、`UNKNOWN`、`NOT_RUN`、`BLOCKED` 與 `FAIL` 的原始證據。
++8. 回復目標、命令、預期結果與實際結果。
++
++候選內容必須保存於新路徑。不得以文件存在、靜態關鍵字、模型自述、ACK 或「已送出」取代實際行為證據。
++
++## 12. 驗收標準
++
++- **AC-01：** 所有來源、版本、狀態與範圍已凍結，缺件與多件可追溯。
++- **AC-02：** 來源到候選、候選到來源均有 mapping；遺漏、重複與責任重疊已判定。
++- **AC-03：** 原始版本、快照、Diff、Hash 與回復方式已保存，原始內容未被覆寫。
++- **AC-04：** 正向、負向、邊界、權限、衝突、反向、回歸與冪等／回復測試均有實際證據。
++- **AC-05：** 硬禁止、權限邊界、狀態防升格、Router 與失敗出口未因合併而放寬。
++- **AC-06：** `UNKNOWN`、`NOT_RUN`、`BLOCKED`、`CONFLICT` 或必要 `FAIL` 不得被標為整體 PASS。
++- **AC-07：** Project Settings、遠端與 Runtime 僅在有讀回及行為證據時才可標示已驗證；否則維持 `NOT_RUN`／`UNKNOWN`／`BLOCKED`。
++- **AC-08：** 未完成必要 AC 時，最終狀態只能是 `REWORK_REQUIRED`、`PASS_WITH_GAPS`、`BLOCKED` 或 `COMPLETED_WITH_CONCERNS`，不可正式放行。
++
++## 13. 固定輸出格式
++
++```markdown
++# 合併／彙整反向驗收報告
++
++- MERGE_TASK_ID：
++- 目標與範圍：
++- 非範圍：
++- 權威來源與版本：
++- 合併前快照／SHA-256：
++- 合併候選路徑：
++- 原始／候選 Diff：
++
++## 結果
++- 整體狀態：PASS／PASS_WITH_GAPS／FAIL／REWORK_REQUIRED／BLOCKED／CONFLICT
++- 來源完整性：
++- 語意與責任衝突：
++- 權限與硬禁止：
++- 狀態升格防護：
++- Router／Runtime：
++- 回復可行性：
++
++## 測試矩陣
++| ID | 類型 | 命令 | Exit Code | 實際結果 | 證據 | 狀態 |
++|---|---|---|---:|---|---|---|
++
++## 缺口與困難卡
++- 現象：
++- 證據與位置：
++- 類別：缺資料／缺授權／衝突／技術失敗
++- 影響 AC：
++- 解除條件：
++- 負責方：
++- 首次發現時間：
++
++## 回復
++- 回復目標：
++- 回復命令／步驟：
++- 回復測試：
++
++## 最終聲明
++- 未正式採用：
++- 未寫入 Project Settings：
++- 未 Merge／Release／啟用 Runtime：
++- 獨立稽核：PASS／NOT_RUN／BLOCKED／UNKNOWN
++```
+ 
+-## Structuring This Skill
++## 14. 最終驗收與交接
+ 
+-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
++只有所有必要 AC 有實際證據、必要反向測試通過、沒有未處理的 `FAIL`／`CONFLICT`／`UNKNOWN`／`NOT_RUN`／`BLOCKED`，且版本、Diff、Hash、回復與交接欄位完整時，才可標 `SELF_ACCEPTED`。這不等於 `INDEPENDENT_AUDIT`、正式採用或 Runtime 生效。
+ 
+-**1. Workflow-Based** (best for sequential processes)
+-- Works well when there are clear step-by-step procedures
+-- Example: DOCX skill with "Workflow Decision Tree" → "Reading" → "Creating" → "Editing"
+-- Structure: ## Overview → ## Workflow Decision Tree → ## Step 1 → ## Step 2...
++交接必須列出：已保存、已送達、已接收、已執行、已驗證、Runtime 是否生效、未完成事項、風險、負責方、下一步與任務四態。任務四態只可用：`完成`、`完成但有疑慮`、`需要資料`、`卡住`。
+ 
+-**2. Task-Based** (best for tool collections)
+-- Works well when the skill offers different operations/capabilities
+-- Example: PDF skill with "Quick Start" → "Merge PDFs" → "Split PDFs" → "Extract Text"
+-- Structure: ## Overview → ## Quick Start → ## Task Category 1 → ## Task Category 2...
+-
+-**3. Reference/Guidelines** (best for standards or specifications)
+-- Works well for brand guidelines, coding standards, or requirements
+-- Example: Brand styling with "Brand Guidelines" → "Colors" → "Typography" → "Features"
+-- Structure: ## Overview → ## Guidelines → ## Specifications → ## Usage...
+-
+-**4. Capabilities-Based** (best for integrated systems)
+-- Works well when the skill provides multiple interrelated features
+-- Example: Product Management with "Core Capabilities" → numbered capability list
+-- Structure: ## Overview → ## Core Capabilities → ### 1. Feature → ### 2. Feature...
+-
+-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+-
+-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+-
+-## [TODO: Replace with the first main section based on chosen structure]
+-
+-[TODO: Add content here. See examples in existing skills:
+-- Code samples for technical skills
+-- Decision trees for complex workflows
+-- Concrete examples with realistic user requests
+-- References to scripts/templates/references as needed]
+-
+-## Resources
+-
+-This skill includes example resource directories that demonstrate how to organize different types of bundled resources:
+-
+-### scripts/
+-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+-
+-**Examples from other skills:**
+-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
+-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+-
+-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+-
+-**Note:** Scripts may be executed without loading into context, but can still be read by Manus for patching or environment adjustments.
+-
+-### references/
+-Documentation and reference material intended to be loaded into context to inform Manus's process and thinking.
+-
+-**Examples from other skills:**
+-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
+-- BigQuery: API reference documentation and query examples
+-- Finance: Schema documentation, company policies
+-
+-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Manus should reference while working.
+-
+-### templates/
+-Files not intended to be loaded into context, but rather used within the output Manus produces.
+-
+-**Examples from other skills:**
+-- Brand styling: PowerPoint template files (.pptx), logo files
+-- Frontend builder: HTML/React boilerplate project directories
+-- Typography: Font files (.ttf, .woff2)
+-
+-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
+-
+----
+-
+-**Any unneeded directories can be deleted.** Not every skill requires all three types of resources.
++本候選 Skill 的升級遵循累積式演進：不覆寫原始 Skill，不刪除歷史證據；任何後續修改都必須重新保存快照、Diff、SHA-256、測試結果與回復方式。

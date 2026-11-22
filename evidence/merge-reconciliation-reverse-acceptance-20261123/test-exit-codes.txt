@@ -1,0 +1,2 @@
+quick_validate_exit=0
+behavior_acceptance_exit=1

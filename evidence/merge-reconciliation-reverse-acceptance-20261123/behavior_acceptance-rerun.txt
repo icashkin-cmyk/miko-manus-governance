@@ -1,0 +1,30 @@
+FAIL hard boundary/status STOPPED: missing 'STOPPED'
+PASS frontmatter name
+PASS candidate status
+PASS adoption boundary
+PASS runtime boundary
+PASS pre-merge checks
+PASS merge workflow
+PASS risk matrix
+PASS reverse tests
+PASS seven-column contract
+PASS failure recovery
+PASS evidence preservation
+PASS acceptance criteria
+PASS handoff
+PASS RT-01
+PASS RT-02
+PASS RT-03
+PASS RT-04
+PASS RT-05
+PASS RT-06
+PASS RT-07
+PASS RT-08
+PASS RT-09
+PASS RT-10
+PASS RT-11
+PASS RT-12
+PASS hard boundary/status 下單
+PASS hard boundary/status 交易
+PASS hard boundary/status Broker
+PASS hard boundary/status LIVE
