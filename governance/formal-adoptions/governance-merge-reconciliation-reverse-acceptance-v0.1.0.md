@@ -8,7 +8,7 @@
 - 批准人：`MIKO`
 - 批准日期：`2026-11-23`（Asia/Taipei）
 - 批准範圍：僅本地正式 `skills/` 路徑；不包含 Project Settings 寫入、Runtime 啟用、外部 Connector、Merge、Release 或正式 Tag
-- 本地採用 commit：由本次採用 Commit 建立後以 Git 讀回確認
+- 本地採用 commit：`53b621b5e1399e0340c97cad5da7969881ca8799`
 - Runtime：`NOT_RUN`
 - Project Settings：`NOT_RUN`
 - Push：本次採用 Commit 將推送至目前候選分支；不推送 `main`
