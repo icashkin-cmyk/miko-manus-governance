@@ -1,11 +1,17 @@
 ---
 name: miko-governance-layer-acceptance
-version: 0.1.0
-status: ADOPTED
-description: 執行 MIKO Manus 治理架構 G0–G9 的全生命週期驗收，包含基線、架構、治理核心、Router、Knowledge Cards、Skill 盤點、Tools Contract、端到端 Dry-run、獨立驗收與候選生命週期回復演練。用於治理架構候選交付前的可重跑驗收；不得將離線候選 PASS 誤報為正式發布、正式採用或 Manus Runtime 已啟用。
+description: 執行 MIKO Manus 治理架構 G0–G9 的全生命週期驗收，包含基線、架構、治理核心、Router、Knowledge Cards、Skill 盤點、Tools Contract、端到端 Dry-run、獨立驗收與候選生命週期回復演練。用於治理架構候選交付前的可重跑驗收；不得將離線候選 PASS 誤報為正式發布、正式採用或 Manus Runtime 已啟用。 本候選補上統一七欄與 P／C／J 驗收責任；不代表正式採用或 Runtime 生效。
+metadata:
+  version: 0.1.1-cumulative-candidate
+  previous_version: 0.1.0
+  status: CANDIDATE
+  adoption_scope: NOT_ADOPTED
+  runtime_status: NOT_RUN
+  source_commit: a940f2407ca561e8f516bdf8d4d26d6525674c9f
+  historical_reference: false
 ---
 
-# MIKO Governance Layer Acceptance v0.1.0
+# 治理-G0至G9生命週期驗收
 
 ## 1. Skill 身分與範圍
 
@@ -209,3 +215,116 @@ python3 -I -B tests/check_repo.py
 - 每次升級採累積式演進：保留舊版、diff、來源、日期、commit、SHA-256 與回復方式。
 - 若測試器與本 Skill 規則衝突，先標記 `CONFLICT`，不得自行改名繞過；由治理裁決後再修正並重跑。
 - 本 Skill 的正式採用狀態為 `ADOPTED`；安裝與 Runtime 載入狀態目前為 `NOT_RUN`，除非另有實際證據。
+
+## Batch B 格式與責任補強（候選升級）
+
+> 本區是候選版新增內容；原有正文保留。`P` 是可重播程式步驟，`C` 是固定檢查步驟，`J` 是需保存判斷依據的判斷步驟。
+
+### 責任邊界
+
+- 角色：`GATE_ACCEPTANCE_COORDINATOR`。
+- 產出：G0–G9 Gate 結果、原始輸出、Exit Code、Hash 與交接報告。
+- 不產出／不執行：不取代 INDEPENDENT_AUDITOR，不自行正式採用，不啟用 Runtime。
+- `final_integrator`：未由上游明確指定時標 `UNKNOWN`，不得自行補造。
+- `runtime_status`：`NOT_RUN`；本候選不代表正式採用。
+
+### 七欄流程／Gate 表
+
+| ID | 類型 | 觸發條件 | 操作要求 | 禁止事項 | 驗收證據 | 失敗處理 |
+|---|---|---|---|---|---|---|
+| GATE-01 | P | 候選驗收開始 | 保存 repository、branch、HEAD、VERSION、README、CHANGELOG 與 remote identity | 只讀舊報告代替本輪讀回 | 基線命令、stdout、stderr、Exit Code、Hash | 身份不一致標 FAIL |
+| GATE-02 | C | G0–G5 測試完成 | 核對架構、治理核心、Router、Knowledge Cards 與 Skill inventory | 把靜態盤點當 Runtime PASS | 逐 Gate 矩陣與缺陷清單 | 任一 Gate 未完成不得前進 |
+| GATE-03 | P | G6 工具驗收開始 | 執行工具存在、拒絕授權、錯誤輸入、邊界與失敗測試 | 用模擬 Connector 冒充授權成功 | 命令、輸出、Exit Code、Hash | 測試失敗保存證據並回流 |
+| GATE-04 | C | G7 E2E 完成 | 核對需求→Router→Card→Skill→Tool→權限→輸出完整鏈 | 只測單一 Skill 或只看最終輸出 | 端到端輸入、路由、輸出與錯誤證據 | 鏈中任一段缺證據標 FAIL |
+| GATE-05 | C | G8 獨立驗收開始 | 由獨立驗收者冷讀並重跑必要測試 | 接受 Tester 自述 PASS | Independent report、差異、重跑輸出 | 獨立性不足標 BLOCKED |
+| GATE-06 | J | G9 生命週期驗收完成 | 分開判定候選回復、遠端讀回、正式發布、採用與 Runtime | 把候選 PASS 當正式採用或 Runtime 生效 | 生命週期矩陣與狀態聲明 | 未授權或未實測標 NOT_RUN／UNKNOWN |
+
+### 候選驗收條件
+
+- expected：每個必要步驟都有輸入、操作、禁止事項、證據與失敗出口。
+- forbidden：把 `UNKNOWN`、`NOT_RUN`、`BLOCKED` 或 ACK 升格為 `PASS`。
+- 相近反例：只通過格式檢查但未執行行為測試；只由製作者自評；未指定 writer 或驗收者卻宣稱完成。
+- AC-BATCH-B-01：七欄表存在且每欄有實質內容。
+- AC-BATCH-B-02：每列類型只使用 `P`、`C` 或 `J`。
+- AC-BATCH-B-03：P 步有可重播命令；C／J 步有固定判定與證據。
+- AC-BATCH-B-04：原有功能與限制可由原始快照、diff 與回歸測試追溯。
+- AC-BATCH-B-05：未正式採用、未啟用 Runtime 與未執行外部 Connector 均明確標示。
+
+## 1. 問問題｜Batch B 相容性驗收
+
+確認本候選版本保留原始責任，新增七欄表、P／C／J 類型、唯一 writer、驗收者與 final integrator；未知資料不得補造。
+
+## 2. 解決｜Batch B 相容性驗收
+
+| ID | 類型 | 觸發條件 | 操作要求 | 禁止事項 | 驗收證據 | 失敗處理 |
+|---|---|---|---|---|---|---|
+| FORMAT-01 | C | 候選 Skill 建立後 | 核對 frontmatter、H1、四節、七欄表與 P／C／J 標型 | 只看檔案存在就宣稱合格 | quick_validate、skill_lint、stdout、stderr、Exit Code | 任一格式失敗標 FAIL，停止後續 Gate |
+| FORMAT-02 | P | 需要保存候選證據 | 執行 `sha256sum <candidate-file>` 並保存輸出 | 只看檔名或大小代替 Hash | 命令、stdout、stderr、Exit Code、SHA-256 | 命令失敗標 BLOCKED，保留候選版本 |
+| FORMAT-03 | C | 格式檢查通過 | 核對角色、writer、驗收者、final integrator 與禁止事項 | 自行補造未讀責任人或授權 | 責任矩陣與未知清單 | 責任不明標 UNKNOWN 或 BLOCKED |
+| FORMAT-04 | J | 進入行為驗收前 | 判定本 Skill 的正向、負向、邊界與回歸題目 | 把格式 PASS 當行為 PASS | 測題表、判定理由與狀態 | 缺題目或證據標 NOT_RUN |
+
+## 3. 後設｜Batch B 相容性驗收
+
+最強反例：格式工具通過，但原有功能、禁止事項或失敗出口被刪除；候選版必須以原始快照、逐行 diff 與回歸測試反證。
+
+## 4. 檢查｜Batch B 相容性驗收
+
+- expected：七欄表每欄有內容；P／C／J 類型正確；P 步有可重播命令；原有功能可追溯。
+- forbidden：把 `UNKNOWN`、`NOT_RUN`、`BLOCKED` 或 ACK 升格為 `PASS`。
+- 相近反例：只跑 lint、不跑行為題；只由製作者自評；未指定 writer 卻宣稱完成。
+- AC-BATCH-B-01：五個候選 Skill 的格式檢查 Exit Code 均為 0。
+- AC-BATCH-B-02：五個候選 Skill 的必要正向、負向、邊界與回歸題均有結果。
+- AC-BATCH-B-03：原始版本、diff、Hash 與回復路徑均可讀。
+- AC-BATCH-B-04：正式採用、Runtime、外部 Connector、Push 與 Merge 狀態分開記錄。
+
+## 累積式優化｜責任邊界、限制與衝突路由 2026-11-17
+
+### 統一治理邊界
+- 本 Skill 只負責下列 `owns` 工作；`does_not_own` 所列工作不由本 Skill 自行決定。
+- 命中邊界時依 `handoff_to` 轉交，不靜默擴張責任、不覆寫其他 Skill 結論。
+- 外部 Connector、付款、刪除、Push、Merge、Release、正式採用與 Runtime 啟用不因本 Skill 的領域判斷而自動授權；由 `manus-core` 管理授權、唯一 writer、讀回與回復。
+- 本 Skill 可提出候選 `PASS`／`FAIL`／`UNKNOWN`／`NOT_RUN`／`BLOCKED`，但 `final_integrator` 固定為 `manus-core`；`may_adopt: false`、`may_enable_runtime: false`。
+- 任務專屬禁止、STOPPED、PAUSED 或使用者當次較嚴格限制，優先於一般常設授權。
+- 規則、版本或來源衝突時標 `CONFLICT`，停止相依步驟並保存原文、位置、影響、差異與回復方式；不得以替代來源繞過授權或停止條件。
+
+| 欄位 | 本 Skill 邊界 |
+|---|---|
+| `final_integrator` | `manus-core` |
+| `may_adopt` | `false` |
+| `may_enable_runtime` | `false` |
+| `external_write_owner` | `manus-core`／指定唯一 writer |
+| `conflict_priority` | 任務專屬硬限制 > manus-core 一般規則 > 本 Skill 建議 |
+
+### 本 Skill 路由
+- `owns`：G0-G9 與治理驗收關卡、證據矩陣與狀態判定。
+- `does_not_own`：不把自評、文件完整或 NOT_RUN 升格為正式採用／Runtime。
+- `handoff_to`：G8 呼叫 `independent-audit`；角色模式交 `three-party-review`；最終決策交核心／治理者。
+
+
+## 第五套高難度邊界與回復補強（候選升級 2026-11-18）
+
+本節是累積式升級，不取代或刪除既有規則；本 Skill 的本次職責為：G0-G9 關卡分離與採用邊界。
+
+### 5B 多重邊界與唯一主路由
+- 當同一請求同時命中本 Skill 與其他 Skill 時，本 Skill 只處理自己的 `owns` 範圍，指定唯一主路由、輔助路由與 `handoff_to`；不得雙重寫入或自行成為最終裁決者。
+- 無法判定主責時標 `CONFLICT`，保存觸發規則、route chain、責任者與待決，不以猜測選路。
+
+### 5E 部分成功與例外
+- 已完成與未完成步驟必須分開記錄；部分成功不得標整體 `PASS`。來源、輸出或讀回不完整時標 `UNKNOWN`、`NOT_RUN` 或 `BLOCKED`，依實際證據判定。
+- 必須保存已完成副作用、未完成範圍、stdout、stderr、Exit Code、錯誤與下一步；不得以替代來源掩蓋缺口。
+
+### 5X 授權、停止與不可逆操作
+- 一般授權不解除任務專屬限制；`STOPPED_BY_USER`、`PAUSED_BY_USER`、`BLOCKED`、使用者當次禁止與不可逆操作限制優先。
+- 外部寫入、付款、刪除、發送、Push、Merge、正式採用與 Runtime 啟用須交 `manus-core`／指定唯一 writer；不得用替代路由繞過授權。
+
+### 5R 回復、冪等與重試
+- 首次失敗與回復失敗都必須保存；非冪等操作沒有去重鍵或讀回證據時，禁止重試、禁止重複寫入，停止並要求人工裁決。
+- 回復須指向明確版本、檔案或狀態；保存原始錯誤、回復錯誤、部分副作用、diff、Hash 與可執行的回復步驟，不得無限重試。
+
+### 5C 循環路由與衝突整合
+- 必須記錄完整路由鏈並偵測重複訪問；發現循環或相互矛盾結論時標 `CONFLICT` 或 `BLOCKED`，在可逆狀態停止並交 `manus-core`。
+- 本 Skill 不得覆寫其他 Skill 或稽核者結論；最終整合者固定為 `manus-core`，本節不授予正式採用或 Runtime 權限。
+
+### 本次補強驗收
+- 內容類型：`繼承＋強化`；歷史版本：已保存於 `evidence/fifth-pass-repair-20261118/pre-upgrade-snapshot/`。
+- 狀態：候選升級，尚未正式採用、尚未 Runtime 生效。

@@ -1,0 +1,1923 @@
+{
+  "generated_at": "2026-11-22T03:27:49+00:00",
+  "source": "/home/ubuntu/skills",
+  "count": 63,
+  "method": "deterministic static scan; not a legal opinion; not a runtime portability proof",
+  "skills": [
+    {
+      "skill": "ai-behavior-emulation",
+      "h1": "人工智慧行為研究與程式設計效法",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "d2f35a66de7fe56251c446657ef25a31f3acfb074008eb9925d7e95b4d02cdad",
+      "path": "/home/ubuntu/skills/ai-behavior-emulation/SKILL.md"
+    },
+    {
+      "skill": "automation-and-scheduling",
+      "h1": "Automation and Scheduling",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 16,
+        "mcp_connector": 1,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "connector"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "e7f178550696b4f19ada83603b4d73a5e2c5dd3ce4df26689d5d64071637aaff",
+      "path": "/home/ubuntu/skills/automation-and-scheduling/SKILL.md"
+    },
+    {
+      "skill": "builtin-llm-models",
+      "h1": "Built-in LLM Models",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 55,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 25,
+        "sensitive_or_auth": 5
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Built-in",
+          "Cloud Computer",
+          "Manus",
+          "Sandbox",
+          "built-in",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Anthropic",
+          "Gemini",
+          "OpenAI",
+          "anthropic",
+          "openai"
+        ],
+        "sensitive_or_auth": [
+          "Token",
+          "credential",
+          "token"
+        ]
+      },
+      "sha256": "2986d57a278e80665a53125329818e70b0f968354d54dac557edbcae96c9840d",
+      "path": "/home/ubuntu/skills/builtin-llm-models/SKILL.md"
+    },
+    {
+      "skill": "claude-md-improver",
+      "h1": "CLAUDE.md Improver",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "EXTERNAL_SERVICE_DEPENDENT",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "git"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "b06c7420be08ca1c7f6d75f7f4709fdb787624a2d363e2f8052216d8c780f85b",
+      "path": "/home/ubuntu/skills/claude-md-improver/SKILL.md"
+    },
+    {
+      "skill": "content-gap-analysis",
+      "h1": "Content Gap Analysis",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "EXTERNAL_SERVICE_DEPENDENT",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 9,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Ahrefs",
+          "Semrush"
+        ],
+        "sensitive_or_auth": [
+          "API key"
+        ]
+      },
+      "sha256": "c3617335e7012b9331e5a6097fad63c17e3c4c2e082ec826e82bf8bf6d140f60",
+      "path": "/home/ubuntu/skills/content-gap-analysis/SKILL.md"
+    },
+    {
+      "skill": "data-analysis",
+      "h1": "Data Analysis",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 2,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "manus-tools"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "similarweb"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "efedd3cc04edd0b6e6b9bae7192accb5e1f740540ecdc724a40f6d6eeebc69c1",
+      "path": "/home/ubuntu/skills/data-analysis/SKILL.md"
+    },
+    {
+      "skill": "data-api",
+      "h1": "Manus Data API",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 16,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 4,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Sandbox",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Similarweb",
+          "YouTube",
+          "similarweb",
+          "youtube"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "f59c98c040f5a0db9377799bea6aba558ac2d12a4e9830b4b2c11ee2cb805d5a",
+      "path": "/home/ubuntu/skills/data-api/SKILL.md"
+    },
+    {
+      "skill": "data-backup-restoration",
+      "h1": "Data Backup and Restoration",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 20,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "90474ee9ed38b6a3035f9131488fc351ace91281b41273a13412aa7456330955",
+      "path": "/home/ubuntu/skills/data-backup-restoration/SKILL.md"
+    },
+    {
+      "skill": "deep-research",
+      "h1": "Deep Research",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 2,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus"
+        ],
+        "mcp_connector": [
+          "browser tools"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "b69aefe8fab8686128b995d0551cdc76e0abea7874fdcac70ff87b2ada28538f",
+      "path": "/home/ubuntu/skills/deep-research/SKILL.md"
+    },
+    {
+      "skill": "excel-generator",
+      "h1": "Excel Generator Skill",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "68cede7c84566524b05e2e7998885b4f34969003f0011a56cea9b540c5f6acad",
+      "path": "/home/ubuntu/skills/excel-generator/SKILL.md"
+    },
+    {
+      "skill": "excel-playbooks",
+      "h1": "Excel Playbooks (Manus for Excel)",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 4,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "b2c049f20d6eb62eeba8a918a8d1408fef59e4e5d49cb20dbcba681e9ac6fd91",
+      "path": "/home/ubuntu/skills/excel-playbooks/SKILL.md"
+    },
+    {
+      "skill": "finance-pro-playbooks",
+      "h1": "Finance Pro Playbooks",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 1,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "built-in"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "dcba4c099f6da75b52ac4d6192eaacef7482fbe6914078ea4c677180effff852",
+      "path": "/home/ubuntu/skills/finance-pro-playbooks/SKILL.md"
+    },
+    {
+      "skill": "financial-analysis",
+      "h1": "Financial Analysis",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 4,
+        "mcp_connector": 1,
+        "filesystem_binding": 3,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP"
+        ],
+        "filesystem_binding": [
+          ".manus/",
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "1cc6333fd670765fa2dd5bba246b67e06f3ec1116dc1db3a778e32039fb06c2e",
+      "path": "/home/ubuntu/skills/financial-analysis/SKILL.md"
+    },
+    {
+      "skill": "game-asset-catalog",
+      "h1": "Game asset catalog",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 9,
+        "mcp_connector": 4,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "built-in",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "webdev-mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "1e2e3fce4b25f61752f5b996a75ac22e946b42f99ad91fa47f8254d9ed4a43e0",
+      "path": "/home/ubuntu/skills/game-asset-catalog/SKILL.md"
+    },
+    {
+      "skill": "git-attribution",
+      "h1": "Git Attribution",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 3,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 4,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Git",
+          "git"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "14096a3a040bade1b9eefe411b31d070557beeaff24080fbf8ab6db4c4aaa936",
+      "path": "/home/ubuntu/skills/git-attribution/SKILL.md"
+    },
+    {
+      "skill": "github-authentication",
+      "h1": "GitHub Authentication v0.1.0-candidate",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 8,
+        "mcp_connector": 3,
+        "filesystem_binding": 1,
+        "external_cli_api": 47,
+        "sensitive_or_auth": 33
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Runtime",
+          "manus"
+        ],
+        "mcp_connector": [
+          "Connector"
+        ],
+        "filesystem_binding": [
+          "HOME/"
+        ],
+        "external_cli_api": [
+          "Git",
+          "GitHub",
+          "gh ",
+          "git",
+          "github"
+        ],
+        "sensitive_or_auth": [
+          "API key",
+          "PASSWORD",
+          "PAT",
+          "TOKEN",
+          "Token",
+          "credential",
+          "token"
+        ]
+      },
+      "sha256": "e9856b276bcaf065a886148222e9a9902244877ae28cf07065e94008d5d3e3bc",
+      "path": "/home/ubuntu/skills/github-authentication/SKILL.md"
+    },
+    {
+      "skill": "github-gem-seeker",
+      "h1": "GitHub Gem Seeker",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "EXTERNAL_SERVICE_DEPENDENT",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 15,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub",
+          "YouTube",
+          "github"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "05042dca5df6d1af0ced96a3212e8e5699b1218021073bf60c060e311e453964",
+      "path": "/home/ubuntu/skills/github-gem-seeker/SKILL.md"
+    },
+    {
+      "skill": "github-integration",
+      "h1": "GitHub Integration",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 9,
+        "filesystem_binding": 3,
+        "external_cli_api": 18,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Sandbox"
+        ],
+        "mcp_connector": [
+          "connector"
+        ],
+        "filesystem_binding": [
+          "MANUS_CONFIG_HOME"
+        ],
+        "external_cli_api": [
+          "Git",
+          "GitHub",
+          "gh ",
+          "github"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "1490a0b29fdeea4d754ad1fc12366f8d18301008e9cfe4a9cc061c731abf0cef",
+      "path": "/home/ubuntu/skills/github-integration/SKILL.md"
+    },
+    {
+      "skill": "google-workspace-integration",
+      "h1": "Google Workspace Integration",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 5,
+        "filesystem_binding": 5,
+        "external_cli_api": 9,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Sandbox"
+        ],
+        "mcp_connector": [
+          "connector"
+        ],
+        "filesystem_binding": [
+          "/home/ubuntu",
+          "MANUS_CONFIG_HOME"
+        ],
+        "external_cli_api": [
+          "gws"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "eac6329fa929df7eb8491a9adc6f2fe1effd25872088f020e61b9d4730e0be03",
+      "path": "/home/ubuntu/skills/google-workspace-integration/SKILL.md"
+    },
+    {
+      "skill": "gws-best-practices",
+      "h1": "gws CLI Best Practices",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "EXTERNAL_SERVICE_DEPENDENT",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 26,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Gmail",
+          "Google Drive",
+          "gws"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "9014cd7ba5bce3cdd92f02e69a37e930a9cd273f55c9a154b04a1ef198b8b4fe",
+      "path": "/home/ubuntu/skills/gws-best-practices/SKILL.md"
+    },
+    {
+      "skill": "handoff",
+      "h1": "Handoff",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "token"
+        ]
+      },
+      "sha256": "705386611638c16ef9f1e94d1b114ea20492fdcbeb1d4afd48fd32a4c4852344",
+      "path": "/home/ubuntu/skills/handoff/SKILL.md"
+    },
+    {
+      "skill": "image-processing",
+      "h1": "Image Processing",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "1ed414ba7bead8a9f29d70e825a3ad1b689f7f429e75c8f3f42aceaf1d572ddb",
+      "path": "/home/ubuntu/skills/image-processing/SKILL.md"
+    },
+    {
+      "skill": "imagegen",
+      "h1": "ImageGen Manus",
+      "license_status": "LICENSE_FILE_PRESENT",
+      "licenses": [
+        "LICENSE.txt"
+      ],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 1,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "bdbf86931215b8e4a51ba893edba6468d7327246c10b07e18337a31a58a183c6",
+      "path": "/home/ubuntu/skills/imagegen/SKILL.md"
+    },
+    {
+      "skill": "internet-skill-finder",
+      "h1": "Internet Skill Finder",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 3,
+        "filesystem_binding": 2,
+        "external_cli_api": 5,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [
+          "Connector"
+        ],
+        "filesystem_binding": [
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [
+          "GitHub"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "aaf9a176a9ff39a191a8a2901497803a563747659083263591edf8854b5db1fe",
+      "path": "/home/ubuntu/skills/internet-skill-finder/SKILL.md"
+    },
+    {
+      "skill": "keyword-research",
+      "h1": "Keyword Research",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 2,
+        "filesystem_binding": 2,
+        "external_cli_api": 3,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus"
+        ],
+        "mcp_connector": [
+          "MCP"
+        ],
+        "filesystem_binding": [
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [
+          "Ahrefs",
+          "Semrush",
+          "Similarweb"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "a90fe02197aaf63be5afe168fca3e18c6065cc425ca00674ce30d29094b9b10a",
+      "path": "/home/ubuntu/skills/keyword-research/SKILL.md"
+    },
+    {
+      "skill": "manus-api",
+      "h1": "Manus API Integration Guide",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 18,
+        "mcp_connector": 17,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 21
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus"
+        ],
+        "mcp_connector": [
+          "OAuth",
+          "connector"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "OpenAI"
+        ],
+        "sensitive_or_auth": [
+          "API key",
+          "Credential",
+          "OAuth",
+          "credential",
+          "token"
+        ]
+      },
+      "sha256": "4f4f651b3df5c8f3b882212daba54c98d99a61437b98afe32de3a23a7fdd0f74",
+      "path": "/home/ubuntu/skills/manus-api/SKILL.md"
+    },
+    {
+      "skill": "manus-config",
+      "h1": "manus-config",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 95,
+        "mcp_connector": 123,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 84
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Cloud Computer",
+          "Manus",
+          "built-in",
+          "cloud computer",
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "Connector",
+          "MCP",
+          "OAuth",
+          "connector",
+          "mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Gmail"
+        ],
+        "sensitive_or_auth": [
+          "API key",
+          "OAuth",
+          "Secret",
+          "TOKEN",
+          "Token",
+          "credential",
+          "password",
+          "secret",
+          "token"
+        ]
+      },
+      "sha256": "5a659a3c043c11037d597040ec39710a1f89af0b4a1cfadd99b0bdc826f6e733",
+      "path": "/home/ubuntu/skills/manus-config/SKILL.md"
+    },
+    {
+      "skill": "manus-tasks",
+      "h1": "Manus Tasks Addon",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 33,
+        "mcp_connector": 12,
+        "filesystem_binding": 0,
+        "external_cli_api": 3,
+        "sensitive_or_auth": 8
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Sandbox",
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "Connector",
+          "MCP",
+          "OAuth",
+          "connector"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Git"
+        ],
+        "sensitive_or_auth": [
+          "API key",
+          "OAuth",
+          "credential",
+          "token"
+        ]
+      },
+      "sha256": "189c8254984f53297a56ffd77676644a8685c3f0e036c3007c8db921bd829a13",
+      "path": "/home/ubuntu/skills/manus-tasks/SKILL.md"
+    },
+    {
+      "skill": "miko-document-upgrade-audit",
+      "h1": "MIKO 文件升級與核對",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 11,
+        "mcp_connector": 1,
+        "filesystem_binding": 0,
+        "external_cli_api": 5,
+        "sensitive_or_auth": 3
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Runtime"
+        ],
+        "mcp_connector": [
+          "connector"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub"
+        ],
+        "sensitive_or_auth": [
+          "API key",
+          "token"
+        ]
+      },
+      "sha256": "6f4c890b92008086a3c40d3c364e032ac71ecb1f62d02909620de10f2be3559d",
+      "path": "/home/ubuntu/skills/miko-document-upgrade-audit/SKILL.md"
+    },
+    {
+      "skill": "miko-src-core-rules",
+      "h1": "MIKO SRC 核心規則草擬器 v0.2",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 2,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "ab029b42ce7ddeeb47f9372652505d969293fb7c4e11f79b72c0f217a47eb8bb",
+      "path": "/home/ubuntu/skills/miko-src-core-rules/SKILL.md"
+    },
+    {
+      "skill": "miko-universal-skill-contract",
+      "h1": "MIKO 統一 Skill 契約與路由治理",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 7,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 3,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Git",
+          "GitHub"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "488bffa96c4414bb001bf1ec39d45165b61925c5501a14d33d820f7845dbbdab",
+      "path": "/home/ubuntu/skills/miko-universal-skill-contract/SKILL.md"
+    },
+    {
+      "skill": "miko-w1-w7-compatibility-audit",
+      "h1": "MIKO W1～W7 相容性稽核",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 1,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "1854846a15cb27efd563b215b10bdbf2b43f0db69dc09c098301d167cce996c2",
+      "path": "/home/ubuntu/skills/miko-w1-w7-compatibility-audit/SKILL.md"
+    },
+    {
+      "skill": "music-prompter",
+      "h1": "Music Generation Prompt Guide",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "247d7d71caa168ff76c9c03faeca0d20520004a68c41ef1add8dd700158b3567",
+      "path": "/home/ubuntu/skills/music-prompter/SKILL.md"
+    },
+    {
+      "skill": "office",
+      "h1": "Office files in Manus",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 3,
+        "mcp_connector": 1,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "9d4562ad94b6f4f63e979bded7605ca6ae6d1b9d8856c077e5b332b5bb0677c2",
+      "path": "/home/ubuntu/skills/office/SKILL.md"
+    },
+    {
+      "skill": "office-documents",
+      "h1": "Office documents",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 1,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [
+          "HOME/"
+        ],
+        "external_cli_api": [
+          "Git"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "7e17a2b692a21d7cab58cbcb9822a59e0883ba84686638bbfa5e4289eff19c31",
+      "path": "/home/ubuntu/skills/office-documents/SKILL.md"
+    },
+    {
+      "skill": "payment",
+      "h1": "Payment",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 5,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 3,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Sandbox",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Stripe"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "f7bad2306f20ea4a7664a6490ca49024a7ae89dd3a8058e616d78ccad67e9ed4",
+      "path": "/home/ubuntu/skills/payment/SKILL.md"
+    },
+    {
+      "skill": "performance-optimization",
+      "h1": "Performance Optimization",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 1,
+        "filesystem_binding": 0,
+        "external_cli_api": 1,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [
+          "MCP"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "git"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "82af71540457cf853893685211f64509cd1e781c0de09d0186f16960f2d6eeba",
+      "path": "/home/ubuntu/skills/performance-optimization/SKILL.md"
+    },
+    {
+      "skill": "persistent-computing",
+      "h1": "Persistent Computing",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 34,
+        "mcp_connector": 2,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Cloud Computer",
+          "Manus",
+          "Sandbox",
+          "built-in",
+          "cloud computer",
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "OAuth"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "OAuth"
+        ]
+      },
+      "sha256": "32a9d7878a7d1fe18e823bbf144249af474e5fe1d66ce6985b507e73d7c1bdd0",
+      "path": "/home/ubuntu/skills/persistent-computing/SKILL.md"
+    },
+    {
+      "skill": "read-special-images",
+      "h1": "Read Special Images",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "ee8e68e20ec3a6871d60eebe0ff8780ab9c0aa0098fbef6747317440d99a4ffc",
+      "path": "/home/ubuntu/skills/read-special-images/SKILL.md"
+    },
+    {
+      "skill": "scrapling",
+      "h1": "Scrapling 网页抓取 Skill",
+      "license_status": "LICENSE_FILE_PRESENT",
+      "licenses": [
+        "LICENSE"
+      ],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 2,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 3
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [
+          "MCP"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "token"
+        ]
+      },
+      "sha256": "5be2707ed7dd50fd6b9d6f40cfcf8559ac24cd4a0491d0e9631819d12188ceba",
+      "path": "/home/ubuntu/skills/scrapling/SKILL.md"
+    },
+    {
+      "skill": "session-self-config",
+      "h1": "Session Connector Configuration",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 5,
+        "mcp_connector": 11,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus"
+        ],
+        "mcp_connector": [
+          "Connector",
+          "MCP",
+          "connector"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "66cdc1b45e2c118c0e141e31a3cba00b94a11895624342b9fcc4d3775fbe49d7",
+      "path": "/home/ubuntu/skills/session-self-config/SKILL.md"
+    },
+    {
+      "skill": "similarweb-analytics",
+      "h1": "SimilarWeb Analytics",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 24,
+        "mcp_connector": 0,
+        "filesystem_binding": 8,
+        "external_cli_api": 11,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [
+          ".manus/"
+        ],
+        "external_cli_api": [
+          "SimilarWeb",
+          "similarweb"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "81e1c6c8f61d17ada7c09f28e2ee462ad00a71e96ac8a0c9f0de97f69d9b16d2",
+      "path": "/home/ubuntu/skills/similarweb-analytics/SKILL.md"
+    },
+    {
+      "skill": "skill-creator",
+      "h1": "Skill Creator",
+      "license_status": "LICENSE_FILE_PRESENT",
+      "licenses": [
+        "LICENSE.txt"
+      ],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 20,
+        "mcp_connector": 0,
+        "filesystem_binding": 3,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 2
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "built-in",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [
+          ".manus/",
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "Token",
+          "token"
+        ]
+      },
+      "sha256": "9396beafe1f61b0ee806cb90bf74d33c72cc60c7533daa06383e855091619444",
+      "path": "/home/ubuntu/skills/skill-creator/SKILL.md"
+    },
+    {
+      "skill": "slack-mcp-guide",
+      "h1": "Slack MCP Guide",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 1,
+        "mcp_connector": 26,
+        "filesystem_binding": 0,
+        "external_cli_api": 21,
+        "sensitive_or_auth": 11
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "runtime"
+        ],
+        "mcp_connector": [
+          "Connector",
+          "OAuth",
+          "Slack MCP",
+          "connector",
+          "mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Slack",
+          "slack"
+        ],
+        "sensitive_or_auth": [
+          "OAuth",
+          "token"
+        ]
+      },
+      "sha256": "749a3217522e8027083a29f2d85e39460f8c5be7800b03d2137f8c0645534ed5",
+      "path": "/home/ubuntu/skills/slack-mcp-guide/SKILL.md"
+    },
+    {
+      "skill": "slides",
+      "h1": "Slides",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 13,
+        "mcp_connector": 3,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "9d6c7d3597a6da133fb77e1f385150501a1cab13593c86fb5c974bc1fe3dbbba",
+      "path": "/home/ubuntu/skills/slides/SKILL.md"
+    },
+    {
+      "skill": "stock-analysis",
+      "h1": "Stock Analysis",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "18901593a0b014c1ee2cbf8cbb972ef197229008ca842ec4cc11dc965b8d6208",
+      "path": "/home/ubuntu/skills/stock-analysis/SKILL.md"
+    },
+    {
+      "skill": "support-policy",
+      "h1": "Support Policy",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 5,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "2d8b449f2370488599d54981e052102921c44f156f24bcff009eb0ce3f1ca70e",
+      "path": "/home/ubuntu/skills/support-policy/SKILL.md"
+    },
+    {
+      "skill": "system-settings-playbooks",
+      "h1": "System Settings Playbooks (Manus for System Settings)",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 7,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 3
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Sandbox",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "secret"
+        ]
+      },
+      "sha256": "db9a5cbab53669631e7d3beb1f090ced763c99e5e0eb6b2a4e6342ab73c27056",
+      "path": "/home/ubuntu/skills/system-settings-playbooks/SKILL.md"
+    },
+    {
+      "skill": "tailscale-network",
+      "h1": "Connect a computer to Tailscale",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 22,
+        "mcp_connector": 2,
+        "filesystem_binding": 0,
+        "external_cli_api": 2,
+        "sensitive_or_auth": 2
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Cloud Computer",
+          "Manus",
+          "Sandbox",
+          "cloud computer",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "OAuth",
+          "browser tools"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "github"
+        ],
+        "sensitive_or_auth": [
+          "OAuth",
+          "password"
+        ]
+      },
+      "sha256": "19de6b79badd6ee3b45a15f6a0d41da67f6b83e94ea48e52280b4988f5bbd04c",
+      "path": "/home/ubuntu/skills/tailscale-network/SKILL.md"
+    },
+    {
+      "skill": "thinking-tools-performance-optimization",
+      "h1": "八工具效能最佳化",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "5bfe2dce504bd51ccb10b8b3ed81afcb298f4f39dbc019c4cdcb1cd03ea4781a",
+      "path": "/home/ubuntu/skills/thinking-tools-performance-optimization/SKILL.md"
+    },
+    {
+      "skill": "touchpoint-contacts",
+      "h1": "Touchpoint Contacts",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 4,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "594dcbab8cda52107b2fc50afed4950607302aa8dd08866931429f404614a033",
+      "path": "/home/ubuntu/skills/touchpoint-contacts/SKILL.md"
+    },
+    {
+      "skill": "triggers",
+      "h1": "Triggers",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 10,
+        "mcp_connector": 8,
+        "filesystem_binding": 0,
+        "external_cli_api": 4,
+        "sensitive_or_auth": 3
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [
+          "Connector",
+          "MCP",
+          "connector",
+          "mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "GitHub",
+          "Gmail",
+          "Slack"
+        ],
+        "sensitive_or_auth": [
+          "credential",
+          "token"
+        ]
+      },
+      "sha256": "03821e47d670a79a3190eef2cd09896905fe946fadd5c780d7679c917b40dd82",
+      "path": "/home/ubuntu/skills/triggers/SKILL.md"
+    },
+    {
+      "skill": "trip",
+      "h1": "Trip.com deals",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 7,
+        "mcp_connector": 2,
+        "filesystem_binding": 6,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "trip MCP"
+        ],
+        "filesystem_binding": [
+          ".manus/",
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [],
+        "sensitive_or_auth": [
+          "secret"
+        ]
+      },
+      "sha256": "e6b60607e1c26ae9cb838948cab70a80f3c30858b37019e2631cf079051434ff",
+      "path": "/home/ubuntu/skills/trip/SKILL.md"
+    },
+    {
+      "skill": "tts-prompter",
+      "h1": "TTS Prompter",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "e4c143aa8d52141e22e80689eeb599c5e8e8350b1e505debeabebac06e3c7fef",
+      "path": "/home/ubuntu/skills/tts-prompter/SKILL.md"
+    },
+    {
+      "skill": "typst-pdf-maker",
+      "h1": "Typst PDF Maker",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 13,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "built-in",
+          "manus",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "4cb53837ce7835bf295dc32caa53cf097796859c51674af655681dcfbffe64ff",
+      "path": "/home/ubuntu/skills/typst-pdf-maker/SKILL.md"
+    },
+    {
+      "skill": "video-generation",
+      "h1": "Video Generation",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 5,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "Sandbox"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "a37771e853b000ea1cf5548e247e2a3b19e90340e29fa44810a8d7e4de1f284f",
+      "path": "/home/ubuntu/skills/video-generation/SKILL.md"
+    },
+    {
+      "skill": "visual-content-intelligence",
+      "h1": "Visual Content Intelligence",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "POTENTIALLY_PORTABLE_BUT_LICENSE_UNVERIFIED",
+      "pattern_counts": {
+        "platform_runtime": 0,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "f3c071ebb89b55c0d3eab496c3d06ffb25c6dcc3f3879ff85a1d798e74571898",
+      "path": "/home/ubuntu/skills/visual-content-intelligence/SKILL.md"
+    },
+    {
+      "skill": "webdev",
+      "h1": "Webdev",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 72,
+        "mcp_connector": 7,
+        "filesystem_binding": 1,
+        "external_cli_api": 31,
+        "sensitive_or_auth": 9
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Built-in",
+          "Manus",
+          "Runtime",
+          "Sandbox",
+          "built-in",
+          "manus",
+          "runtime",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "OAuth",
+          "oauth"
+        ],
+        "filesystem_binding": [
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [
+          "Git",
+          "GitHub",
+          "Stripe",
+          "git"
+        ],
+        "sensitive_or_auth": [
+          "OAuth",
+          "Secret",
+          "credential",
+          "oauth",
+          "password",
+          "secret"
+        ]
+      },
+      "sha256": "4432383dcd6ce4a14806dc0109f5e5aae9fd1dafaf6ee00ef1a1546c9af23dd2",
+      "path": "/home/ubuntu/skills/webdev/SKILL.md"
+    },
+    {
+      "skill": "webdev-seo",
+      "h1": "Website SEO",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 2,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Manus",
+          "manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "35312346500ee708add46a0c2a0e86060d3be6220d27830bac4c7c45d6987c90",
+      "path": "/home/ubuntu/skills/webdev-seo/SKILL.md"
+    },
+    {
+      "skill": "webdev-worklocally",
+      "h1": "Webdev Work Locally",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 66,
+        "mcp_connector": 0,
+        "filesystem_binding": 2,
+        "external_cli_api": 73,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Cloud Computer",
+          "Manus",
+          "Sandbox",
+          "manus",
+          "platform-managed",
+          "runtime"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [
+          ".manus/",
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [
+          "Git",
+          "GitHub",
+          "git"
+        ],
+        "sensitive_or_auth": [
+          "token"
+        ]
+      },
+      "sha256": "e8bfd082796b6c275f74508e970e8965bde9a4ce1da1d8d5e687fe3dc7b1389a",
+      "path": "/home/ubuntu/skills/webdev-worklocally/SKILL.md"
+    },
+    {
+      "skill": "website-traffic-checker",
+      "h1": "Website Traffic Checker",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 5,
+        "mcp_connector": 18,
+        "filesystem_binding": 0,
+        "external_cli_api": 37,
+        "sensitive_or_auth": 1
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "built-in",
+          "manus"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "connector",
+          "mcp"
+        ],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Ahrefs",
+          "Semrush",
+          "Similarweb"
+        ],
+        "sensitive_or_auth": [
+          "API key"
+        ]
+      },
+      "sha256": "5f71dbe5d197ca9caaf4574f8add99ebe88b387c63fb810efaefdd8773654297",
+      "path": "/home/ubuntu/skills/website-traffic-checker/SKILL.md"
+    },
+    {
+      "skill": "workflow-composer",
+      "h1": "Workflow Composer",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 14,
+        "mcp_connector": 6,
+        "filesystem_binding": 3,
+        "external_cli_api": 0,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "Sandbox",
+          "sandbox"
+        ],
+        "mcp_connector": [
+          "MCP",
+          "mcp"
+        ],
+        "filesystem_binding": [
+          "/home/ubuntu"
+        ],
+        "external_cli_api": [],
+        "sensitive_or_auth": []
+      },
+      "sha256": "61b6b1dc44e4fe44d98f6c6eab760475a030fe1d907f64c819d286b28004ee52",
+      "path": "/home/ubuntu/skills/workflow-composer/SKILL.md"
+    },
+    {
+      "skill": "youtube-video-research",
+      "h1": "YouTube Video Research",
+      "license_status": "LICENSE_NOT_FOUND_IN_SKILL_DIR",
+      "licenses": [],
+      "tier": "PLATFORM_DEPENDENT_OR_MANAGED",
+      "pattern_counts": {
+        "platform_runtime": 9,
+        "mcp_connector": 0,
+        "filesystem_binding": 0,
+        "external_cli_api": 37,
+        "sensitive_or_auth": 0
+      },
+      "pattern_hits": {
+        "platform_runtime": [
+          "manus"
+        ],
+        "mcp_connector": [],
+        "filesystem_binding": [],
+        "external_cli_api": [
+          "Stripe",
+          "YouTube",
+          "youtube"
+        ],
+        "sensitive_or_auth": []
+      },
+      "sha256": "95dfb03b78cd5a1eb8960f0aab1c4addc8f697517480f1956f2c2f5f3cc1c5f0",
+      "path": "/home/ubuntu/skills/youtube-video-research/SKILL.md"
+    }
+  ]
+}

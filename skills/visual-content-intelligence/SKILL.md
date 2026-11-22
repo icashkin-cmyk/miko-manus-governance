@@ -3,7 +3,7 @@ name: visual-content-intelligence
 description: 外部影片、圖片、截圖、技術展示、社群圖卡的內容理解與查證時使用：先用程式探測與抽影格，再分開寫畫面看到的、作者說的、自己推論的，查證重要主張，產出可回指的分析檔；MIKO 要求「參照 MIKO」「導入」時才另寫工程提案並交 make-skill S3。施工查驗照片用 photo-inspection-log、命盤截圖用 dghp-metaphysical-integrated-analysis、只問照片裡有什麼時只答內容。先載入 manus-core。
 ---
 
-# visual-content-intelligence v1.0-rewritten-candidate
+# 視覺-影片圖片內容理解與查證
 
 ## 1. 問問題
 
@@ -116,3 +116,63 @@ description: 外部影片、圖片、截圖、技術展示、社群圖卡的內�
 若本 Skill 與其他 Skill、正本規則、外部來源或使用者限制衝突，不得靜默覆蓋；先標記 `CONFLICT`，保存衝突位置、影響範圍與待決事項，停在可逆狀態。任何新增能力都必須通過正向、負向、邊界、異常、回歸與必要的 Mutation 測試；`FAIL`、`NOT_RUN`、`UNKNOWN`、`BLOCKED` 不得升格為正式採用或 Runtime 生效。
 
 本候選版本只代表 Manus 分支候選內容，不代表 GitHub main、正式採用或 Runtime 已生效。
+
+## 累積式補強｜20 FAIL 修正候選 2026-11-17
+
+### 工程導入與修改權限邊界
+- 本 Skill 負責讀取與分析影片、圖片、截圖及其主張；不得自行修改 Skill、建立工程實作或 Push。
+- 若使用者要求「導入 MIKO」或工程化，另產出候選提案並交 `make-skill`／治理流程；沒有明確要求時維持內容分析模式。
+- 提示詞：`請先分開寫畫面看到的、作者說的、自己的推論與查證結果；只做內容分析，不修改 Skill、不 Push。若要求導入，另交 make-skill 候選提案。`
+- 影片只有網址、字幕或影格讀不到時標 `NOT_READ`／`UNKNOWN`，不得從標題或單一影格補全內容。
+
+## 累積式優化｜責任邊界、限制與衝突路由 2026-11-17
+
+### 統一治理邊界
+- 本 Skill 只負責下列 `owns` 工作；`does_not_own` 所列工作不由本 Skill 自行決定。
+- 命中邊界時依 `handoff_to` 轉交，不靜默擴張責任、不覆寫其他 Skill 結論。
+- 外部 Connector、付款、刪除、Push、Merge、Release、正式採用與 Runtime 啟用不因本 Skill 的領域判斷而自動授權；由 `manus-core` 管理授權、唯一 writer、讀回與回復。
+- 本 Skill 可提出候選 `PASS`／`FAIL`／`UNKNOWN`／`NOT_RUN`／`BLOCKED`，但 `final_integrator` 固定為 `manus-core`；`may_adopt: false`、`may_enable_runtime: false`。
+- 任務專屬禁止、STOPPED、PAUSED 或使用者當次較嚴格限制，優先於一般常設授權。
+- 規則、版本或來源衝突時標 `CONFLICT`，停止相依步驟並保存原文、位置、影響、差異與回復方式；不得以替代來源繞過授權或停止條件。
+
+| 欄位 | 本 Skill 邊界 |
+|---|---|
+| `final_integrator` | `manus-core` |
+| `may_adopt` | `false` |
+| `may_enable_runtime` | `false` |
+| `external_write_owner` | `manus-core`／指定唯一 writer |
+| `conflict_priority` | 任務專屬硬限制 > manus-core 一般規則 > 本 Skill 建議 |
+
+### 本 Skill 路由
+- `owns`：影像／影片／截圖的證據、作者主張與推論分離。
+- `does_not_own`：資料不足不得下確定結論，不取代領域紀錄 Skill。
+- `handoff_to`：工程照片交 `photo-inspection-log`；命理／美容交對應領域 Skill。
+
+
+## 第五套高難度邊界與回復補強（候選升級 2026-11-18）
+
+本節是累積式升級，不取代或刪除既有規則；本 Skill 的本次職責為：作者主張、證據、推論與視覺內容分流。
+
+### 5B 多重邊界與唯一主路由
+- 當同一請求同時命中本 Skill 與其他 Skill 時，本 Skill 只處理自己的 `owns` 範圍，指定唯一主路由、輔助路由與 `handoff_to`；不得雙重寫入或自行成為最終裁決者。
+- 無法判定主責時標 `CONFLICT`，保存觸發規則、route chain、責任者與待決，不以猜測選路。
+
+### 5E 部分成功與例外
+- 已完成與未完成步驟必須分開記錄；部分成功不得標整體 `PASS`。來源、輸出或讀回不完整時標 `UNKNOWN`、`NOT_RUN` 或 `BLOCKED`，依實際證據判定。
+- 必須保存已完成副作用、未完成範圍、stdout、stderr、Exit Code、錯誤與下一步；不得以替代來源掩蓋缺口。
+
+### 5X 授權、停止與不可逆操作
+- 一般授權不解除任務專屬限制；`STOPPED_BY_USER`、`PAUSED_BY_USER`、`BLOCKED`、使用者當次禁止與不可逆操作限制優先。
+- 外部寫入、付款、刪除、發送、Push、Merge、正式採用與 Runtime 啟用須交 `manus-core`／指定唯一 writer；不得用替代路由繞過授權。
+
+### 5R 回復、冪等與重試
+- 首次失敗與回復失敗都必須保存；非冪等操作沒有去重鍵或讀回證據時，禁止重試、禁止重複寫入，停止並要求人工裁決。
+- 回復須指向明確版本、檔案或狀態；保存原始錯誤、回復錯誤、部分副作用、diff、Hash 與可執行的回復步驟，不得無限重試。
+
+### 5C 循環路由與衝突整合
+- 必須記錄完整路由鏈並偵測重複訪問；發現循環或相互矛盾結論時標 `CONFLICT` 或 `BLOCKED`，在可逆狀態停止並交 `manus-core`。
+- 本 Skill 不得覆寫其他 Skill 或稽核者結論；最終整合者固定為 `manus-core`，本節不授予正式採用或 Runtime 權限。
+
+### 本次補強驗收
+- 內容類型：`繼承＋強化`；歷史版本：已保存於 `evidence/fifth-pass-repair-20261118/pre-upgrade-snapshot/`。
+- 狀態：候選升級，尚未正式採用、尚未 Runtime 生效。

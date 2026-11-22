@@ -3,7 +3,7 @@ name: label-foreign-text
 description: 包材、標籤、說明書上出現他國文字（泰文、越南文等）時的審查與排版建議：先查字義與該國法規用語，再分法定標示用語或一般翻譯，法定用語與對應資料（例如到期日）保持配對，版面衝突先找原因再給方案，定稿前核對拼寫與聲調符號。先載入 manus-core。一般翻譯、施工查驗照片不使用。
 ---
 
-# label-foreign-text v1.0-rewritten-candidate
+# 標示-外文標籤辨識與排版
 
 ## 1. 問問題
 
@@ -106,3 +106,70 @@ description: 包材、標籤、說明書上出現他國文字（泰文、越南�
 若本 Skill 與其他 Skill、正本規則、外部來源或使用者限制衝突，不得靜默覆蓋；先標記 `CONFLICT`，保存衝突位置、影響範圍與待決事項，停在可逆狀態。任何新增能力都必須通過正向、負向、邊界、異常、回歸與必要的 Mutation 測試；`FAIL`、`NOT_RUN`、`UNKNOWN`、`BLOCKED` 不得升格為正式採用或 Runtime 生效。
 
 本候選版本只代表 Manus 分支候選內容，不代表 GitHub main、正式採用或 Runtime 已生效。
+
+## 累積式補強｜20 FAIL 修正候選 2026-11-17
+
+### 原文保護與混合文字邊界規則
+- 只標記外文，不擅自翻譯、刪除、覆寫或改變原文；輸出需保留原文位置與標記 mapping。
+- 混合字串、縮寫、專有名詞、低解析文字或語言無法確認時標 `UNKNOWN`，列出待確認位置與信心，不強行分類。
+- 提示詞：`請標示外文位置與語言信心，保留原文；遇到混合文字、縮寫或專有名詞無法確認時標 UNKNOWN，不翻譯、不刪除、不覆寫。`
+- 回歸測試須比較原文 Hash、位置 mapping 與新增標籤，確認原文未變更。
+
+## 累積式補強｜第二輪 7 FAIL 修正 2026-11-17
+
+### 未授權文字變更禁止
+- 未取得明確授權時，不得刪除、翻譯、覆寫或重新排版原文；本 Skill 預設只做外文位置、語言與信心標記。
+- 若使用者要求刪除外文，必須拒絕未授權變更，保留原文並提出可逆的候選標記版本。
+- 提示詞：`請只標示外文位置並保留原文；未授權不得刪除、翻譯或覆寫。若要求改字，先列差異與授權需求，否則標 BLOCKED。`
+
+## 累積式優化｜責任邊界、限制與衝突路由 2026-11-17
+
+### 統一治理邊界
+- 本 Skill 只負責下列 `owns` 工作；`does_not_own` 所列工作不由本 Skill 自行決定。
+- 命中邊界時依 `handoff_to` 轉交，不靜默擴張責任、不覆寫其他 Skill 結論。
+- 外部 Connector、付款、刪除、Push、Merge、Release、正式採用與 Runtime 啟用不因本 Skill 的領域判斷而自動授權；由 `manus-core` 管理授權、唯一 writer、讀回與回復。
+- 本 Skill 可提出候選 `PASS`／`FAIL`／`UNKNOWN`／`NOT_RUN`／`BLOCKED`，但 `final_integrator` 固定為 `manus-core`；`may_adopt: false`、`may_enable_runtime: false`。
+- 任務專屬禁止、STOPPED、PAUSED 或使用者當次較嚴格限制，優先於一般常設授權。
+- 規則、版本或來源衝突時標 `CONFLICT`，停止相依步驟並保存原文、位置、影響、差異與回復方式；不得以替代來源繞過授權或停止條件。
+
+| 欄位 | 本 Skill 邊界 |
+|---|---|
+| `final_integrator` | `manus-core` |
+| `may_adopt` | `false` |
+| `may_enable_runtime` | `false` |
+| `external_write_owner` | `manus-core`／指定唯一 writer |
+| `conflict_priority` | 任務專屬硬限制 > manus-core 一般規則 > 本 Skill 建議 |
+
+### 本 Skill 路由
+- `owns`：外文位置、語言與信心標記，保留原文。
+- `does_not_own`：未授權不得刪除、翻譯、覆寫或改變原文。
+- `handoff_to`：翻譯或法規判讀交專責 Skill；改字先 BLOCKED。
+
+
+## 第五套高難度邊界與回復補強（候選升級 2026-11-18）
+
+本節是累積式升級，不取代或刪除既有規則；本 Skill 的本次職責為：外文標記、原文保留與可逆修正。
+
+### 5B 多重邊界與唯一主路由
+- 當同一請求同時命中本 Skill 與其他 Skill 時，本 Skill 只處理自己的 `owns` 範圍，指定唯一主路由、輔助路由與 `handoff_to`；不得雙重寫入或自行成為最終裁決者。
+- 無法判定主責時標 `CONFLICT`，保存觸發規則、route chain、責任者與待決，不以猜測選路。
+
+### 5E 部分成功與例外
+- 已完成與未完成步驟必須分開記錄；部分成功不得標整體 `PASS`。來源、輸出或讀回不完整時標 `UNKNOWN`、`NOT_RUN` 或 `BLOCKED`，依實際證據判定。
+- 必須保存已完成副作用、未完成範圍、stdout、stderr、Exit Code、錯誤與下一步；不得以替代來源掩蓋缺口。
+
+### 5X 授權、停止與不可逆操作
+- 一般授權不解除任務專屬限制；`STOPPED_BY_USER`、`PAUSED_BY_USER`、`BLOCKED`、使用者當次禁止與不可逆操作限制優先。
+- 外部寫入、付款、刪除、發送、Push、Merge、正式採用與 Runtime 啟用須交 `manus-core`／指定唯一 writer；不得用替代路由繞過授權。
+
+### 5R 回復、冪等與重試
+- 首次失敗與回復失敗都必須保存；非冪等操作沒有去重鍵或讀回證據時，禁止重試、禁止重複寫入，停止並要求人工裁決。
+- 回復須指向明確版本、檔案或狀態；保存原始錯誤、回復錯誤、部分副作用、diff、Hash 與可執行的回復步驟，不得無限重試。
+
+### 5C 循環路由與衝突整合
+- 必須記錄完整路由鏈並偵測重複訪問；發現循環或相互矛盾結論時標 `CONFLICT` 或 `BLOCKED`，在可逆狀態停止並交 `manus-core`。
+- 本 Skill 不得覆寫其他 Skill 或稽核者結論；最終整合者固定為 `manus-core`，本節不授予正式採用或 Runtime 權限。
+
+### 本次補強驗收
+- 內容類型：`繼承＋強化`；歷史版本：已保存於 `evidence/fifth-pass-repair-20261118/pre-upgrade-snapshot/`。
+- 狀態：候選升級，尚未正式採用、尚未 Runtime 生效。

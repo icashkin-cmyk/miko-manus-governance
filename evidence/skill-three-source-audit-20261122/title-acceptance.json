@@ -1,0 +1,170 @@
+[
+  {
+    "skill": "ai-engineering-anti-fraud-test-credibility",
+    "frontmatter": true,
+    "h1": "工程-測試可信度與反造假",
+    "title_format": true,
+    "sha256": "3a03673814c3285d28da293e641cbb7935c0e8b4fe9f03e3e55cb4adf9c61375"
+  },
+  {
+    "skill": "batch-task-completion-and-single-report",
+    "frontmatter": true,
+    "h1": "治理-批次任務整體完成與單次回報",
+    "title_format": true,
+    "sha256": "ca1c63aa4040fe7a32a77b4fe57316613b4527337a7c88edb74783c8f506c394"
+  },
+  {
+    "skill": "dghp-beauty",
+    "frontmatter": true,
+    "h1": "美妝-保養彩妝與醫美資訊分析",
+    "title_format": true,
+    "sha256": "b0434c2f66e51d51593edce6426f16e1706be8e7d15b479e84b67fb50bd3d0cf"
+  },
+  {
+    "skill": "dghp-food",
+    "frontmatter": true,
+    "h1": "餐飲-餐廳搜尋與實體核驗",
+    "title_format": true,
+    "sha256": "c54a71f15264f5ca590a4ee5d67a79e626be6b7b34a9c13eca3ca229102fe29b"
+  },
+  {
+    "skill": "dghp-metaphysical-integrated-analysis",
+    "frontmatter": true,
+    "h1": "命理-多系統象徵整合分析",
+    "title_format": true,
+    "sha256": "5f88b208d3170c5f07f2246b61534b0220c8616b8316f89dd3bff8c111dab969"
+  },
+  {
+    "skill": "dghp-travel",
+    "frontmatter": true,
+    "h1": "旅遊-行程交通住宿規劃",
+    "title_format": true,
+    "sha256": "786ffbbd21b0734f6c307c032bcdc587e330e17ef221bb1ef5c63916c52ff47c"
+  },
+  {
+    "skill": "dghp-work-handoff",
+    "frontmatter": true,
+    "h1": "交接-工作狀態與證據收尾",
+    "title_format": true,
+    "sha256": "6414510b57fc6f72a7e93de31e4909f2a1060f034a0896a8a6ad282cec7819d5"
+  },
+  {
+    "skill": "gmail-cleanup",
+    "frontmatter": true,
+    "h1": "Gmail-信箱盤點與廣告清理",
+    "title_format": true,
+    "sha256": "4d8b06702506b1e45c2ca19fb00d56720092191d0e9ad53f22ba1197499acb34"
+  },
+  {
+    "skill": "independent-audit",
+    "frontmatter": true,
+    "h1": "治理-獨立稽核與冷讀驗收",
+    "title_format": true,
+    "sha256": "56e250b5f6e6c4babe7c8f67a323580256e9be07f713f15f43f6e8de59509c3e"
+  },
+  {
+    "skill": "knowledge-card-format",
+    "frontmatter": true,
+    "h1": "知識卡-固定格式與驗收",
+    "title_format": true,
+    "sha256": "ed2b9453e97e52e3fe6728b8166e6b5a8d09cb4995a7b1c6ec9146eae93536b8"
+  },
+  {
+    "skill": "label-foreign-text",
+    "frontmatter": true,
+    "h1": "標示-外文標籤辨識與排版",
+    "title_format": true,
+    "sha256": "ee7405b14239e496d8f0dd1903b336c126a09552f35bdfb45ac4b9076072e90d"
+  },
+  {
+    "skill": "make-skill",
+    "frontmatter": true,
+    "h1": "Skill-建立與升級可執行技能",
+    "title_format": true,
+    "sha256": "82add4e6769d87099073d07e1e485d593097bf9f4dead5d67ac5f95780e5b981"
+  },
+  {
+    "skill": "manus-core",
+    "frontmatter": true,
+    "h1": "治理-核心代理閉環與權限管理",
+    "title_format": true,
+    "sha256": "0c38f0cdde00fdc8fea24a7766dea5e833717245eb11a9ecba3a7ef27353a15f"
+  },
+  {
+    "skill": "miko-flow-optimizer",
+    "frontmatter": true,
+    "h1": "流程-依賴責任與閘門最佳化",
+    "title_format": true,
+    "sha256": "3e67d1d088f664b73ea285372a85961f10dcba5512d5182bc8c953ef9978aae2"
+  },
+  {
+    "skill": "miko-governance-layer-acceptance",
+    "frontmatter": true,
+    "h1": "治理-G0至G9生命週期驗收",
+    "title_format": true,
+    "sha256": "f9aa42b8eb570c2748038fbb6664e889c5a2f8f8c807d6c4f85752f4f8cb7f21"
+  },
+  {
+    "skill": "miko-project-note-specialist",
+    "frontmatter": true,
+    "h1": "文件-專案筆記與交接整理",
+    "title_format": true,
+    "sha256": "cac45795f2ad54417189d186b866a350afcde0f6c203050f0f0fd7810360ff18"
+  },
+  {
+    "skill": "miko-prompt-optimizer",
+    "frontmatter": true,
+    "h1": "提示詞-指令結構與邊界最佳化",
+    "title_format": true,
+    "sha256": "b01911a4dae3321ebd305e58228534c889919ecc8b0d610856bd6a5024a5e0d7"
+  },
+  {
+    "skill": "photo-inspection-log",
+    "frontmatter": true,
+    "h1": "工程-施工照片與材料檢查紀錄",
+    "title_format": true,
+    "sha256": "631227f23678ea598eabd947aa3bb0da8f29859205ae0d345e613138209a6e5a"
+  },
+  {
+    "skill": "safe-implementation",
+    "frontmatter": true,
+    "h1": "程式-安全實作與測試驗證",
+    "title_format": true,
+    "sha256": "cb0166428836453cad77e685e5b24f6f53754f7d13364b75a7296373a61a39e0"
+  },
+  {
+    "skill": "three-party-review",
+    "frontmatter": true,
+    "h1": "治理-製作測試與獨立驗收分離",
+    "title_format": true,
+    "sha256": "58f47cd190fbbe91494a055b3046fcfdfdefe2efb66561952e54b1dcd7c42ffd"
+  },
+  {
+    "skill": "tw-alert-check",
+    "frontmatter": true,
+    "h1": "臺灣-官方警報與出行查核",
+    "title_format": true,
+    "sha256": "6e18361db14f6b7f5fd44412243a7d6e6bfefc28aa728858ab75f2f109156993"
+  },
+  {
+    "skill": "tw-backtest-workflow",
+    "frontmatter": true,
+    "h1": "金融研究-臺股策略回測流程",
+    "title_format": true,
+    "sha256": "cb529187dfe27387ff6bc8e91908090df1365e383ba61a7b1b5a58ca0da87140"
+  },
+  {
+    "skill": "version-evolution-preservation",
+    "frontmatter": true,
+    "h1": "版本-累積式演進與歷史保護",
+    "title_format": true,
+    "sha256": "fb734dc7d783f90a82491f3992cabdb7a784eea61380f61476e022ecee30e92e"
+  },
+  {
+    "skill": "visual-content-intelligence",
+    "frontmatter": true,
+    "h1": "視覺-影片圖片內容理解與查證",
+    "title_format": true,
+    "sha256": "8a4d6fda243d9dcae20e75b12a8daff11901e28f7cb93b56c0cced4cd9d16fb7"
+  }
+]

@@ -3,7 +3,7 @@ name: gmail-cleanup
 description: 信箱整理清潔：使用者要盤點、清理 Gmail 舊廣告信，或檢查重要信（帳單到期、扣款失敗、補件、工作往來）時使用。只問或盤點時唯讀；清理只限超過三個曆月且逐封確認已過期的純行銷廣告，移到垃圾桶；清空垃圾桶與永久刪除由 MIKO 自己操作。
 ---
 
-# gmail-cleanup v1.0-rewritten-candidate
+# Gmail-信箱盤點與廣告清理
 
 ## 1. 問問題
 
@@ -83,3 +83,64 @@ Gmail 的垃圾桶就是它的 _to_delete（MIKO 2026-10-20 指定「清理移�
 若本 Skill 與其他 Skill、正本規則、外部來源或使用者限制衝突，不得靜默覆蓋；先標記 `CONFLICT`，保存衝突位置、影響範圍與待決事項，停在可逆狀態。任何新增能力都必須通過正向、負向、邊界、異常、回歸與必要的 Mutation 測試；`FAIL`、`NOT_RUN`、`UNKNOWN`、`BLOCKED` 不得升格為正式採用或 Runtime 生效。
 
 本候選版本只代表 Manus 分支候選內容，不代表 GitHub main、正式採用或 Runtime 已生效。
+
+## 累積式補強｜20 FAIL 修正候選 2026-11-17
+
+### 批次刪除邊界與回復規則
+- Gmail 清理預設先唯讀搜尋、預覽、分組與列出數量；模糊的「沒用」不得作為批次刪除條件。
+- 批次刪除、封存或大範圍標籤前，必須有明確查詢條件、排除重要／附件／法律／財務郵件規則與使用者確認；未授權不得執行。
+- 任何變更需保存前後數量、查詢式、排除條件與回復方式；若無法確認結果完整性，停止不可逆操作並標 `UNKNOWN`。
+- 提示詞：`先唯讀預覽 Gmail 查詢結果，列出批次條件、排除項、筆數與回復方式；沒有明確授權不得刪除或批次修改。`
+- 回歸測試須確認新規則未刪除既有標籤與重要信件。
+
+## 累積式優化｜責任邊界、限制與衝突路由 2026-11-17
+
+### 統一治理邊界
+- 本 Skill 只負責下列 `owns` 工作；`does_not_own` 所列工作不由本 Skill 自行決定。
+- 命中邊界時依 `handoff_to` 轉交，不靜默擴張責任、不覆寫其他 Skill 結論。
+- 外部 Connector、付款、刪除、Push、Merge、Release、正式採用與 Runtime 啟用不因本 Skill 的領域判斷而自動授權；由 `manus-core` 管理授權、唯一 writer、讀回與回復。
+- 本 Skill 可提出候選 `PASS`／`FAIL`／`UNKNOWN`／`NOT_RUN`／`BLOCKED`，但 `final_integrator` 固定為 `manus-core`；`may_adopt: false`、`may_enable_runtime: false`。
+- 任務專屬禁止、STOPPED、PAUSED 或使用者當次較嚴格限制，優先於一般常設授權。
+- 規則、版本或來源衝突時標 `CONFLICT`，停止相依步驟並保存原文、位置、影響、差異與回復方式；不得以替代來源繞過授權或停止條件。
+
+| 欄位 | 本 Skill 邊界 |
+|---|---|
+| `final_integrator` | `manus-core` |
+| `may_adopt` | `false` |
+| `may_enable_runtime` | `false` |
+| `external_write_owner` | `manus-core`／指定唯一 writer |
+| `conflict_priority` | 任務專屬硬限制 > manus-core 一般規則 > 本 Skill 建議 |
+
+### 本 Skill 路由
+- `owns`：Gmail 清理候選的盤點、分類與可逆操作準備。
+- `does_not_own`：未授權不得刪除、移動、寄信或改標籤。
+- `handoff_to`：Connector 與外部寫入交 `manus-core` 授權閘門。
+
+
+## 第五套高難度邊界與回復補強（候選升級 2026-11-18）
+
+本節是累積式升級，不取代或刪除既有規則；本 Skill 的本次職責為：郵件盤點、標籤、移動與刪除邊界。
+
+### 5B 多重邊界與唯一主路由
+- 當同一請求同時命中本 Skill 與其他 Skill 時，本 Skill 只處理自己的 `owns` 範圍，指定唯一主路由、輔助路由與 `handoff_to`；不得雙重寫入或自行成為最終裁決者。
+- 無法判定主責時標 `CONFLICT`，保存觸發規則、route chain、責任者與待決，不以猜測選路。
+
+### 5E 部分成功與例外
+- 已完成與未完成步驟必須分開記錄；部分成功不得標整體 `PASS`。來源、輸出或讀回不完整時標 `UNKNOWN`、`NOT_RUN` 或 `BLOCKED`，依實際證據判定。
+- 必須保存已完成副作用、未完成範圍、stdout、stderr、Exit Code、錯誤與下一步；不得以替代來源掩蓋缺口。
+
+### 5X 授權、停止與不可逆操作
+- 一般授權不解除任務專屬限制；`STOPPED_BY_USER`、`PAUSED_BY_USER`、`BLOCKED`、使用者當次禁止與不可逆操作限制優先。
+- 外部寫入、付款、刪除、發送、Push、Merge、正式採用與 Runtime 啟用須交 `manus-core`／指定唯一 writer；不得用替代路由繞過授權。
+
+### 5R 回復、冪等與重試
+- 首次失敗與回復失敗都必須保存；非冪等操作沒有去重鍵或讀回證據時，禁止重試、禁止重複寫入，停止並要求人工裁決。
+- 回復須指向明確版本、檔案或狀態；保存原始錯誤、回復錯誤、部分副作用、diff、Hash 與可執行的回復步驟，不得無限重試。
+
+### 5C 循環路由與衝突整合
+- 必須記錄完整路由鏈並偵測重複訪問；發現循環或相互矛盾結論時標 `CONFLICT` 或 `BLOCKED`，在可逆狀態停止並交 `manus-core`。
+- 本 Skill 不得覆寫其他 Skill 或稽核者結論；最終整合者固定為 `manus-core`，本節不授予正式採用或 Runtime 權限。
+
+### 本次補強驗收
+- 內容類型：`繼承＋強化`；歷史版本：已保存於 `evidence/fifth-pass-repair-20261118/pre-upgrade-snapshot/`。
+- 狀態：候選升級，尚未正式採用、尚未 Runtime 生效。
