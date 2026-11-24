@@ -1,0 +1,77 @@
+{
+  "tester": "TESTER",
+  "gate": "G3",
+  "mapping_count": 2,
+  "cases": [
+    {
+      "id": "positive_k03",
+      "expected": "ROUTE",
+      "actual": {
+        "decision": "ROUTE",
+        "primary": "K03"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "positive_k51",
+      "expected": "ROUTE",
+      "actual": {
+        "decision": "ROUTE",
+        "primary": "K51"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "negative_unrelated",
+      "expected": "NO_ROUTE",
+      "actual": {
+        "decision": "NO_ROUTE",
+        "primary": null
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "boundary_k03",
+      "expected": "ROUTE",
+      "actual": {
+        "decision": "ROUTE",
+        "primary": "K03"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "boundary_k51",
+      "expected": "ROUTE",
+      "actual": {
+        "decision": "ROUTE",
+        "primary": "K51"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "conflict_both",
+      "expected": "CONFLICT",
+      "actual": {
+        "decision": "CONFLICT",
+        "primary": null,
+        "candidates": [
+          "K03",
+          "K51"
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "mutation_tests": [
+    {
+      "id": "remove_K03",
+      "detected_missing_route": true
+    },
+    {
+      "id": "remove_K51",
+      "detected_missing_route": true
+    }
+  ],
+  "overall": "PASS",
+  "runtime": "NOT_RUN"
+}

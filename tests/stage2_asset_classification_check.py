@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 2 asset classification acceptance for the current 24-skill inventory.
+"""Stage 2 asset classification acceptance for the current 25-skill inventory.
 
 The test regenerates Stage 1 output before reading it, so it never relies on a
 stale committed evidence snapshot. It writes disposable results under
@@ -26,7 +26,7 @@ WORKFLOW = {'dghp-work-handoff', 'safe-implementation', 'tw-backtest-workflow'}
 DOMAIN = {
     'dghp-beauty', 'dghp-food', 'dghp-metaphysical-integrated-analysis', 'dghp-travel',
     'gmail-cleanup', 'label-foreign-text', 'photo-inspection-log', 'tw-alert-check',
-    'visual-content-intelligence',
+    'visual-content-intelligence', 'ingredient-source-analysis',
 }
 FIELDS = [
     'stable_id', 'name', 'semantic_category', 'primary_asset_type', 'canonical_path',

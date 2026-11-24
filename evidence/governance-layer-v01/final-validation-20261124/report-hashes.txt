@@ -1,0 +1,2 @@
+02b589960b3cd63b9953580be3ca438b990df8d5aad423f1496f7550cdbc9337  evidence/governance-layer-v01/final-validation-20261124/ACCEPTANCE-REPORT.md
+cd910403dd185f11bc443ed8226c69835b29d9d7fc9a264e5298d228fac3dd3c  evidence/governance-layer-v01/final-validation-20261124/sha256sums.txt

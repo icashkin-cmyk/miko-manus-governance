@@ -7,7 +7,7 @@ from acceptance_runtime import output_dir, repo_label, current_commit
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = sorted((ROOT / "skills").glob("*/SKILL.md"))
-EXPECTED = 24
+EXPECTED = 25
 errors = []
 records = []
 

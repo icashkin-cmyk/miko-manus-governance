@@ -1,0 +1,54 @@
+{
+  "test_id": "THREE-SKILL-CANDIDATE-001",
+  "result": "PASS",
+  "items": [
+    {
+      "skill": "miko-flow-optimizer",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "frontmatter_name": true,
+        "description_present": true,
+        "proposed_state": true,
+        "no_runtime_claim": true,
+        "required_sections": true,
+        "status_boundaries": true,
+        "no_external_execution": true,
+        "source_hash_recordable": true
+      },
+      "result": "PASS"
+    },
+    {
+      "skill": "miko-project-note-specialist",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "frontmatter_name": true,
+        "description_present": true,
+        "proposed_state": true,
+        "no_runtime_claim": true,
+        "required_sections": true,
+        "status_boundaries": true,
+        "no_external_execution": true,
+        "source_hash_recordable": true
+      },
+      "result": "PASS"
+    },
+    {
+      "skill": "miko-prompt-optimizer",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "frontmatter_name": true,
+        "description_present": true,
+        "proposed_state": true,
+        "no_runtime_claim": true,
+        "required_sections": true,
+        "status_boundaries": true,
+        "no_external_execution": true,
+        "source_hash_recordable": true
+      },
+      "result": "PASS"
+    }
+  ]
+}

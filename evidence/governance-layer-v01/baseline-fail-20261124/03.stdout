@@ -1,0 +1,6 @@
+K03	PASS	expected=('ROUTE', 'K03')	actual=('ROUTE', 'K03')
+K51	PASS	expected=('ROUTE', 'K51')	actual=('ROUTE', 'K51')
+NONE	PASS	expected=('NO_ROUTE', None)	actual=('NO_ROUTE', None)
+CONFLICT	PASS	expected=('CONFLICT', None)	actual=('CONFLICT', None)
+RUNTIME=NOT_RUN
+OVERALL=PASS

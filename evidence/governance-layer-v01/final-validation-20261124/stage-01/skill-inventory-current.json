@@ -1,0 +1,236 @@
+{
+  "generated_at": "2026-11-24T15:10:33+0000",
+  "repository": "<REPO_ROOT>",
+  "commit": "da5bc15ee20a45cec137280a50194457fc97fb86",
+  "expected_count": 25,
+  "actual_count": 25,
+  "records": [
+    {
+      "path": "skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",
+      "directory_name": "ai-engineering-anti-fraud-test-credibility",
+      "name": "ai-engineering-anti-fraud-test-credibility",
+      "description_present": true,
+      "sha256": "2ec1f4a1b4bf21bd0b0a305e5e11b25453b098469d3f3ddb426f7dd0011e0630",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/batch-task-completion-and-single-report/SKILL.md",
+      "directory_name": "batch-task-completion-and-single-report",
+      "name": "batch-task-completion-and-single-report",
+      "description_present": true,
+      "sha256": "6c0f812e07c2626530602e558f8b5108616608e0eba023878f220a48acae10b0",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/dghp-beauty/SKILL.md",
+      "directory_name": "dghp-beauty",
+      "name": "dghp-beauty",
+      "description_present": true,
+      "sha256": "65e54d93b7b2f5677dfcf6e3dce76130de0c9f9387d8a99bc9d90edcefd16e5e",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/dghp-food/SKILL.md",
+      "directory_name": "dghp-food",
+      "name": "dghp-food",
+      "description_present": true,
+      "sha256": "dced9274a049ffb623e4223ddb4b0f35c3bcbde744c8cb7afa87079ebd05c332",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/dghp-metaphysical-integrated-analysis/SKILL.md",
+      "directory_name": "dghp-metaphysical-integrated-analysis",
+      "name": "dghp-metaphysical-integrated-analysis",
+      "description_present": true,
+      "sha256": "ae08ec6b4b614f4217ab3029a6ef383229024c66556b2e6e97c2bb11bfe7f646",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/dghp-travel/SKILL.md",
+      "directory_name": "dghp-travel",
+      "name": "dghp-travel",
+      "description_present": true,
+      "sha256": "63037a25706b889398b41933ee8bf1151d50963dce32e0fc30d6b4298ecbb99e",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/dghp-work-handoff/SKILL.md",
+      "directory_name": "dghp-work-handoff",
+      "name": "dghp-work-handoff",
+      "description_present": true,
+      "sha256": "0eff58da08fb17cc9481bc3e728035907b5217f0e5a28fa17e424d4af9ee60e5",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/gmail-cleanup/SKILL.md",
+      "directory_name": "gmail-cleanup",
+      "name": "gmail-cleanup",
+      "description_present": true,
+      "sha256": "8505da47d97574a5146a868720bb56aa995d1f8d0536843cf8585700623e4532",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/independent-audit/SKILL.md",
+      "directory_name": "independent-audit",
+      "name": "independent-audit",
+      "description_present": true,
+      "sha256": "f1c1d7f88ea03c36dcfaf536a43fa23ff0ae5783efb954f54cb338397b89e3d1",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/ingredient-source-analysis/SKILL.md",
+      "directory_name": "ingredient-source-analysis",
+      "name": "ingredient-source-analysis",
+      "description_present": true,
+      "sha256": "f2f4539398c8de25967579a43b5c07650ad5000320eabb9f67217314f0d5aebf",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/knowledge-card-format/SKILL.md",
+      "directory_name": "knowledge-card-format",
+      "name": "knowledge-card-format",
+      "description_present": true,
+      "sha256": "f7b019cc4b0957aa0135819ed561302b9b82a912a8fe41694ca31aee7b8c14ec",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/label-foreign-text/SKILL.md",
+      "directory_name": "label-foreign-text",
+      "name": "label-foreign-text",
+      "description_present": true,
+      "sha256": "94fd949577bca02f6a60461dbe230cec7ab885c917713d946af2a3966978efea",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/make-skill/SKILL.md",
+      "directory_name": "make-skill",
+      "name": "make-skill",
+      "description_present": true,
+      "sha256": "ee2443409b77666ec7c0176e193d0b12e0b47a6669af6e8d198dc52747717273",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/manus-core/SKILL.md",
+      "directory_name": "manus-core",
+      "name": "manus-core",
+      "description_present": true,
+      "sha256": "f5af290b640ea9daaa31ab72c28e76484959ec3e4eb97ce4583fde6e5bbcd9ec",
+      "source_archive_present": false,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/miko-flow-optimizer/SKILL.md",
+      "directory_name": "miko-flow-optimizer",
+      "name": "miko-flow-optimizer",
+      "description_present": true,
+      "sha256": "a6963f4d71b8397148fb2f570a12139cf9e17602e94aeccf41666bbcffda1e5e",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/miko-governance-layer-acceptance/SKILL.md",
+      "directory_name": "miko-governance-layer-acceptance",
+      "name": "miko-governance-layer-acceptance",
+      "description_present": true,
+      "sha256": "cc959abd33a7b3140d46753e4515901b560019630019192400488e7d76385db6",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/miko-project-note-specialist/SKILL.md",
+      "directory_name": "miko-project-note-specialist",
+      "name": "miko-project-note-specialist",
+      "description_present": true,
+      "sha256": "134341a016b1360df72d5f85f453fc37aad6f0ed8e29bb2e8c62108116d516c0",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/miko-prompt-optimizer/SKILL.md",
+      "directory_name": "miko-prompt-optimizer",
+      "name": "miko-prompt-optimizer",
+      "description_present": true,
+      "sha256": "be69a39a08f532134eaf4e649455b87f835191571864fbbe3b1e202fd859c89b",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/photo-inspection-log/SKILL.md",
+      "directory_name": "photo-inspection-log",
+      "name": "photo-inspection-log",
+      "description_present": true,
+      "sha256": "ffe5840d6f13b4c032ddaecf70942c37211c4ebadf1de09d9773ff94da7da8c6",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/safe-implementation/SKILL.md",
+      "directory_name": "safe-implementation",
+      "name": "safe-implementation",
+      "description_present": true,
+      "sha256": "60a736416049cd1da338d220aef2f2c39ad9d036d4628981ad95a656c4fc3280",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/three-party-review/SKILL.md",
+      "directory_name": "three-party-review",
+      "name": "three-party-review",
+      "description_present": true,
+      "sha256": "5e87f5a01a062cc3c35178d7591f350a0efdcece099dda53a7bbe776c9da2a90",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/tw-alert-check/SKILL.md",
+      "directory_name": "tw-alert-check",
+      "name": "tw-alert-check",
+      "description_present": true,
+      "sha256": "a5174ac8af331a709048dd5acb985298505f0f8837bad40bb47332164ccebe1d",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/tw-backtest-workflow/SKILL.md",
+      "directory_name": "tw-backtest-workflow",
+      "name": "tw-backtest-workflow",
+      "description_present": true,
+      "sha256": "754d139a696ec352850ef0262bb3c56e4517d706ea6aeebfb59b50aa653aeb18",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/version-evolution-preservation/SKILL.md",
+      "directory_name": "version-evolution-preservation",
+      "name": "version-evolution-preservation",
+      "description_present": true,
+      "sha256": "89b2258e1d438cdd1dc0a1dffd3d5885ba4190a619149018ce05112c62cbcfd8",
+      "source_archive_present": true,
+      "status": "PASS"
+    },
+    {
+      "path": "skills/visual-content-intelligence/SKILL.md",
+      "directory_name": "visual-content-intelligence",
+      "name": "visual-content-intelligence",
+      "description_present": true,
+      "sha256": "f0a73e093ad9141a851da772c4e7a8f993b1d83742190d8f7beefbb421b0977f",
+      "source_archive_present": true,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "result": "PASS"
+}
