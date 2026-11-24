@@ -1,0 +1,29 @@
+[
+  {
+    "skill": "manus-core",
+    "source": "skills/manus-core/SKILL.md",
+    "candidate": "knowledge-cards/proposals/skills/manus-core-manus-primary/SKILL.md",
+    "source_sha256": "9fe619035b1a5d5b6fef8f399493e6eb3d51185227db063b0cbae14b7eb6f709",
+    "candidate_sha256": "419263c7c06d88c9ea664433a1c5e3939158d5e2e4722d607842fd83dbe9b148",
+    "status": "PROPOSED",
+    "runtime": "NOT_RUN"
+  },
+  {
+    "skill": "ai-behavior-emulation",
+    "source": "<source-root>/ai-behavior-emulation/SKILL.md",
+    "candidate": "knowledge-cards/proposals/skills/ai-behavior-emulation-manus-primary/SKILL.md",
+    "source_sha256": "d2f35a66de7fe56251c446657ef25a31f3acfb074008eb9925d7e95b4d02cdad",
+    "candidate_sha256": "a34f7186e0a1921be5bc28166197e920666845aba498f69043ea0c4acd4144ae",
+    "status": "PROPOSED",
+    "runtime": "NOT_RUN"
+  },
+  {
+    "skill": "thinking-tools-performance-optimization",
+    "source": "<source-root>/thinking-tools-performance-optimization/SKILL.md",
+    "candidate": "knowledge-cards/proposals/skills/thinking-tools-performance-optimization-manus-primary/SKILL.md",
+    "source_sha256": "5bfe2dce504bd51ccb10b8b3ed81afcb298f4f39dbc019c4cdcb1cd03ea4781a",
+    "candidate_sha256": "850caf8ea39c7c4a2ba91598dbeb3aa82aadaa91244aebd19f4617f352d231b3",
+    "status": "PROPOSED",
+    "runtime": "NOT_RUN"
+  }
+]

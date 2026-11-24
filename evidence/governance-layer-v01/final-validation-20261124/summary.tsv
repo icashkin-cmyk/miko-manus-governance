@@ -1,0 +1,18 @@
+01	0	python3 -I -B tests/stage1_inventory_check.py
+02	0	python3 -I -B tests/stage2_asset_classification_check.py
+03	0	python3 -I -B tests/g3_router_acceptance.py
+04	0	python3 -I -B tests/g3_router_independent_audit.py
+05	0	python3 -I -B tests/g6_tools_acceptance.py
+06	0	python3 -I -B tests/g7_e2e_acceptance.py
+07	0	python3 -I -B tests/g8_independent_acceptance.py
+08	0	python3 -I -B tests/g9_lifecycle_acceptance.py
+09	0	python3 -I -B tests/governance_layer_acceptance_v01.py
+10	0	python3 -I -B tests/governance_layer_independent_audit_v01.py
+11	0	python3 -I -B tests/k03_k50_acceptance.py
+12	0	python3 -I -B tests/k03_k50_independent_audit.py
+13	0	python3 -I -B tests/three_candidate_skills_validation.py
+14	0	python3 -I -B tests/test_photo_scripts.py
+15	0	python3 -I -B tests/acceptance_runtime.py
+16	0	python3 -I -B tests/history_c3_scan.py
+17	0	python3 -I -B tests/check_repo.py
+18	0	git diff --check

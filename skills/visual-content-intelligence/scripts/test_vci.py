@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# test_vci.py｜vci_media.py、vci_check.py 與 miko-core read_ledger.py 的固定測題（合成測資，不連網、不用真實影片、不碰回測）
+# test_vci.py｜vci_media.py、vci_check.py 與 manus-core read_ledger.py 的固定測題（合成測資，不連網、不用真實影片、不碰回測）
 # 用法：python3 -I -B test_vci.py（在本檔所在資料夾或任何位置都可）
 # 沒有 ffmpeg／ffprobe 時，媒體題標 skipped（＝NOT_RUN，不算 PASS），其餘照跑；最後一行印出 PASS／NOT_RUN 計數。
 # 結束碼：0＝全部 PASS 且 NOT_RUN 0；5＝沒有 FAIL 但有 NOT_RUN（不得當 PASS，稽核 r1）；1＝有 FAIL。
@@ -9,7 +9,7 @@ import csv, hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile, u
 HERE = pathlib.Path(__file__).resolve().parent
 MEDIA = HERE / 'vci_media.py'
 CHECK = HERE / 'vci_check.py'
-LEDGER = HERE.parents[1] / 'miko-core' / 'scripts' / 'read_ledger.py'
+LEDGER = HERE.parents[1] / 'manus-core' / 'scripts' / 'read_ledger.py'
 FIX = HERE / 'fixtures'
 HAS_FF = bool(shutil.which('ffmpeg') and shutil.which('ffprobe'))
 

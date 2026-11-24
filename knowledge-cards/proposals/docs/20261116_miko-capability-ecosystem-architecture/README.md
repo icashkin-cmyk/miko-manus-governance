@@ -39,7 +39,7 @@
 
 ## 3. 分層責任
 
-- `miko-core`：治理、權限、版本、證據、停止與正式放行。
+- `manus-core`：治理、權限、版本、證據、停止與正式放行。
 - `Capability Inventory`：描述能力現況，不負責自行安裝。
 - `Concept-to-Capability`：將概念轉成能力需求與資產候選。
 - `Skill Gap Analysis`：分析缺口與重複，不負責採用決策。

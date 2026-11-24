@@ -1,11 +1,11 @@
 # knowledge-cards｜Manus 任務卡（K01～K50）存放處｜2026-11-11
 
-> 名詞：正本（正式名稱：GitHub 上的正式規則來源與目前採用版本）【限制】；硬禁止（正式名稱：當次指示也不執行的禁止事項：下單、交易、Broker、LIVE）【限制】；治理（正式名稱：規則版本、變更、授權、審查與正式放行管理）【流程】；困難卡（正式名稱：失敗分類與阻塞處置卡）【處置】；定義見 skills/miko-core/references/term-definitions.md（MIKO 核心詞彙與行為定義表）。本檔的「總召」指 MIKO 指定負責協調與寫入範圍的 AI（正本 README §6）；「單一 writer」指一個範圍只有一個寫入者。
+> 名詞：正本（正式名稱：GitHub 上的正式規則來源與目前採用版本）【限制】；硬禁止（正式名稱：當次指示也不執行的禁止事項：下單、交易、Broker、LIVE）【限制】；治理（正式名稱：規則版本、變更、授權、審查與正式放行管理）【流程】；困難卡（正式名稱：失敗分類與阻塞處置卡）【處置】；定義見 skills/manus-core/references/term-definitions.md（MIKO 核心詞彙與行為定義表）。本檔的「總召」指 MIKO 指定負責協調與寫入範圍的 AI（正本 README §6）；「單一 writer」指一個範圍只有一個寫入者。
 
 ## 這個資料夾是什麼
 
 - 存放 MIKO 給 Manus 用的任務卡（正式名稱：Manus 平台的自訂指令卡，每張含「名稱、在以下情況下使用、內容」三欄，內容欄以 Manus 介面 1,000 字元為上限），編號 K01～K50，一張一檔：`K01.md`、`K02.md`……
-- 不是 MIKO 正本，也不是 Skill。卡片和正本（README.md、skills/miko-core/SKILL.md）衝突時，以正本為準；卡片不能解除正本的停止、暫緩、硬禁止與授權規則。
+- 不是 MIKO 正本，也不是 Skill。卡片和正本（README.md、skills/manus-core/SKILL.md）衝突時，以正本為準；卡片不能解除正本的停止、暫緩、硬禁止與授權規則。
 
 ## 誰可以寫（雙總召試行，正本 1.2.65，ADR-088）
 
@@ -39,7 +39,7 @@ MIKO 2026-11-11 22:35（台北）在總召專案回「１」，選「放寬提�
 
 | 項目 | 規則 |
 |---|---|
-| 可提案的對象 | 任何對象：Skill、tests、workflow（.github/）、規則（README、miko-core）、文件、設定 |
+| 可提案的對象 | 任何對象：Skill、tests、workflow（.github/）、規則（README、manus-core）、文件、設定 |
 | 放哪裡 | 一律先放 knowledge-cards/proposals/<類型>/，<類型> 用 skills、tests、workflow、rules、docs 其中之一，沒有適合的先問 Claude 總召；一件提案一個子資料夾或一個檔 |
 | 內容形式 | 文字或「完整替換稿」（整個檔改完後的全文，標明要取代哪個路徑）；不要只貼片段；放 proposals/ 的 SKILL.md 格式檔只是提案，不會被啟用 |
 | Manus 仍不能做 | 改 knowledge-cards/ 以外的路徑；審查；放行；合併；登錄 ADR；改版本號 |

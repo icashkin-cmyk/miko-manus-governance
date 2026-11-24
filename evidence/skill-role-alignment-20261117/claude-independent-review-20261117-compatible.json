@@ -1,0 +1,25 @@
+{
+  "test_id": "CLAUDE-INDEPENDENT-GOVERNANCE-001-COMPATIBLE",
+  "requested_at_utc": "2026-11-17T05:42:08.014640+00:00",
+  "model": "claude-sonnet-5-5",
+  "candidate_files": [
+    {
+      "path": "knowledge-cards/proposals/skills/ai-behavior-emulation-manus-primary/SKILL.md",
+      "sha256": "a34f7186e0a1921be5bc28166197e920666845aba498f69043ea0c4acd4144ae",
+      "bytes": 11212
+    },
+    {
+      "path": "knowledge-cards/proposals/skills/manus-core-manus-primary/SKILL.md",
+      "sha256": "31f7393740fafe21769496ad72b83f8523c9d1b8e5d7bae3a1cbd0c988fdc8f3",
+      "bytes": 102021
+    },
+    {
+      "path": "knowledge-cards/proposals/skills/thinking-tools-performance-optimization-manus-primary/SKILL.md",
+      "sha256": "850caf8ea39c7c4a2ba91598dbeb3aa82aadaa91244aebd19f4617f352d231b3",
+      "bytes": 11088
+    }
+  ],
+  "status": "BLOCKED",
+  "error": "RemoteDisconnected",
+  "error_detail": "Remote end closed connection without response"
+}

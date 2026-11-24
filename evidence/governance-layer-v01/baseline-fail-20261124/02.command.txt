@@ -1,0 +1,1 @@
+python3 -I -B tests/g3_router_acceptance.py

@@ -1,0 +1,1 @@
+python3 -I -B tests/g7_e2e_acceptance.py

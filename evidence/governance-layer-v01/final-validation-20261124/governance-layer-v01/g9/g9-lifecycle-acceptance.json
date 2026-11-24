@@ -1,0 +1,41 @@
+{
+  "tester": "TESTER",
+  "gate": "G9",
+  "checks": [
+    {
+      "id": "G9-01",
+      "status": "PASS",
+      "detail": "candidate commit exists"
+    },
+    {
+      "id": "G9-02",
+      "status": "PASS",
+      "detail": "local candidate archive"
+    },
+    {
+      "id": "G9-03",
+      "status": "PASS",
+      "detail": "archive readback"
+    },
+    {
+      "id": "G9-04",
+      "status": "PASS",
+      "detail": "isolated recovery drill"
+    },
+    {
+      "id": "G9-05",
+      "status": "PASS",
+      "detail": "isolated candidate tag process"
+    },
+    {
+      "id": "G9-06",
+      "status": "PASS",
+      "detail": "remote identity readback"
+    }
+  ],
+  "overall": "PASS",
+  "formal_remote_release": "NOT_RUN",
+  "formal_remote_tag": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "note": "Only isolated local archive, readback, recovery and tag process were tested; no external push, merge, release or formal adoption was performed."
+}

@@ -96,8 +96,8 @@
     "under_500_lines": true
   },
   {
-    "skill": "miko-core",
-    "path": "skills/miko-core/SKILL.md",
+    "skill": "manus-core",
+    "path": "skills/manus-core/SKILL.md",
     "sha256": "5e3056e9ea4cdfa32668c2df95541719dc3fff6e402f9331d6081b8744ee8104",
     "lines": 282,
     "has_cumulative_route": true,

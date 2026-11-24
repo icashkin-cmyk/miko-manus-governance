@@ -1,6 +1,6 @@
 ---
 name: tw-backtest-workflow
-description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時使用：把想法拆成可程式化規則、讀本機 FinMind 資料（雲端改用證交所官方日線）、用內附 bt_min.py 實算成本與統計、找虧損模式、樣本外驗證。先載入 miko-core，再依本 Skill 四段執行。一般投資問答、即時報價、台指期不使用。
+description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時使用：把想法拆成可程式化規則、讀本機 FinMind 資料（雲端改用證交所官方日線）、用內附 bt_min.py 實算成本與統計、找虧損模式、樣本外驗證。先載入 manus-core，再依本 Skill 四段執行。一般投資問答、即時報價、台指期不使用。
 ---
 
 # tw-backtest-workflow v1.0-rewritten-candidate
@@ -9,7 +9,7 @@ description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時�
 
 - 目的：先確認本 Skill 的使用意圖、輸入範圍、輸出期待、資料來源與不可逆操作。
 - 必問：使用者目標、必要資料、時間／地區／對象條件、授權與限制；缺少關鍵資料時集中詢問，不以記憶補值。
-- 領域基線：name: tw-backtest-workflow description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時使用：把想法拆成可程式化規則、讀本機 FinMind 資料（雲端改用證交所官方日線）、用內附 bt_min.py 實算成本與統計、找虧損模式、樣本外驗證。先載入 miko-core，再依本 Skill 四段執行。一般投資問答、即時報價、台指期不使用。 載入順序：先 miko-core（四視角主流程、品質閘門），再本 Skill；§1 問問題、§2～§3 解決、§4 後設、§6 檢查，對應 miko-core §2.4。v1.3 依 2026-10-26 實跑結果加入資料取得路徑、執行步驟與附錄 A 引擎（ADR-015）。 來源：臺股專案指令原件 V1.2-REFERENCE-CANDIDATE、ADR-001、ADR-004、四視角引擎 v3.1 §7.2（RC2 作用域 PROJECT_RC2_PROFILE_ONLY、不適用月配息）、MIKO 帳號偏好（三檔 2330／2454／2317 共同規則、OOS 與全局最優用語、策略比較 Markdown）；v1.2 增補來自 H-03、H-04（ADR-015）。 - DGHP_TW_STOCK_REBUILD（含 2330、2454、2317 三檔共同策略）：適用 RC2（PROJECT_RC2_PROFILE_ONLY，從屬 RC1）與臺股專案指令。Universe 只限 TWSE＋TPEx 可交易普通股，排除興櫃、創櫃、ETF、ETN、REIT、TDR、特別股、權證、可轉債、槓桿反向商品。 - 月配息專案（MONTHLY_INCOME_DASHBOARD）：標的是 ETF，屬另一個領域，RC2 與上面的普通股限制不適用。 - 權責：Claude 是總召（ADR-001），負責驗證、探索、審查與放行；工程執行由 Claude 負責（雲端工作區實跑，或產生終端機指令由 MIKO 在 Mac 執行；2026-11-02 前為「Codex 負責工程執行」，ADR-039）；送審與結論由 MIKO 轉貼。STOP_FOR_GPT_REVIEW 等門檻只由總召以正式審查紀錄放行，不自審解鎖。 - 台指期維持停止；下單、交易、Broker、LIVE 一律不做。 - 狀態階梯（ADR-040，承襲 DGHP 2026-09-13 規則）：草案 DRAFT／CANDIDATE → 測試通過 TESTED → 回測結果 RESEARCH_RESULT；任何 AI 都不得自行升格為 Canonical、Strict Release 或 LIVE，升格由 MIKO 決定（KEEP／MODIFY／REJECT）。PAPER 測試不等於 LIVE；合成測試或有限工程檢查通過，不代表完整回測、Stric
+- 領域基線：name: tw-backtest-workflow description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時使用：把想法拆成可程式化規則、讀本機 FinMind 資料（雲端改用證交所官方日線）、用內附 bt_min.py 實算成本與統計、找虧損模式、樣本外驗證。先載入 manus-core，再依本 Skill 四段執行。一般投資問答、即時報價、台指期不使用。 載入順序：先 manus-core（四視角主流程、品質閘門），再本 Skill；§1 問問題、§2～§3 解決、§4 後設、§6 檢查，對應 manus-core §2.4。v1.3 依 2026-10-26 實跑結果加入資料取得路徑、執行步驟與附錄 A 引擎（ADR-015）。 來源：臺股專案指令原件 V1.2-REFERENCE-CANDIDATE、ADR-001、ADR-004、四視角引擎 v3.1 §7.2（RC2 作用域 PROJECT_RC2_PROFILE_ONLY、不適用月配息）、MIKO 帳號偏好（三檔 2330／2454／2317 共同規則、OOS 與全局最優用語、策略比較 Markdown）；v1.2 增補來自 H-03、H-04（ADR-015）。 - DGHP_TW_STOCK_REBUILD（含 2330、2454、2317 三檔共同策略）：適用 RC2（PROJECT_RC2_PROFILE_ONLY，從屬 RC1）與臺股專案指令。Universe 只限 TWSE＋TPEx 可交易普通股，排除興櫃、創櫃、ETF、ETN、REIT、TDR、特別股、權證、可轉債、槓桿反向商品。 - 月配息專案（MONTHLY_INCOME_DASHBOARD）：標的是 ETF，屬另一個領域，RC2 與上面的普通股限制不適用。 - 權責：Claude 是總召（ADR-001），負責驗證、探索、審查與放行；工程執行由 Claude 負責（雲端工作區實跑，或產生終端機指令由 MIKO 在 Mac 執行；2026-11-02 前為「Codex 負責工程執行」，ADR-039）；送審與結論由 MIKO 轉貼。STOP_FOR_GPT_REVIEW 等門檻只由總召以正式審查紀錄放行，不自審解鎖。 - 台指期維持停止；下單、交易、Broker、LIVE 一律不做。 - 狀態階梯（ADR-040，承襲 DGHP 2026-09-13 規則）：草案 DRAFT／CANDIDATE → 測試通過 TESTED → 回測結果 RESEARCH_RESULT；任何 AI 都不得自行升格為 Canonical、Strict Release 或 LIVE，升格由 MIKO 決定（KEEP／MODIFY／REJECT）。PAPER 測試不等於 LIVE；合成測試或有限工程檢查通過，不代表完整回測、Stric
 - 輸入：本輪使用者輸入、已授權來源、專案檔與工具狀態。
 - 輸出：可追溯的需求摘要、缺件清單與可執行／需補件判定。
 
@@ -34,7 +34,7 @@ description: 臺股策略、月配息 ETF 或下跌預警的回測與改進時�
 
 > 以下內容由原始候選逐段納入本次正式格式重構；其來源版本、差異與 SHA-256 由 mapping 與 evidence 保存。
 
-載入順序：先 miko-core（四視角主流程、品質閘門），再本 Skill；§1 問問題、§2～§3 解決、§4 後設、§6 檢查，對應 miko-core §2.4。v1.3 依 2026-10-26 實跑結果加入資料取得路徑、執行步驟與附錄 A 引擎（ADR-015）。
+載入順序：先 manus-core（四視角主流程、品質閘門），再本 Skill；§1 問問題、§2～§3 解決、§4 後設、§6 檢查，對應 manus-core §2.4。v1.3 依 2026-10-26 實跑結果加入資料取得路徑、執行步驟與附錄 A 引擎（ADR-015）。
 
 ## 0. 作用域與權威（v1.1 新增）
 來源：臺股專案指令原件 V1.2-REFERENCE-CANDIDATE、ADR-001、ADR-004、四視角引擎 v3.1 §7.2（RC2 作用域 PROJECT_RC2_PROFILE_ONLY、不適用月配息）、MIKO 帳號偏好（三檔 2330／2454／2317 共同規則、OOS 與全局最優用語、策略比較 Markdown）；v1.2 增補來自 H-03、H-04（ADR-015）。
@@ -294,7 +294,7 @@ if __name__ == '__main__':
 
 ## 0.2 累積式整合、衝突與邊界路由
 
-本 Skill 的優化、升級、重構、修正與移轉一律採累積式演進：先保存目前版本與 SHA-256，再逐項分類為繼承、強化、新增、修正、重構或廢止；未理解或未驗證的既有內容不得刪除。執行前載入 `version-evolution-preservation`，並確認本 Skill 與 `miko-core`、`independent-audit`、`three-party-review`、`ai-engineering-anti-fraud-test-credibility` 的責任不重疊。
+本 Skill 的優化、升級、重構、修正與移轉一律採累積式演進：先保存目前版本與 SHA-256，再逐項分類為繼承、強化、新增、修正、重構或廢止；未理解或未驗證的既有內容不得刪除。執行前載入 `version-evolution-preservation`，並確認本 Skill 與 `manus-core`、`independent-audit`、`three-party-review`、`ai-engineering-anti-fraud-test-credibility` 的責任不重疊。
 
 若本 Skill 與其他 Skill、正本規則、外部來源或使用者限制衝突，不得靜默覆蓋；先標記 `CONFLICT`，保存衝突位置、影響範圍與待決事項，停在可逆狀態。任何新增能力都必須通過正向、負向、邊界、異常、回歸與必要的 Mutation 測試；`FAIL`、`NOT_RUN`、`UNKNOWN`、`BLOCKED` 不得升格為正式採用或 Runtime 生效。
 

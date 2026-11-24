@@ -1,0 +1,5 @@
+G3	PASS	exit=0
+G6	PASS	exit=0
+G7	PASS	exit=0
+C1-C16	PASS	exit=0
+OVERALL=PASS

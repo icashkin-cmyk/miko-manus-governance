@@ -6,8 +6,11 @@
 - 候選原檔：`knowledge-cards/proposals/skills/miko-governance-layer-acceptance/SKILL.md`
 - 來源封存：`source-archive/miko-governance-layer-acceptance/SKILL.md`
 - 採用版本：`v0.1.0`
-- active Skill 數量：由 20 更新為 21
+- active Skill 數量：由 21 更新為 24
 - 採用方式：累積式升格；候選、來源、差異與驗收證據保留
+- 批准人：MIKO（本地正式採用範圍）
+- 批准日期：2026-11-16（Asia/Taipei）
+- 批准範圍：僅本地正式 `skills/` 路徑；不包含 Runtime 啟用、遠端 Release、正式 Tag 或 Merge
 - 本地採用 commit：由本次正式採用 commit 的 Git 讀回確認
 - Runtime：`NOT_RUN`
 - Push／Merge／Release／正式 Tag：`NOT_RUN`
