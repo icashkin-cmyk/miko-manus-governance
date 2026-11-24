@@ -1,0 +1,42 @@
+{
+  "auditor": "INDEPENDENT_AUDITOR",
+  "checks": [
+    {
+      "id": "IA-01",
+      "status": "PASS",
+      "detail": "baseline files"
+    },
+    {
+      "id": "IA-02",
+      "status": "PASS",
+      "detail": "K01-K50 count=50; K51=True"
+    },
+    {
+      "id": "IA-03",
+      "status": "PASS",
+      "detail": "K03 decision and K51 renumbering are preserved"
+    },
+    {
+      "id": "IA-04",
+      "status": "PASS",
+      "detail": "test entrypoints"
+    },
+    {
+      "id": "IA-07",
+      "status": "PASS",
+      "detail": "independent G3 mapping and route cases"
+    },
+    {
+      "id": "IA-05",
+      "status": "PASS",
+      "detail": "check_repo exit=0"
+    },
+    {
+      "id": "IA-06",
+      "status": "PASS",
+      "detail": "external Runtime/connectors and formal release remain NOT_RUN; K03 conflict is resolved"
+    }
+  ],
+  "overall": "PASS",
+  "limitation": "This audit validates evidence integrity and K03 identity resolution; it does not convert runtime NOT_RUN into PASS."
+}

@@ -23,31 +23,31 @@
     {
       "id": "K06",
       "status": "PASS",
-      "content_chars": 288,
+      "content_chars": 289,
       "errors": []
     },
     {
       "id": "K07",
       "status": "PASS",
-      "content_chars": 301,
+      "content_chars": 302,
       "errors": []
     },
     {
       "id": "K08",
       "status": "PASS",
-      "content_chars": 323,
+      "content_chars": 324,
       "errors": []
     },
     {
       "id": "K09",
       "status": "PASS",
-      "content_chars": 294,
+      "content_chars": 295,
       "errors": []
     },
     {
       "id": "K10",
       "status": "PASS",
-      "content_chars": 299,
+      "content_chars": 300,
       "errors": []
     },
     {
@@ -77,19 +77,19 @@
     {
       "id": "K15",
       "status": "PASS",
-      "content_chars": 338,
+      "content_chars": 339,
       "errors": []
     },
     {
       "id": "K16",
       "status": "PASS",
-      "content_chars": 311,
+      "content_chars": 312,
       "errors": []
     },
     {
       "id": "K17",
       "status": "PASS",
-      "content_chars": 298,
+      "content_chars": 299,
       "errors": []
     },
     {
@@ -131,7 +131,7 @@
     {
       "id": "K24",
       "status": "PASS",
-      "content_chars": 276,
+      "content_chars": 277,
       "errors": []
     },
     {
@@ -143,7 +143,7 @@
     {
       "id": "K26",
       "status": "PASS",
-      "content_chars": 294,
+      "content_chars": 295,
       "errors": []
     },
     {
@@ -227,7 +227,7 @@
     {
       "id": "K40",
       "status": "PASS",
-      "content_chars": 280,
+      "content_chars": 281,
       "errors": []
     },
     {
@@ -257,7 +257,7 @@
     {
       "id": "K45",
       "status": "PASS",
-      "content_chars": 289,
+      "content_chars": 290,
       "errors": []
     },
     {
@@ -287,7 +287,7 @@
     {
       "id": "K50",
       "status": "PASS",
-      "content_chars": 375,
+      "content_chars": 376,
       "errors": []
     }
   ],

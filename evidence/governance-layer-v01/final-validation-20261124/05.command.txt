@@ -1,0 +1,1 @@
+python3 -I -B tests/g6_tools_acceptance.py

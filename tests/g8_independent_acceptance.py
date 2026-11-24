@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from acceptance_runtime import output_dir
 import subprocess,json,sys
-ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'evidence/governance-layer-v01/g8'; OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1]; OUT=output_dir('governance-layer-v01/g8')
 items=[('G3',['tests/g3_router_independent_audit.py']),('G6',['tests/g6_tools_acceptance.py']),('G7',['tests/g7_e2e_acceptance.py'])]
 checks=[]
 for gid,cmd in items:

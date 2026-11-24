@@ -8,7 +8,7 @@
 
 | 邊界 | 裁決 | 處理方式 |
 |---|---|---|
-| `miko-core` 與領域 Skill | 不重疊 | `miko-core` 保留常駐閉環、治理與路由；領域 Skill 只負責領域行為。 |
+| `manus-core` 與領域 Skill | 不重疊 | `manus-core` 保留常駐閉環、治理與路由；領域 Skill 只負責領域行為。 |
 | `independent-audit` 與 `three-party-review` | 不合併責任 | 前者負責獨立驗收；後者定義 IMPLEMENTER／TESTER／INDEPENDENT_AUDITOR 三方責任。 |
 | anti-fraud 與測試 Skill | 不替代功能測試 | anti-fraud 驗證證據可信度與反造假；各 Skill 仍須執行自己的功能、邊界與回歸測試。 |
 | `version-evolution-preservation` 與各 Skill | 前置路由 | 各 Skill 必須先保存歷史、diff、Hash，再進行優化或重構。 |
@@ -27,4 +27,4 @@
 
 ## 核心 Skill 格式例外
 
-`miko-core` 為常駐核心 Skill，不套用領域 Skill 的四節／P-C-J linter；此為責任分層例外，不是測試豁免。其核心專用驗收規則見 `governance/validation-policy.md`。
+`manus-core` 為常駐核心 Skill，不套用領域 Skill 的四節／P-C-J linter；此為責任分層例外，不是測試豁免。其核心專用驗收規則見 `governance/validation-policy.md`。

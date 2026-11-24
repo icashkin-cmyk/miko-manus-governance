@@ -104,19 +104,19 @@ max_age_seconds=0
 來源讀取成功且工具回傳 commit 時：
 
 ```text
-已對齊：miko-core vX｜正本 vY（commit abc1234｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub icashkin-cmyk/miko main（YYYY-MM-DD）
+已對齊：manus-core vX｜正本 vY（commit abc1234｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub icashkin-cmyk/miko main（YYYY-MM-DD）
 ```
 
 工具只回檔案內容、沒有回 commit 時：
 
 ```text
-已對齊：miko-core vX｜正本 vY（commit UNKNOWN｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub raw 固定 commit（YYYY-MM-DD）
+已對齊：manus-core vX｜正本 vY（commit UNKNOWN｜讀取時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub raw 固定 commit（YYYY-MM-DD）
 ```
 
 讀取失敗時：
 
 ```text
-已對齊：miko-core vX｜正本 NOT_READ（讀取失敗時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub NOT_READ
+已對齊：manus-core vX｜正本 NOT_READ（讀取失敗時間 YYYY-MM-DD HH:MM 台北）｜領域：名稱｜Skill：名稱與版本或無｜狀態來源：GitHub NOT_READ
 ```
 
 不得把 VERSION 第 4 行的 README SHA-256 當成 Git commit。兩者是不同欄位，必須分開記錄。
@@ -168,7 +168,7 @@ path: knowledge-cards/proposals/
 
 - [ ] 已實際讀到 GitHub API Contents `VERSION`。
 - [ ] 已實際取得 VERSION 最新修改 commit。
-- [ ] 已使用同一固定 commit 讀取 VERSION、CHANGELOG、README、miko-core 與必要 references。
+- [ ] 已使用同一固定 commit 讀取 VERSION、CHANGELOG、README、manus-core 與必要 references。
 - [ ] raw URL 若使用，已設定 `max_age_seconds=0` 或等效零快取控制。
 - [ ] API 內容、固定 commit raw 內容與 SHA-256 已比對。
 - [ ] 對齊行含版本、commit、讀取時間與狀態來源。

@@ -10,10 +10,10 @@
 <!-- check_repo 結果（例：16/16 PASS，附實際命令）；測題逐案 PASS／FAIL／NOT_RUN／BLOCKED，沒實跑寫 NOT_RUN。 -->
 
 ## 稽核版 commit
-<!-- miko-core §6「回報必列兩樣」之一：獨立稽核合格那版的 commit（完整 SHA）。 -->
+<!-- manus-core §6「回報必列兩樣」之一：獨立稽核合格那版的 commit（完整 SHA）。 -->
 
 ## 兩版比對
-<!-- miko-core §6「回報必列兩樣」之二：git diff 底本..稽核版 與 git diff 底本..本 PR 是否逐位元相同；不同就列出差在哪、是否只改版本號字樣。 -->
+<!-- manus-core §6「回報必列兩樣」之二：git diff 底本..稽核版 與 git diff 底本..本 PR 是否逐位元相同；不同就列出差在哪、是否只改版本號字樣。 -->
 
 ## 影響哪些 Skill
 <!-- 列出受影響的 Skill 與版本；沒有寫 NONE。 -->
@@ -22,4 +22,4 @@
 <!-- UNKNOWN、NOT_READ、NOT_RUN 逐條列出；沒有寫 NONE。 -->
 
 ## 回滾方式
-<!-- 例：git revert -m 1 <合併 commit>，依 miko-core §7 取得推送授權後再 git push origin main；Drive DELTA 怎麼標作廢。 -->
+<!-- 例：git revert -m 1 <合併 commit>，依 manus-core §7 取得推送授權後再 git push origin main；Drive DELTA 怎麼標作廢。 -->

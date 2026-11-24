@@ -7,7 +7,7 @@
 # 結束碼：0＝成功；1＝沒有可抽的內容（無字幕軌：字幕 NOT_READ；不是影片）；2＝用法錯誤；3＝檔案讀不到或解不開（NOT_READ）；
 #         4＝本機沒有 ffprobe／ffmpeg（NOT_RUN：不得假裝已抽影格，改請 MIKO 在有 ffmpeg 的環境跑，或只分析使用者給的截圖；probe 此時仍印 sha256 與大小）
 # 重跑：frames 先清掉 <資料夾> 裡舊的 f_*.png 與 frames.csv 再寫，同一輸入同一參數重跑結果相同、不累加重複影格；不改動原始媒體檔。
-# 不做：不下載網址（下載工具要先經 MIKO 批准，miko-core §6、§7）；不做語音轉文字（本 Skill 沒有配置 ASR）。
+# 不做：不下載網址（下載工具要先經 MIKO 批准，manus-core §6、§7）；不做語音轉文字（本 Skill 沒有配置 ASR）。
 import csv, hashlib, json, os, re, shutil, subprocess, sys
 
 

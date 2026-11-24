@@ -2,8 +2,8 @@
   "generated_at": "2026-11-16T09:34:54+0000",
   "repository": "<REPO_ROOT>",
   "commit": "90a018c4c95bfec9b970936f59873c0e6e0cc8be",
-  "expected_count": 21,
-  "actual_count": 21,
+  "expected_count": 24,
+  "actual_count": 24,
   "records": [
     {
       "path": "skills/ai-engineering-anti-fraud-test-credibility/SKILL.md",

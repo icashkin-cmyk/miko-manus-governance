@@ -1,0 +1,61 @@
+{
+  "test_id": "ROLE-ALIGN-LOCAL-001",
+  "result": "PASS",
+  "items": [
+    {
+      "skill": "manus-core",
+      "result": "PASS",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "source_hash_unchanged": true,
+        "candidate_hash_matches": true,
+        "candidate_proposed": true,
+        "no_runtime_adoption": true,
+        "required_1": true,
+        "required_2": true,
+        "required_3": true,
+        "required_4": true,
+        "required_5": true,
+        "required_6": true
+      }
+    },
+    {
+      "skill": "ai-behavior-emulation",
+      "result": "PASS",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "source_hash_unchanged": true,
+        "candidate_hash_matches": true,
+        "candidate_proposed": true,
+        "no_runtime_adoption": true,
+        "required_1": true,
+        "required_2": true,
+        "required_3": true,
+        "required_4": true,
+        "required_5": true
+      }
+    },
+    {
+      "skill": "thinking-tools-performance-optimization",
+      "result": "PASS",
+      "checks": {
+        "candidate_exists": true,
+        "source_exists": true,
+        "source_hash_unchanged": true,
+        "candidate_hash_matches": true,
+        "candidate_proposed": true,
+        "no_runtime_adoption": true,
+        "required_1": true,
+        "required_2": true,
+        "required_3": true,
+        "required_4": true,
+        "required_5": true
+      }
+    }
+  ],
+  "runtime": "NOT_RUN",
+  "remote_push": "NOT_RUN",
+  "merge": "NOT_RUN"
+}

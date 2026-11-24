@@ -20,3 +20,5 @@ __pycache__/
 *.pfx
 .netrc
 secrets.toml
+# Acceptance test runtime output; use MIKO_ACCEPTANCE_OUT=evidence only for an intentional snapshot
+out/

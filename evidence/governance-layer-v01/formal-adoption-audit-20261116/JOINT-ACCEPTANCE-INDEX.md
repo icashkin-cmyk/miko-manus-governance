@@ -16,8 +16,8 @@
 | 候選原檔 | `knowledge-cards/proposals/skills/miko-governance-layer-acceptance/SKILL.md` | 驗證原候選仍保留且未被覆寫 |
 | 來源封存 | `source-archive/miko-governance-layer-acceptance/SKILL.md` | 驗證來源快照與候選內容可追溯 |
 | 採用紀錄 | `governance/formal-adoptions/miko-governance-layer-acceptance-v0.1.0.md` | 驗證採用範圍、回復方式與未啟用邊界 |
-| Stage 1 inventory | `evidence/stage-01/skill-inventory-current.json` | 驗證 active Skill 總數 21、唯一名稱與 Hash |
-| Stage 1 驗收器 | `tests/stage1_inventory_check.py` | 驗證 21 筆正式 Skill inventory |
+| Stage 1 inventory | `evidence/stage-01/skill-inventory-current.json` | 驗證 active Skill 總數 25、唯一名稱與 Hash |
+| Stage 1 驗收器 | `tests/stage1_inventory_check.py` | 驗證 25 筆正式 Skill inventory |
 | G0–G9 主驗收器 | `tests/governance_layer_acceptance_v01.py` | 驗證架構 Gate |
 | G0–G9 獨立驗收器 | `tests/governance_layer_independent_audit_v01.py` | 由獨立驗收者重新判定 |
 | G6 | `tests/g6_tools_acceptance.py` | Tools Contract 驗收 |
@@ -54,7 +54,7 @@ sha256sum skills/miko-governance-layer-acceptance/SKILL.md \
 1. `skills/miko-governance-layer-acceptance/SKILL.md` 的 frontmatter 必須含 `version: 0.1.0` 與 `status: ADOPTED`。
 2. 候選原檔必須仍為 `PROPOSED`，不得被正式檔案反向覆寫。
 3. 來源封存必須存在；其 Hash 應可與候選原檔比對。
-4. Stage 1 active Skill 總數必須為 21，frontmatter name 必須唯一且與資料夾名稱一致。
+4. Stage 1 active Skill 總數必須為 25，frontmatter name 必須唯一且與資料夾名稱一致。
 5. `G0–G9`、`G6`、`G7`、`G8`、`G9` 與 `C1–C16` 必須以實際 Exit Code 0 判定；輸出中的 `PASS` 文字不能單獨作為證據。
 6. C3 必須為零命中；若驗收證據重新產生本機路徑，應先去識別化再重跑，不得刪除原始 FAIL 證據。
 7. Runtime、Push、Merge、Release、正式 Tag 必須維持 `NOT_RUN`，不得從本地驗收 PASS 推論已生效。

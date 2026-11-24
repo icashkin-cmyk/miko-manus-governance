@@ -1,0 +1,68 @@
+{
+  "checklist": "MIKO Manus governance layer acceptance v0.1",
+  "results": [
+    {
+      "gate": "G0",
+      "status": "PASS",
+      "evidence": "git remote, branch, HEAD, VERSION, MANUS_VERSION, README, CHANGELOG",
+      "gap": ""
+    },
+    {
+      "gate": "G1",
+      "status": "PASS",
+      "evidence": "p0-outer-architecture.md; module-mapping.md; modules/*/README.md",
+      "gap": ""
+    },
+    {
+      "gate": "G2",
+      "status": "PASS",
+      "evidence": "skills/manus-core/SKILL.md; governance/project-architecture/stage-gates.md",
+      "gap": ""
+    },
+    {
+      "gate": "G3",
+      "status": "PASS",
+      "evidence": "modules/router/README.md; router/g3-router-mapping.tsv; g3-router-acceptance.json",
+      "gap": "Runtime loading remains NOT_RUN"
+    },
+    {
+      "gate": "G4",
+      "status": "PASS",
+      "evidence": "formal=1; candidate=50; K01-K50 unique=50; K51=True",
+      "gap": ""
+    },
+    {
+      "gate": "G5",
+      "status": "PASS",
+      "evidence": "skills count=25; stage-01 inventory",
+      "gap": "per-skill runtime execution and workflow samples are not uniformly proven"
+    },
+    {
+      "gate": "G6",
+      "status": "PASS",
+      "evidence": "adapters/README.md; g6/g6-tools-acceptance.json",
+      "gap": "external connectors remain NOT_RUN"
+    },
+    {
+      "gate": "G7",
+      "status": "PASS",
+      "evidence": "g7/g7-e2e-acceptance.json",
+      "gap": "representative E2E workflow failed or is NOT_RUN"
+    },
+    {
+      "gate": "G8",
+      "status": "PASS",
+      "evidence": "g8/g8-independent-acceptance.json",
+      "gap": "independent full acceptance failed or is NOT_RUN"
+    },
+    {
+      "gate": "G9",
+      "status": "PASS",
+      "evidence": "g9/g9-lifecycle-acceptance.json",
+      "gap": "candidate lifecycle evidence failed or is NOT_RUN"
+    }
+  ],
+  "counts": {
+    "PASS": 10
+  }
+}

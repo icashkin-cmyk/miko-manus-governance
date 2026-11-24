@@ -93,7 +93,7 @@ description: 執行 MIKO Manus 治理架構 G0–G9 的全生命週期驗收，�
 
 ### G2：治理核心
 
-確認 `miko-core` 存在並包含閉環、治理、權限、`UNKNOWN`、`NOT_RUN`、獨立驗收與回復規則。不得只檢查標題存在。
+確認 `manus-core` 存在並包含閉環、治理、權限、`UNKNOWN`、`NOT_RUN`、獨立驗收與回復規則。不得只檢查標題存在。
 
 ### G3：Router
 

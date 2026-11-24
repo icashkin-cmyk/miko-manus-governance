@@ -57,7 +57,7 @@ Gmail 的垃圾桶就是它的 _to_delete（MIKO 2026-10-20 指定「清理移�
 ## 5. 禁止
 自行退訂；點擊信中的外部連結；寄信或回信；修改篩選器；新增排程；擴大權限；改變已讀狀態。
 
-## 6. 檢查（驗收；2026-11-05 總檢補，正本 1.2.27。本 Skill 在正本 1.2.25 前採用，依 miko-core §2.4 不改判；「問問題」「後設」兩節與 §2 逐步閘門，下次改 §2 判定步驟時補齊）
+## 6. 檢查（驗收；2026-11-05 總檢補，正本 1.2.27。本 Skill 在正本 1.2.25 前採用，依 manus-core §2.4 不改判；「問問題」「後設」兩節與 §2 逐步閘門，下次改 §2 判定步驟時補齊）
 - AC-G1：只詢問或盤點時，沒有移動信件、改標籤或改已讀狀態（§1）。
 - AC-G2：截止日以台北時間往前三個曆月計算，月底夾到該月最後一天，截止日當天寄的信保留（§2 第 1 點）。
 - AC-G3：移動的每一封都逐封讀過內文、確認是已過期的純行銷廣告；§3 類別與不確定的信都保留。
@@ -78,7 +78,7 @@ Gmail 的垃圾桶就是它的 _to_delete（MIKO 2026-10-20 指定「清理移�
 
 ## 0.2 累積式整合、衝突與邊界路由
 
-本 Skill 的優化、升級、重構、修正與移轉一律採累積式演進：先保存目前版本與 SHA-256，再逐項分類為繼承、強化、新增、修正、重構或廢止；未理解或未驗證的既有內容不得刪除。執行前載入 `version-evolution-preservation`，並確認本 Skill 與 `miko-core`、`independent-audit`、`three-party-review`、`ai-engineering-anti-fraud-test-credibility` 的責任不重疊。
+本 Skill 的優化、升級、重構、修正與移轉一律採累積式演進：先保存目前版本與 SHA-256，再逐項分類為繼承、強化、新增、修正、重構或廢止；未理解或未驗證的既有內容不得刪除。執行前載入 `version-evolution-preservation`，並確認本 Skill 與 `manus-core`、`independent-audit`、`three-party-review`、`ai-engineering-anti-fraud-test-credibility` 的責任不重疊。
 
 若本 Skill 與其他 Skill、正本規則、外部來源或使用者限制衝突，不得靜默覆蓋；先標記 `CONFLICT`，保存衝突位置、影響範圍與待決事項，停在可逆狀態。任何新增能力都必須通過正向、負向、邊界、異常、回歸與必要的 Mutation 測試；`FAIL`、`NOT_RUN`、`UNKNOWN`、`BLOCKED` 不得升格為正式採用或 Runtime 生效。
 

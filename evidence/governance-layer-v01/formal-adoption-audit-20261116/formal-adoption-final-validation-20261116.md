@@ -4,6 +4,12 @@
 
 本地正式升格已完成，正式 Skill 位於 `skills/miko-governance-layer-acceptance/SKILL.md`。候選原檔與來源封存均保留。正式採用後重跑結果：Stage 1 21/21、G0–G9 PASS、G6 PASS、G7 PASS、G8 PASS、G9 PASS、INDEPENDENT_AUDITOR PASS、C1–C16 16/16 PASS、C3 零命中。
 
+## 採用裁決欄位
+
+- 批准人：MIKO。
+- 批准日期：2026-11-16（Asia/Taipei）。
+- 批准範圍：僅本地正式 `skills/` 路徑；Runtime、外部 Connector、遠端 Release、正式 Tag 與 Merge 仍為 `NOT_RUN`。
+
 ## 實際結果
 
 | 驗收 | 結果 | 證據 |
